@@ -49,7 +49,7 @@ html
 						a.navbar-brand(href='/')
 							img(src='/images/logo.svg', width='160')
 					#navbarSupportedContent.collapse.navbar-collapse
-						ul.navbar-nav.mr-auto
+						ul.navbar-nav.ml-auto
 							each link in navLinks
 								li(class=(section == link.key ? 'active' : null)): a.nav-link(href=link.href)= link.label
 						ul.navbar-nav
@@ -66,10 +66,8 @@ html
 			//- NOTE:
 			//- There is no .container wrapping class around body blocks to allow more flexibility in design.
 			//- Remember to include it in your templates when you override the intro and content blocks!
-
 			//- The Intro block appears above flash messages (used for temporary information display)
 			block intro
-
 			//- Flash messages allow you to display once-off status messages to users, e.g. form
 			//- validation errors, success messages, etc.
 			+flash-messages(messages)
