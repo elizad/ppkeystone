@@ -10,8 +10,8 @@ var keystone = require('keystone');
 // and documentation.
 
 keystone.init({
-	'name': 'My Site',
-	'brand': 'My Site',
+	'name': 'Profile Pension',
+	'brand': 'Profile Pension',
 
 	'sass': 'public',
 	'static': 'public',

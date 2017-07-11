@@ -41,26 +41,24 @@ html
 			//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
 			//- ... or completely change this header to suit your design.
 
-			div(role="navigation").navbar.navbar-default
-				.container-fluid
+			nav(role="navigation").navbar.navbar-toggleable-md.navbar-light.bg-faded
+				.container
 					.navbar-header
-						button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-							span.sr-only Toggle navigation
-							span.icon-bar
-							span.icon-bar
-							span.icon-bar
-						a.navbar-brand(href='/') My Site
-					.collapse.navbar-collapse
-						ul.nav.navbar-nav.navbar-left
+						button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+							span.navbar-toggler-icon
+						a.navbar-brand(href='/')
+							img(src='/images/logo.svg', width='160')
+					#navbarSupportedContent.collapse.navbar-collapse
+						ul.navbar-nav.mr-auto
 							each link in navLinks
-								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
-						ul.nav.navbar-nav.navbar-right
+								li(class=(section == link.key ? 'active' : null)): a.nav-link(href=link.href)= link.label
+						ul.navbar-nav
 							if user
 								if user.canAccessKeystone
-									li: a(href='/keystone') Open Keystone
-								li: a(href='/keystone/signout') Sign Out
+									li: a.nav-link(href='/keystone') Open Keystone
+								li: a.nav-link(href='/keystone/signout') Sign Out
 							else
-								li: a(href='/keystone/signin') Sign In
+								li: a.nav-link(href='/keystone/signin') Sign In
 
 		//- BODY
 		#body
@@ -84,19 +82,20 @@ html
 		.container: #footer
 
 			//- You don't _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it!
-			p Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.
+			p Profile Pensions is a trading name of Profile Financial Solutions Ltd which is Authorised and Regulated by the Financial Conduct Authority.FCA Number 596398.
+			p Registered in England & Wales, Company Number 07731925. Registered Office address: Norwest Court, Guildhall Street, Preston, PR1 3NU.
+			p Trading address: Norwest Court, Guildhall Street, Preston, PR1 3NU.©2011-2017 Profile Financial Solutions Ltd.
 
 
 		//- JAVASCRIPT
 
 		//- jQuery 1.11.3 is included by default, and required by both Bootstrap
 		//- and the KeystoneJS Content Editor. If you are not targeting IE8,
-		//- you can upgrade to 2.1.4 (also bundled) for better performance.
-		script(src='/js/jquery/jquery-1.11.3.min.js')
+		//- you can upgrade
+		script(src='/js/jquery/jquery-3.2.1.min.js')
 
-		//- Customise which Bootstrap javascript files are served by including
-		//- them specifically here, instead of bootstrap-3.3.5.min.js
-		script(src='/js/bootstrap/bootstrap-3.3.5.min.js')
+		//- Customise which Bootstrap 4 javascript files are served by includings
+		script(src='/js/bootstrap/bootstrap.js')
 
 		//- The KeystoneJS Content Editor provides support for ks-editable data attributes,
 		//- which generate links to edit content for users who can access Keystone
