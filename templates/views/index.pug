@@ -1,23 +1,69 @@
 extends ../layouts/default
 
 block content
-	.container: .text-center
-		
-		h1.text-center Straight-talking pension advice.
-		p.text-center We find your pensions and tell you about them for free, with no obligation.
-		a(href='/contact').btn.btn-lg.btn-primary Find Pension
-		p It includes the latest versions of
-			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
-			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
-		p Visit 
-		hr
-		if user && user.canAccessKeystone
-			p
-				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
-		else
-			p We have created a default Admin user for you with the email <strong>elizadascal@gmail.com</strong> and the password <strong>light</strong>.
-			p
-				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
-				|  to use the Admin UI.
-		hr
-		p
+	.container: #homehead.text-center
+		h1 Straight-talking pension advice 				
+		div.row.justify-content-center
+			div.col-xs-8.col-md-6
+				p We find your pensions and tell you about them for free, with no obligation.
+				a(href='/get-started-trace').btn.btn-lg.btn-primary Find Pensions
+
+	section.features
+		.container
+			div.row.no-gutters
+				+company-features('We')
+				+company-features('are')
+				+company-features('authorised')
+				+company-features('We are authorised and regulated by the FCA')
+
+	section.process
+		.container.text-center
+			h2 How we find your pensions
+			div.row.text-center
+				.col-md-4
+
+					p Submit your details online.
+				.col-md-4
+
+					p We will send you two forms by email and post. Respond to either of these by signing the forms and returning them. This gives your approval for us to start the pension trace.
+				.col-md-4
+
+					p One of our pension advisers will be in contact to talk through the results of the pension trace and run through the next steps.
+				.col-md-12.text-center
+					a(href='/get-started-trace').btn.btn-lg.btn-primary Find Pensions
+				.col-md-12.text-center
+					a(href='/get-started-trace') Our charges explained
+
+	section.promise
+		.container.text-center
+			h2 Our promise to you
+			div.row
+				div.col-md-4
+					svg.sprite-check-lg.svgyellow <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick" viewBox="0 0 29.98 27.81"></use>
+					span.company-features__item We are not tied to anyone and work in your best interest
+				div.col-md-4
+					svg.sprite-check-lg.svgyellow <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick" viewBox="0 0 29.98 27.81"></use>
+					span.company-features__item We are not tied to anyone and work in your best interest
+				div.col-md-4
+					svg.sprite-check-lg.svgyellow <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick" viewBox="0 0 29.98 27.81"></use>
+					span.company-features__item We are not tied to anyone and work in your best interest		
+
+
+	+article('Hello world')
+		p This is my
+		p Amazing article	
+		input(type='checkbox' checked=true)
+		input(type='checkbox' checked=true && 'checked')
+		//div(unescaped!="<code>")xsasssa
+
+	p
+		- var title = "On Dogs: Man's Best Friend";
+		- var author = "enlore";
+		- var theGreat = "<span>escape!</span>";
+
+		h1= title
+		p Written with love by #{author}
+		p This will be safe: #{theGreat}
+
+	+link('/foo', 'foo')(class="btn")
+	+link('/start', 'start')(class="btn")
