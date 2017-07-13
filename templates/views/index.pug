@@ -1,12 +1,13 @@
 extends ../layouts/default
 
 block content
-	.container: #homehead.text-center
-		h1 Straight-talking pension advice 				
-		div.row.justify-content-center
-			div.col-xs-8.col-md-6
-				p We find your pensions and tell you about them for free, with no obligation.
-				a(href='/get-started-trace').btn.btn-lg.btn-primary Find Pensions
+	section#homehead
+		.container.text-center
+			h1 Straight-talking pension advice 				
+			div.row.justify-content-center
+				div.col-xs-8.col-md-6
+					p We find your pensions and tell you about them for free, with no obligation.
+					a(href='/get-started-trace').btn.btn-lg.btn-primary Find Pensions
 
 	section.features
 		.container
@@ -21,7 +22,7 @@ block content
 			h2 How we find your pensions
 			div.row.text-center
 				.col-md-4
-
+					img.className#IdName(src="/images/start.jpg" alt="Image Title")
 					p Submit your details online.
 				.col-md-4
 
@@ -48,22 +49,90 @@ block content
 					svg.sprite-check-lg.svgyellow <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick" viewBox="0 0 29.98 27.81"></use>
 					span.company-features__item We are not tied to anyone and work in your best interest		
 
+	section.reviews
+		.container.text-center
+			h2 On average we find £25,000 per missing pension
+			div.row
+				div.light-slider.col-md-12
+					div.col-md-12.text-center.review-customer
+						<div class="review-image compat-object-fit" style="background-image: url(&quot;https://www.profilepensions.co.uk/wp-content/uploads/2017/05/pt-2.jpg&quot;);">                    
+						<img src="https://www.profilepensions.co.uk/wp-content/uploads/2017/05/pt-2.jpg" alt="" class="img full-width">
+						</div> 
+						.div.customer-about
+							p.lead2 Shaun, Found a £27,603 pension with Prudential. Lives in Penarth
+							p The result of my pension trace was great! Profile helped me find pensions that I’d lost through moving employers and put everything into layman’s terms. Even though I paid out, I’m better off in the long run and in control of my pension pot.
+					div.col-md-12.text-center.review-customer
+						<div class="customer-image compat-object-fit" style="background-image: url(&quot;https://www.profilepensions.co.uk/wp-content/uploads/2017/05/pt-3.jpg&quot;);">                    
+						<img src="https://www.profilepensions.co.uk/wp-content/uploads/2017/05/pt-3.jpg" alt="" class="img full-width">
+						</div>
+						div.col-md-12.text-center.review-customer
+							p.lead2 Mark, Found a £24,899 pension with Re-assure. Lives in Bath
+							p The process was entirely pain free, very professional and explained in a way that was easy to understand. The best part was that I found money that I didn’t know I had! I would definitely recommend Profile to anyone who needs pension advice or to find a lost pension.</p> 
+					div.col-md-12.text-center.review-customer  your content 1 
+					div.col-md-12.text-center.review-customer  your content 2
 
-	+article('Hello world')
-		p This is my
-		p Amazing article	
-		input(type='checkbox' checked=true)
-		input(type='checkbox' checked=true && 'checked')
-		//div(unescaped!="<code>")xsasssa
+	section.tp-reviews
+		.container.text-center
+			h2 Average TrustScore of 9.5 out of 10
+			div.row
+				div#trustpilot-reviews.col-md-12
+					div.col-md-12 your content 1 
+					div.col-md-12  >your content 2
+					div.col-md-12  your content 1 
+					div.col-md-12  >your content 2
+					div.col-md-12  your content 1 
+					div.col-md-12   >your content 2	
+	section.partners
+		.container.text-center
+			h2 Working with all the UK's leading pension providers and funds including
+			div.row
+				div.profilepension-partners.col-md-12
+					div.col-md-12
+						img.profilepension-partners__img(src="/images/logo.svg" alt="Image Title logo")
+					div.col-md-12
+						img.profilepension-partners__img(src="/images/logo.svg" alt="Image Title logo")
+					div.col-md-12
+						img.profilepension-partners__img(src="/images/logo.svg" alt="Image Title logo")
+					div.col-md-12
+						img.profilepension-partners__img(src="/images/logo.svg" alt="Image Title logo")
+					div.col-md-12
+						img.profilepension-partners__img(src="/images/logo.svg" alt="Image Title logo")
+					div.col-md-12
+						img.profilepension-partners__img(src="/images/logo.svg" alt="Image Title logo")
+	section.press
+		.container.text-center
+			h2 Profile in the press
+			div.row
+				div.profilepension-press.col-md-12
+					div.col-md-12
+						img.profilepension-partners__img(src="/images/logo.svg" alt="Image Title logo")
+					div.col-md-12
+						img.profilepension-partners__img(src="/images/logo.svg" alt="Image Title logo")
+					div.col-md-12
+						img.profilepension-partners__img(src="/images/logo.svg" alt="Image Title logo")
+					div.col-md-12
+						img.profilepension-partners__img(src="/images/logo.svg" alt="Image Title logo")
+					div.col-md-12
+						img.profilepension-partners__img(src="/images/logo.svg" alt="Image Title logo")
+					div.col-md-12
+						img.profilepension-partners__img(src="/images/logo.svg" alt="Image Title logo")
 
-	p
-		- var title = "On Dogs: Man's Best Friend";
-		- var author = "enlore";
-		- var theGreat = "<span>escape!</span>";
 
-		h1= title
-		p Written with love by #{author}
-		p This will be safe: #{theGreat}
-
-	+link('/foo', 'foo')(class="btn")
-	+link('/start', 'start')(class="btn")
+	//+article('Hello world')
+		//	p This is my
+		//	p Amazing article	
+		//	input(type='checkbox' checked=true)
+		//	input(type='checkbox' checked=true && 'checked')
+		//	//div(unescaped!="<code>")xsasssa
+		//
+		//p
+		//	- var title = "On Dogs: Man's Best Friend";
+		//	- var author = "enlore";
+		//	- var theGreat = "<span>escape!</span>";
+		//
+		//	h1= title
+		//	p Written with love by #{author}
+		//	p This will be safe: #{theGreat}
+		//
+		//+link('/foo', 'foo')(class="btn")
+		//+link('/start', 'start')(class="btn")
