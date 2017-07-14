@@ -7,13 +7,15 @@ html
 	head
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		//- Appstore smart banner
+		meta(name="apple-itunes-app", content="app-id=000111222")
+		
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 		//meta/(name='webcrawlers', content='all')/
 		meta(name="author" content="Profile Pensions")
 		meta(name="robots" content="index,follow")
 		meta(name="revisit-after" content="1 days")
 		meta(name="description" content="We find all your pensions and tell you about them for free, with no obligation.")
-
 
 		//- Add meta for posts
 		if typeof(data) !== 'undefined' && data.post && typeof(data.post.meta) !== 'undefined'
@@ -35,7 +37,7 @@ html
 				meta(name='twitter:image' content='https://www.profilepensions.co.uk/images/' + data.post.meta.image.filename)
 
 
-		title= title || 'Profile Pension'
+		title= page.title || 'Profile Pension'
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
 
 		//- Customise the stylesheet for your site by editing /public/styles/site.sass
@@ -73,27 +75,7 @@ html
 	body
 
 		//- HEADER
-		#header.fixed-top
-			//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
-			//- ... or completely change this header to suit your design.
-			nav(role="navigation").navbar.navbar-toggleable-md
-				.container
-					.navbar-header
-						button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
-							span.navbar-toggler-icon
-						a.navbar-brand(href='/')
-							svg#profile-pension-logo( height='54') <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#profile-pension-logo" viewBox="0 0 574 232"></use>
-					#navbarSupportedContent.collapse.navbar-collapse
-						ul.navbar-nav.ml-auto
-							each link in navLinks
-								li(class=(section == link.key ? 'active' : null)): a.nav-link(href=link.href)= link.label
-						ul.navbar-nav
-							if user
-								if user.canAccessKeystone
-									li: a.nav-link(href='/keystone') Open Keystone
-								li: a.nav-link(href='/keystone/signout') Sign Out
-							else
-								li: a.nav-link(href='/keystone/signin') Sign In
+		include ../includes/layout/header	
 
 		//- BODY
 		#body
