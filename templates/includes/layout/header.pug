@@ -1,0 +1,22 @@
+#header.fixed-top
+	nav(role="navigation").navbar.navbar-toggleable-md
+		.container
+			.navbar-header
+				button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+					span.navbar-toggler-icon
+				a.navbar-brand(href='/')
+					svg#profile-pension-logo( height='54') <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#profile-pension-logo" viewBox="0 0 574 232"></use>
+			#navbarSupportedContent.collapse.navbar-collapse
+				ul.navbar-nav.ml-auto
+					each link in navLinks
+						li(class=(section == link.key ? 'active' : null)): a.nav-link(href=link.href)= link.label
+				ul.navbar-nav
+					if user
+						if user.canAccessKeystone
+							li: a.nav-link(href='/keystone') Open Keystone
+						li: a.nav-link(href='/keystone/signout') Sign Out
+					else
+						li: a.nav-link(href='/keystone/signin') Sign In
+
+
+
