@@ -118,6 +118,9 @@ body {
 #body{
 	margin-top: 86px;
 }
+ul{
+	list-style: none;
+}
 .clearblock {
 	display: block
 }
@@ -569,8 +572,8 @@ svg {
 	color: #fff;
 }
 
-#footer{
+footer{
 	background-color: #169b62;
-	padding: 1rem 0;
+	padding-top: 2rem;
 	color: #fff;
 }

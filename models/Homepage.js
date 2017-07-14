@@ -5,15 +5,19 @@ var Types = keystone.Field.Types;
  * Homepage Model
  * =============
  */
-
-var Homepage = new keystone.List('Homepage', {
+var Homepage;
+Homepage = new keystone.List('Homepage', {
 	preview: {
 		label: 'View Post',
-		available: function() { return (this.state == 'published'); },
-		path: function() { return '/' + this.key }
-	}
-	map: { name: 'title' },
-	autokey: { from: 'slug', path: 'title', unique: true },
+		available: function () {
+			return (this.state === 'published');
+		},
+		path: function () {
+			return '/' + this.key
+		},
+	},
+	map: {name: 'title'},
+	autokey: {from: 'slug', path: 'title', unique: true},
 });
 
 Homepage.add({
