@@ -37,7 +37,7 @@ exports = module.exports = function (app) {
 	app.get('/', routes.views.index);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
-
+	app.get('/meetTheTeam/:meetTheTeamMember', routes.views.meetTheTeamMember);
 	app.get('/gallery', routes.views.gallery);
 	app.all('/contact', routes.views.contact);
 
@@ -45,3 +45,20 @@ exports = module.exports = function (app) {
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
 
 };
+
+//export internal API 
+// router.get('/api/:list/:format(export.csv|export.json)',middleware.initList,require('keystone/admin/server/api/list/download'));
+//
+//
+// exports.initList = function(req, res, next) {
+// 	console.log('req.keystone', req.keystone);
+// 	req.keystone = keystone;
+// 	req.list = keystone.list(req.params.list);
+// 	if (!req.list) {
+// 		if (req.headers.accept === 'application/json') {
+// 			return res.status(404).json({ error: 'invalid list path' });
+// 		}
+// 		req.flash('error', 'List ' + req.params.list + ' could not be found.');
+// 	}
+// 	next();
+// };

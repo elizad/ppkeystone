@@ -6,12 +6,12 @@ var Types = keystone.Field.Types;
  * ===========
  */
 
-var TeamMember = new keystone.List('TeamMember', {
+var MeetTheTeamMember = new keystone.List('MeetTheTeamMember', {
 	track: true,
 	sortable: true,
 });
 
-TeamMember.add({
+MeetTheTeamMember.add({
 	name: { type: String, required: true, initial: true },
 	isLightningTalk: { type: Boolean },
 	who: { type: Types.Relationship, ref: 'User', many: true, index: true },
@@ -20,7 +20,6 @@ TeamMember.add({
 	link: { type: Types.Url },
 });
 
-
-TeamMember.defaultColumns = 'name';
-TeamMember.register();
+MeetTheTeamMember.defaultColumns = 'name';
+MeetTheTeamMember.register();
 

@@ -6374,30 +6374,14 @@ strong {
   .tp-widget-businessinfo span {
     display: inline-block !important; } }
 
-.tp-widget-logo {
-  margin: 0 0 10px; }
-
 .tp-widget-logo img {
   width: 100%;
   max-width: 255px; }
-
-.tp-widget-logo .svg-box {
-  position: relative;
-  width: 100%;
-  max-width: 255px;
-  margin: 0 auto; }
 
 .tp-widget-logo .svg-box:before {
   content: '';
   padding-top: 11.2745%;
   display: block; }
-
-.tp-widget-logo svg {
-  position: absolute;
-  top: 0;
-  left: 7%;
-  bottom: 0;
-  right: 0; }
 
 .tp-widget-stars {
   margin: 0 0 10px;
