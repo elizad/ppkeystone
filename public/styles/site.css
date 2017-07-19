@@ -426,13 +426,13 @@ output {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
+  font-family: Campton-Medium;
+  font-weight: 300;
   line-height: 1.1;
-  color: inherit; }
+  color: #169B62; }
 
 h1, .h1 {
-  font-size: 2.5rem; }
+  font-size: 32px; }
 
 h2, .h2 {
   font-size: 2rem; }
@@ -441,7 +441,7 @@ h3, .h3 {
   font-size: 1.75rem; }
 
 h4, .h4 {
-  font-size: 1.5rem; }
+  font-size: 20px; }
 
 h5, .h5 {
   font-size: 1.25rem; }
@@ -6644,3 +6644,82 @@ footer {
   background-color: #169b62;
   padding-top: 2rem;
   color: #fff; }
+
+/*contact page*/
+.lead-capture-sidebar section {
+  margin-top: 4rem; }
+
+.media {
+  margin-top: 15px; }
+
+.media-heading {
+  font-size: 14px;
+  line-height: 23px;
+  font-family: Campton-Book;
+  margin-top: 0.5rem; }
+
+.media-box {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 10px 15px 10px 0; }
+
+.border {
+  padding: 10px;
+  border: 1px solid #169b62;
+  border-radius: 5px; }
+
+.profile-step:before {
+  content: "";
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  background: #169b62;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 11px;
+  text-align: center;
+  line-height: 20px; }
+
+.profile-step.step1:before {
+  content: "1"; }
+
+.profile-step.step2:before {
+  content: "2"; }
+
+.profile-step.step3:before {
+  content: "3"; }
+
+.contact-promise {
+  padding: 20px 35px;
+  margin: 2rem auto; }
+
+.thumbnail {
+  display: block;
+  margin-bottom: 20px;
+  line-height: 60px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+  height: 70px;
+  padding: 8px; }
+
+.profile-list {
+  margin: 35px 0; }
+
+.profile-list > li:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #92de63;
+  position: absolute;
+  left: -30px;
+  top: 8px; }
+
+.profile-list > li {
+  margin: 20px 0;
+  position: relative; }
