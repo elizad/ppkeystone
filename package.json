@@ -1,5 +1,5 @@
 {
-  "name": "Profile Pensions",
+  "name": "ProfilePensions",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -23,6 +23,8 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node keystone.js",
-    "test": "./node_modules/.bin/mocha tests/init.js tests/unit/**"
+    "integrationtest": "./node_modules/.bin/mocha tests/init.js tests/integration",
+    "test": "./node_modules/.bin/mocha tests/unit"
+
   }
 }
