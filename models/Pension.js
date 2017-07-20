@@ -21,5 +21,5 @@ Pension.add({
 });
 
 
-Pension.defaultColumns = 'name, meetup|20%, who|20%';
+Pension.defaultColumns = 'name, who|20%';
 Pension.register();

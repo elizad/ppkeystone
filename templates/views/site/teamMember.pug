@@ -3,33 +3,36 @@ extends ../../layouts/default
 
 block intro
 	.container
-		h1 page title 
+		h1 page title H1
 		h3 subtitle
 block content
 	.container: .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
 		article
 			p: a(href='/blog') &larr; back to the blog
 			hr
-			if !data.post
+			//if !data.post
 				h2 Invalid Post.
 				
 	.container
-		.col-md-3.col-xs-12
-			img
-		.col-md-5.col-xs-12
-			h2 Name Surmane
-			h4 job 
-			p desc 
-		.col-md-4.col-xs-12
-			h2 My Qualifications
-			ul.dot-list.border-bottom
-				li
-			h2 Contact 
-			i.fa.fa-phone
-			span
-			i.fa.fa-envelope
-			span
-			
+		.row
+			//if teammember.teamMemberImage.exists
+			//	.col-md-2.col-xs-4: teammember
+			//else
+			//	h2.red Description	
+			.col-md-5.col-xs-8
+				h2 Name Surmane
+				h4 job 
+				p desc 
+			.col-md-4.col-xs-12
+				h2 My Qualifications
+				ul.dot-list.border-bottom
+					li
+				h2 Contact 
+				i.fa.fa-phone
+				span
+				i.fa.fa-envelope
+				span
+				
 			
 	//.post
 	//	if data.meetTheTeamMember.image.exists

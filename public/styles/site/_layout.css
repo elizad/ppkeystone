@@ -564,6 +564,16 @@ footer{
 	color: #fff;
 }
 
+footer .footer-heading{
+	color: #ffffff;
+}
+footer a {
+	color: #ffffff;
+}
+
+p.small{
+	margin: 0;
+}
 /*contact page*/
 .lead-capture-sidebar section{
 	margin-top: 4rem;
@@ -629,6 +639,9 @@ footer{
 	transition: border 0.2s ease-in-out;
 	height: 70px;
 	padding: 8px;
+}
+a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
+	border-color: #92de63;
 }
 
 .profile-list {
