@@ -1,42 +1,66 @@
 extends ../../layouts/default
 
-
 block intro
 	.container
-		h1 page title H1
-		h3 subtitle
+		h1 page title
+		h3 page subtitle
+
 block content
-	.container: .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
-		article
-			p: a(href='/blog') &larr; back to the blog
-			hr
-			//if !data.post
-				h2 Invalid Post.
-				
 	.container
 		.row
-			//if teammember.teamMemberImage.exists
-			//	.col-md-2.col-xs-4: teammember
-			//else
-			//	h2.red Description	
-			.col-md-5.col-xs-8
-				h2 Name Surmane
-				h4 job 
+			h1 Our Leadership Team
+			p Our leadership team oversee our entire operation to make sure it's simple, effective and works for you!
+			.col-md-4
+				//teammember data
+				img
+				h3 job 
 				p desc 
-			.col-md-4.col-xs-12
-				h2 My Qualifications
-				ul.dot-list.border-bottom
-					li
-				h2 Contact 
-				i.fa.fa-phone
-				span
-				i.fa.fa-envelope
-				span
-				
-			
-	//.post
-	//	if data.meetTheTeamMember.image.exists
-	//		.image-wrap: img(src=data.meetTheTeamMember._.image.fit(750, 450)).img-responsive
-	//	!= data.meetTheTeamMember.content.full
-	    
-	    		
+			.col-md-4
+				img
+				h3 job 
+				p desc
+			.col-md-4
+				img
+				h3 job 
+				p desc
+	.container.grey
+		.row
+			h1 Our Leadership Team
+			p Our leadership team oversee our entire operation to make sure it's simple, effective and works for you!
+			.col-md-4
+				imgteammeneber category
+				h3 job 
+				p desc 
+			.col-md-4
+				img
+				h3 job 
+				p desc
+			.col-md-4
+				img
+				h3 job 
+				p desc        
+	.container
+		.row
+			.col-md-5
+				video
+			.col-md-7
+				h2 The Profile Pensions Team
+				p desc
+	.container.grey
+		.row
+			.col-md-12
+				h2 Need To Track Down Your Pensions?
+				p desc
+	section.promise
+		.container.text-center
+			h2 Our promise to you
+			div.row
+				div.col-md-4
+					svg.sprite-check-lg.svgyellow <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick" viewBox="0 0 29.98 27.81"></use>
+					span.company-features__item We are not tied to anyone and work in your best interest
+				div.col-md-4
+					svg.sprite-check-lg.svgyellow <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick" viewBox="0 0 29.98 27.81"></use>
+					span.company-features__item We are not tied to anyone and work in your best interest
+				div.col-md-4
+					svg.sprite-check-lg.svgyellow <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick" viewBox="0 0 29.98 27.81"></use>
+					span.company-features__item We are not tied to anyone and work in your best interest			

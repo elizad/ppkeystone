@@ -15,9 +15,9 @@ var Post = new keystone.List('Post', {
 	// 		callback(null, '/blog/post/' + this.key);
 	// 	}.bind(this));
 	// },
-	preview:{
-		
-	},
+	// preview: {
+    //
+	// },
 	map: { name: 'title' },
 	autokey: { path: 'slug', from: 'title', unique: true },
 });

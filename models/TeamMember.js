@@ -14,7 +14,7 @@ TeamMember.add({
 	title: { type: String, required: true },
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	author: { type: Types.Relationship, ref: 'User', index: true },
-	createdAt: { type: Date, default: Date.now },
+//	createdAt: { type: Date, default: Date.now },
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
 	teamMemberImage: { type: Types.CloudinaryImage },
 	fullname: { type: Types.Html, wysiwyg: true, height: 50 },
@@ -26,7 +26,7 @@ TeamMember.add({
 });
 
 TeamMember.schema.methods.isPublished = function () {
-	return this.state == 'published';
+	return this.state === 'published';
 };
 
 TeamMember.schema.pre('save', function (next) {

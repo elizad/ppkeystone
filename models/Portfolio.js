@@ -4,22 +4,31 @@ var Types = keystone.Field.Types;
 /* portfolio Page*/
 
 var Portfolio = new keystone.List('Portfolio', {
-	autokey: { path: 'slug', from: 'title', unique: true },
+	// preview: function (callback) {
+	// 	this.populate('category', function (err) {
+	// 		if (err) return callback(err);
+	// 		if (this.category) return callback(null, '/blog/' + this.category.key + '/' + this.key);
+	// 		callback(null, '/blog/post/' + this.key);
+	// 	}.bind(this));
+	// },
+	// preview: {
+	//
+	// },
 	map: { name: 'title' },
-	defaultSort: '-createdAt',
+	autokey: { path: 'slug', from: 'title', unique: true },
 });
 
 Portfolio.add({
 	title: { type: String, required: true },
-	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft' },
+	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	author: { type: Types.Relationship, ref: 'User', index: true },
-	createdAt: { type: Date, default: Date.now },
-	publishedAt: Date,
+	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
 	image: { type: Types.CloudinaryImage },
 	content: {
 		brief: { type: Types.Html, wysiwyg: true, height: 150 },
 		extended: { type: Types.Html, wysiwyg: true, height: 400 },
 	},
+	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
 });
 
 Portfolio.schema.virtual('content.full').get(function () {
