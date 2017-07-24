@@ -2,8 +2,8 @@ var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
 /**
- * Pension Switch as homepage template
- */
+ * team member*/
+
 var TeamMember = new keystone.List('teamMember', {
 	map: { name: 'title' },
 	autokey: { from: 'slug', path: 'title', unique: true },
@@ -22,6 +22,7 @@ TeamMember.add({
 	qualification: { type: Types.Html, wysiwyg: true, height: 50 },
 	phone: { type: Number },
 	email: { type: String, required: false },
+	category: { type: Types.Relationship, ref: 'TeamMemberCategory', many: true },
 });
 
 TeamMember.schema.methods.isPublished = function () {
