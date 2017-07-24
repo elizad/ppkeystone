@@ -35,21 +35,20 @@ var routes = {
 exports = module.exports = function (app) {
 	// Views
 	app.get('/', routes.views.index);
-	// app.get('/teammember/', routes.views.meettheteam);
-	// app.get('/teammember/post/:post', routes.views.teammember);
-	app.get('/portfolio/', routes.views.portfolio);
-	// app.get('/portfolio/post/:post', routes.views.portfolioitem);
+	app.get('/meet-the-team/', routes.views.teamMembers);
+	app.get('/meet-the-team/:teamMember', routes.views.teamMember);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
 	app.get('/gallery', routes.views.gallery);
 	app.all('/contact', routes.views.contact);
-
+	app.get('/products', routes.views.products);
+	app.get('/products/:product', routes.views.product);
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
 
 };
 
-//export internal API 
+// export internal API
 // router.get('/api/:list/:format(export.csv|export.json)',middleware.initList,require('keystone/admin/server/api/list/download'));
 //
 //

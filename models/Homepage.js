@@ -13,11 +13,11 @@ Homepage = new keystone.List('Homepage', {
 			return (this.state === 'published');
 		},
 		path: function () {
-			return '/' + this.key
+			return '/' + this.key;
 		},
 	},
-	map: {name: 'title'},
-	autokey: {from: 'slug', path: 'title', unique: true},
+	map: { name: 'title' },
+	autokey: { from: 'slug', path: 'title', unique: true },
 });
 
 Homepage.add({
@@ -41,7 +41,4 @@ Homepage.schema.virtual('content.full').get(function () {
 	return this.content.extended || this.content.brief;
 });
 
-Homepage.defaultColumns = 'title, state|20%, author|20%, publishedDate|20%';
-
 Homepage.register();
-

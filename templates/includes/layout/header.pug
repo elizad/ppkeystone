@@ -10,13 +10,13 @@
 				ul.navbar-nav.ml-auto
 					each link in navLinks
 						li(class=(section == link.key ? 'active' : null)): a.nav-link(href=link.href)= link.label
-				ul.navbar-nav
-					if user
-						if user.canAccessKeystone
-							li: a.nav-link(href='/keystone') Open Keystone
-						li: a.nav-link(href='/keystone/signout') Sign Out
-					else
-						li: a.nav-link(href='/keystone/signin') Sign In
+				//ul.navbar-nav
+				//	if user
+				//		if user.canAccessKeystone
+				//			li: a.nav-link(href='/keystone') Open Keystone
+				//		li: a.nav-link(href='/keystone/signout') Sign Out
+				//	else
+				//		li: a.nav-link(href='/keystone/signin') Sign In
 
 
 
