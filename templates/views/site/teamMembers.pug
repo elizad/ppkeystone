@@ -2,34 +2,34 @@ extends ../../layouts/default
 
 block intro
 	.container
-		h1 page title
+		h1 Meet the team 
 		h3 page subtitle
 
 block content
 	.container
-		.row
-			h1 Our Leadership Team
-			p Our leadership team oversee our entire operation to make sure it's simple, effective and works for you!
-			.col
-				if teamMembers.length
-					each teamMember in teamMembers
+		.row.text-center
+			h1.col-md-12 Our Leadership Team
+			p.col-md-12 Our leadership team oversee our entire operation to make sure it's simple, effective and works for you!
+			if teamMembers.length
+				each teamMember in teamMembers
+					.col
 						img(src=teamMember.teamMemberImage)
 						h2= teamMember.fullname
 						p= teamMember.jobtitle
-				else
-					h3.text-muted There are no team member yet.
+			else
+				h3.text-muted There are no team member yet.
 	.container.grey
-		.row
-			h1 Our Leadership Team
-			p Our leadership team oversee our entire operation to make sure it's simple, effective and works for you!
-			.col
-				if teamMembers.length
-					each teamMember in teamMembers
+		.row.text-center
+			h1.col-md-12 Our Leadership Team
+			p.col-md-12  Our leadership team oversee our entire operation to make sure it's simple, effective and works for you!
+			if teamMembers.length
+				each teamMember in teamMembers
+					.col
 						img(src=teamMember.teamMemberImage)
 						h2= teamMember.fullname
 						p= teamMember.jobtitle
-				else
-					h3.text-muted There are no team member yet.
+			else
+				h3.text-muted There are no team member yet.
 
 	.container
 		.row
@@ -38,8 +38,9 @@ block content
 			.col-md-7
 				h2 The Profile Pensions Team
 				p desc
+				
 	.container.grey
-		.row
+		.row.text-center
 			.col-md-12
 				h2 Need To Track Down Your Pensions?
 				p desc
