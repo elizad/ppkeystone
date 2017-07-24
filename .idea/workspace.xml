@@ -2,31 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf97d029-01dd-4d96-88a3-616f3edbedce" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/Product.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/Trustpilot.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/views/product.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/views/products.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/views/teamMembers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/views/trustpilot.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/helpers/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mixins/navlinks.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/views/site/people.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/views/site/product.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/views/site/products.pug" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/Portfolio.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/views/site/portfolio.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/views/site/portfolioitem.pug" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/routes/views/portfolio.js" afterPath="$PROJECT_DIR$/routes/views/teamMember.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/routes/views/teammember.js" afterPath="$PROJECT_DIR$/routes/views/people.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/views/site/teamMember.pug" afterPath="$PROJECT_DIR$/templates/views/site/teamMembers.pug" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/views/site/teamMemberitem.pug" afterPath="$PROJECT_DIR$/templates/views/site/teamMember.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keystone.js" afterPath="$PROJECT_DIR$/keystone.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Homepage.js" afterPath="$PROJECT_DIR$/models/Homepage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/TeamMember.js" afterPath="$PROJECT_DIR$/models/TeamMember.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/middleware.js" afterPath="$PROJECT_DIR$/routes/middleware.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/includes/layout/header.pug" afterPath="$PROJECT_DIR$/templates/includes/layout/header.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/site/products.pug" afterPath="$PROJECT_DIR$/templates/views/site/products.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/site/teamMembers.pug" afterPath="$PROJECT_DIR$/templates/views/site/teamMembers.pug" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -100,26 +77,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="teamMember.pug" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/views/site/teamMember.pug">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gallery.pug" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/views/site/gallery.pug">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="product.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/views/site/product.pug">
           <provider selected="true" editor-type-id="text-editor">
@@ -150,31 +107,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="teamMember.pug" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/views/site/teamMember.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="products.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/views/site/products.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="49" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="14" selection-end-column="56" />
+            <state relative-caret-position="272">
+              <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="48" column="2" lean-forward="true" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="teamMembers.pug" pinned="false" current-in-tab="false">
+      <file leaf-file-name="teamMembers.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/site/teamMembers.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="39" lean-forward="false" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+            <state relative-caret-position="408">
+              <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -229,7 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/routes/views/meet-the-teamMember.js" />
         <option value="$PROJECT_DIR$/routes/views/meet-the-team.js" />
         <option value="$PROJECT_DIR$/templates/views/site/post.pug" />
         <option value="$PROJECT_DIR$/templates/views/site/meetTheTeamMember.pug" />
@@ -270,7 +226,6 @@
         <option value="$PROJECT_DIR$/routes/views/products.js" />
         <option value="$PROJECT_DIR$/templates/views/site/product.pug" />
         <option value="$PROJECT_DIR$/routes/views/product.js" />
-        <option value="$PROJECT_DIR$/templates/views/site/products.pug" />
         <option value="$PROJECT_DIR$/templates/helpers/index.js" />
         <option value="$PROJECT_DIR$/models/TeamMember.js" />
         <option value="$PROJECT_DIR$/models/Homepage.js" />
@@ -280,6 +235,8 @@
         <option value="$PROJECT_DIR$/keystone.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/templates/views/site/teamMember.pug" />
+        <option value="$PROJECT_DIR$/templates/views/site/products.pug" />
+        <option value="$PROJECT_DIR$/templates/views/site/teamMembers.pug" />
       </list>
     </option>
   </component>
@@ -544,7 +501,7 @@
       <workItem from="1500540082032" duration="416000" />
       <workItem from="1500540778177" duration="26618000" />
       <workItem from="1500634828072" duration="13436000" />
-      <workItem from="1500877607070" duration="21056000" />
+      <workItem from="1500877607070" duration="22221000" />
     </task>
     <servers />
   </component>
@@ -554,7 +511,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="226204000" />
+    <option name="totallyTimeSpent" value="227369000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -926,22 +883,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/views/site/teamMembers.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="39" lean-forward="false" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/views/site/products.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="49" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="14" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/site/index.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="67">
@@ -966,34 +907,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="48" column="2" lean-forward="true" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/views/site/gallery.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/site/product.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="6" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/views/teamMembers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1006,6 +923,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/views/teamMembers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="48" column="2" lean-forward="true" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/views/site/products.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/views/site/teamMember.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/views/site/gallery.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/views/teamMember.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1014,10 +971,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/views/site/teamMember.pug">
+    <entry file="file://$PROJECT_DIR$/templates/views/site/teamMembers.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        <state relative-caret-position="408">
+          <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
           <folding />
         </state>
       </provider>

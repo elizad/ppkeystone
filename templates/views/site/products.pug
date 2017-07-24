@@ -8,7 +8,7 @@ block content
 				if products.length
 					each product in products
 						h2= product.title
-						a(href='http://localhost:3000/products/'+product.slug)
+						a(href='http://localhost:3000/products'+product.slug)
 							span= product.title
 					
 				else

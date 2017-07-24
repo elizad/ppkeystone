@@ -10,35 +10,27 @@ block content
 		.row
 			h1 Our Leadership Team
 			p Our leadership team oversee our entire operation to make sure it's simple, effective and works for you!
-			.col-md-4
-				//teammember data
-				img
-				h3 job 
-				p desc 
-			.col-md-4
-				img
-				h3 job 
-				p desc
-			.col-md-4
-				img
-				h3 job 
-				p desc
+			.col
+				if teamMembers.length
+					each teamMember in teamMembers
+						img(src=teamMember.teamMemberImage)
+						h2= teamMember.fullname
+						p= teamMember.jobtitle
+				else
+					h3.text-muted There are no team member yet.
 	.container.grey
 		.row
 			h1 Our Leadership Team
 			p Our leadership team oversee our entire operation to make sure it's simple, effective and works for you!
-			.col-md-4
-				imgteammeneber category
-				h3 job 
-				p desc 
-			.col-md-4
-				img
-				h3 job 
-				p desc
-			.col-md-4
-				img
-				h3 job 
-				p desc        
+			.col
+				if teamMembers.length
+					each teamMember in teamMembers
+						img(src=teamMember.teamMemberImage)
+						h2= teamMember.fullname
+						p= teamMember.jobtitle
+				else
+					h3.text-muted There are no team member yet.
+
 	.container
 		.row
 			.col-md-5
