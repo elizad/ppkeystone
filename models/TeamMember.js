@@ -13,14 +13,14 @@ TeamMember.add({
 	title: { type: String, required: true },
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	author: { type: Types.Relationship, ref: 'User', index: true },
-	createdAt: { type: Date, default: Date.now },
+	createdAt: { type: Types.Date, default: Date.now },
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
-	teamMemberImage: { type: Types.CloudinaryImage },
+	teamMemberImage: { type: Types.CloudinaryImage, publicID: 'slug' }
 	fullname: { type: String, required: false },
 	jobtitle: { type: String, required: false },
 	description: { type: Types.Html, wysiwyg: false, height: 150 },
 	qualification: { type: Types.Html, wysiwyg: true, height: 50 },
-	phone: { type: Number },
+	phone: { type: Types.Number },
 	email: { type: String, required: false },
 });
 

@@ -2,20 +2,19 @@ extends ../../layouts/default
 
 
 block intro
-	.container.green
+	section.intro.green.text-center
 		h1= data.teamMember.title
-		
-	.container
-		span: a(href='/meet-the-team') &larr; Meet the team
-		span   /  
-		span= data.teamMember.title
-		br
+		h3 
+	ul.breadcrumb
+		li: a(href='/meet-the-team') &larr; Meet the team
+		li   /  
+		li= data.teamMember.title
 block content
-	.container
+	.container.p3rem
 		.row
 			.col-md-2.col-xs-4
 				img(src=data.teamMember.teamMemberImage)
-			.col-md-5.col-xs-8
+			.col-md-5.col-xs-8.border-right
 				h2= data.teamMember.fullname
 				p= data.teamMember.jobtitle
 				p= data.teamMember.description
@@ -24,12 +23,12 @@ block content
 				ul.dot-list.border-bottom
 					li= data.teamMember.qualification
 				h2 Contact 
-				i.fa.fa-phone 
+				i.fa.fa-phone
 				span= data.teamMember.phone
 				i.fa.fa-envelope
 				span=data.teamMember.mail
-				
-			
+
+
 	//.post
 	//	if data.meetTheTeamMember.image.exists
 	//		.image-wrap: img(src=data.meetTheTeamMember._.image.fit(750, 450)).img-responsive

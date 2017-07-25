@@ -401,11 +401,7 @@ a.circle.img {
 	margin-left: 7rem;
 }
 
-.vertical-align {
-	position: relative;
-	top: 50%;
-	transform: perspective(1px) translateY(-50%);
-}
+
 
 .cap {
 	text-transform: capitalize;
@@ -690,44 +686,44 @@ li.menu-item-has-children .dropdownsub-toggle.checked:after {
 	border-radius: 6px 0 6px 6px;
 }
 
-ul.breadcrumbs {
-	list-style: none;
-	margin: 0;
-	display: -webkit-inline-flex;
-	display: -moz-inline-box;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-moz-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	padding: 1.5rem;
-}
+/*ul.breadcrumbs {*/
+	/*list-style: none;*/
+	/*margin: 0;*/
+	/*display: -webkit-inline-flex;*/
+	/*display: -moz-inline-box;*/
+	/*display: -ms-inline-flexbox;*/
+	/*display: inline-flex;*/
+	/*-webkit-box-align: center;*/
+	/*-webkit-align-items: center;*/
+	/*-moz-box-align: center;*/
+	/*-ms-flex-align: center;*/
+	/*align-items: center;*/
+	/*padding: 1.5rem;*/
+/*}*/
 
-ul.breadcrumbs li {
-	margin: 0;
-	display: inline-block;
-	font-size: 14px;
-	position: relative;
-	padding: 0 10px 0 10px;
-	height: 36px;
-	line-height: 36px;
-}
+/*ul.breadcrumbs li {*/
+	/*margin: 0;*/
+	/*display: inline-block;*/
+	/*font-size: 14px;*/
+	/*position: relative;*/
+	/*padding: 0 10px 0 10px;*/
+	/*height: 36px;*/
+	/*line-height: 36px;*/
+/*}*/
 
-ul.breadcrumbs li:after {
-	display: block;
-	content: "\f105";
-	position: absolute;
-	top: 0;
-	font-family: FontAwesome;
-	margin: 0 -10px;
-}
+/*ul.breadcrumbs li:after {*/
+	/*display: block;*/
+	/*content: "\f105";*/
+	/*position: absolute;*/
+	/*top: 0;*/
+	/*font-family: FontAwesome;*/
+	/*margin: 0 -10px;*/
+/*}*/
 
-ul.breadcrumbs li:first-child {
-	padding-right: 0;
-	color: #fbfbfb;
-}
+/*ul.breadcrumbs li:first-child {*/
+	/*padding-right: 0;*/
+	/*color: #fbfbfb;*/
+/*}*/
 
 #primary {
 	padding: 4rem 0;
@@ -2033,34 +2029,7 @@ button > i.fa.fa-envelope:hover {
 	background-color: #000 !important;
 }
 
-/* centered columns styles bootstrap customize */
-.row-centered {
-	text-align: center;
-}
 
-.col-centered {
-	display: inline-block;
-	float: none;
-	/* reset the text-align */
-	text-align: left;
-	/* inline-block space fix */
-	margin-right: -4px;
-}
-
-.col-fixed {
-	/* custom width */
-	width: 320px;
-}
-
-.col-min {
-	/* custom min width */
-	min-width: 320px;
-}
-
-.col-max {
-	/* custom max width */
-	max-width: 320px;
-}
 
 .sidebar.column {
 	width: 25%;
