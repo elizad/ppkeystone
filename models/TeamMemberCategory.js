@@ -11,10 +11,10 @@ var TeamMemberCategory = new keystone.List('TeamMemberCategory', {
 
 TeamMemberCategory.add({
 	name: { type: Types.Text, required: true, index: true, initial: true },
-	title: { type: Types.Text },
+	title: { type: Types.Text, initial: true },
 	description: { type: Types.Markdown, initial: true },
-	video: { type: Types.Text },
-	slug: { type: Types.Text },
+	video: { type: Types.Text, initial: true },
+	slug: { type: Types.Text, initial: true },
 	isVisible: { type: Boolean, initial: true, index: true },
 });
 
