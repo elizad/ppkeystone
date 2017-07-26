@@ -10,7 +10,10 @@ keystone.init({
 });
 keystone.import('models');
 var post = keystone.list('Post');
-// console.log(post);
+var teammember = keystone.list('teamMember');
+var pension = keystone.list('Pension');
+
+ // console.log(pension);
 chai.should();
 
 // keystone.set('locals', {
