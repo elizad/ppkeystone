@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf97d029-01dd-4d96-88a3-616f3edbedce" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/Enquiry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/Gallery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/Homepage.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/Page.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/Pension.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/Post.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/PostCategory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/Product.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/TeamMember.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/Trustpilot.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/User.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/init.js" afterPath="$PROJECT_DIR$/testsinit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keystone.js" afterPath="$PROJECT_DIR$/keystone.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/integration/routes/posttest.js" afterPath="$PROJECT_DIR$/tests/integration/routes/posttest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/integration/routes/test.js" afterPath="$PROJECT_DIR$/tests/integration/routes/test.js" />
-    </list>
+    <list default="true" id="cf97d029-01dd-4d96-88a3-616f3edbedce" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -104,16 +86,6 @@
       </file>
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/test.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -514,14 +486,11 @@
       <workItem from="1500540778177" duration="26618000" />
       <workItem from="1500634828072" duration="13436000" />
       <workItem from="1500877607070" duration="23547000" />
-      <workItem from="1501051058998" duration="18888000" />
+      <workItem from="1501051058998" duration="19200000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 11h 43m 06s.xml">
-      <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
     <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 12h 26m 58s.xml">
       <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
     </history-entry>
@@ -549,9 +518,12 @@
     <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 16h 15m 46s.xml">
       <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
     </history-entry>
+    <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 16h 29m 47s.xml">
+      <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="258502000" />
+    <option name="totallyTimeSpent" value="258814000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -570,7 +542,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284553" sideWeight="0.5029762" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4813008" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22185062" sideWeight="0.49702382" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22185062" sideWeight="0.49702382" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24969843" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2251951" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
