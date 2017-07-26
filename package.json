@@ -23,8 +23,7 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node keystone.js",
-    "integrationtest": "./node_modules/.bin/mocha tests/init.js tests/integration",
-    "test": "./node_modules/.bin/mocha tests/unit"
-
+    "integrationtest": "./node_modules/.bin/mocha testsinit.js tests/integration/**/*.js",
+    "test": "./node_modules/.bin/mocha tests/unit/**/*.js"
   }
 }

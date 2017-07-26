@@ -5,12 +5,12 @@ var keystone = require('keystone');
 var chai = require('chai');
 console.log('in init file');
 keystone.init({
-	'name': 'Profile Pension',
+	'name': 'ProfilePension',
 	's3 config': {},
 });
 keystone.import('models');
 var post = keystone.list('Post');
-console.log(post);
+// console.log(post);
 chai.should();
 
 // keystone.set('locals', {

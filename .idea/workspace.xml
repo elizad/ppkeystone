@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf97d029-01dd-4d96-88a3-616f3edbedce" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/Enquiry.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/Gallery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/Homepage.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/Page.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/Pension.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/Post.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/PostCategory.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/Product.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/TeamMember.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/Trustpilot.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/models/User.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/init.js" afterPath="$PROJECT_DIR$/testsinit.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/init.js" afterPath="$PROJECT_DIR$/tests/init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keystone.js" afterPath="$PROJECT_DIR$/keystone.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/integration/routes/posttest.js" afterPath="$PROJECT_DIR$/tests/integration/routes/posttest.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/integration/routes/test.js" afterPath="$PROJECT_DIR$/tests/integration/routes/test.js" />
     </list>
@@ -22,48 +35,8 @@
       <file leaf-file-name="posttest.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/integration/routes/posttest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="26" column="52" lean-forward="false" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/keystone/lib/core/list.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/integration/routes/test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="56" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Page.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/models/Page.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Post.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/Post.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+            <state relative-caret-position="357">
+              <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -72,28 +45,68 @@
       <file leaf-file-name="keystone.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/keystone.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="27" />
+            <state relative-caret-position="34">
+              <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="connection.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/connection.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="636">
-              <caret line="352" column="22" lean-forward="false" selection-start-line="352" selection-start-column="22" selection-end-line="352" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="init.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/init.js">
+      <file leaf-file-name="testsinit.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testsinit.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/integration/routes/test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="952">
+              <caret line="56" column="14" lean-forward="false" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".eslintignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.eslintignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".eslintrc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.eslintrc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -109,11 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="81" />
+              <caret line="25" column="55" lean-forward="false" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -177,8 +190,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tests/unit/routes/test.js" />
-        <option value="$PROJECT_DIR$/models/Enquiry.js" />
         <option value="$PROJECT_DIR$/client/sorting.js" />
         <option value="$PROJECT_DIR$/tests/unit/testsorting.js" />
         <option value="$PROJECT_DIR$/templates/views/site/contacttest.pug" />
@@ -210,7 +221,6 @@
         <option value="$PROJECT_DIR$/templates/helpers/index.js" />
         <option value="$PROJECT_DIR$/models/Homepage.js" />
         <option value="$PROJECT_DIR$/routes/middleware.js" />
-        <option value="$PROJECT_DIR$/keystone.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/public/styles/site/tp css.css" />
         <option value="$PROJECT_DIR$/public/styles/site/test.css" />
@@ -224,10 +234,13 @@
         <option value="$PROJECT_DIR$/routes/views/product.js" />
         <option value="$PROJECT_DIR$/routes/views/teamMember.js" />
         <option value="$PROJECT_DIR$/models/TeamMember.js" />
-        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/tests/integration/routes/test.js" />
-        <option value="$PROJECT_DIR$/tests/integration/routes/posttest.js" />
+        <option value="$PROJECT_DIR$/keystone.js" />
         <option value="$PROJECT_DIR$/tests/init.js" />
+        <option value="$PROJECT_DIR$/tests/integration/routes/posttest.js" />
+        <option value="$PROJECT_DIR$/init.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -302,12 +315,20 @@
             <path>
               <item name="ppkeystone" type="b2602c69:ProjectViewProjectNode" />
               <item name="ppkeystone" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ppkeystone" type="b2602c69:ProjectViewProjectNode" />
               <item name="ppkeystone" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="integration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ppkeystone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ppkeystone" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="integration" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -336,11 +357,11 @@
       <recent name="C:\xampp\htdocs\ppkeystone\tests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ppkeystone" />
       <recent name="C:\xampp\htdocs\ppkeystone\tests\unit\models" />
       <recent name="C:\xampp\htdocs\ppkeystone\public" />
       <recent name="C:\xampp\htdocs\ppkeystone\public\styles" />
       <recent name="C:\xampp\htdocs\ppkeystone\templates\views\site" />
-      <recent name="C:\xampp\htdocs\ppkeystone\templates\views\site\" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -493,44 +514,44 @@
       <workItem from="1500540778177" duration="26618000" />
       <workItem from="1500634828072" duration="13436000" />
       <workItem from="1500877607070" duration="23547000" />
-      <workItem from="1501051058998" duration="10737000" />
+      <workItem from="1501051058998" duration="18888000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 11h 39m 13s.xml">
-      <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 11h 39m 30s.xml">
-      <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 11h 39m 44s.xml">
-      <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 11h 40m 31s.xml">
-      <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 11h 41m 40s.xml">
-      <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 11h 42m 24s.xml">
-      <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 11h 42m 31s.xml">
-      <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 11h 42m 45s.xml">
-      <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 11h 43m 01s.xml">
-      <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
     <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 11h 43m 06s.xml">
+      <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 12h 26m 58s.xml">
+      <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 15h 06m 30s.xml">
+      <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 15h 06m 35s.xml">
+      <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 16h 13m 22s.xml">
+      <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 16h 14m 07s.xml">
+      <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 16h 14m 25s.xml">
+      <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 16h 15m 01s.xml">
+      <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 16h 15m 05s.xml">
+      <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="tests_integration_routes_posttest_js - 2017.07.26 at 16h 15m 46s.xml">
       <configuration name="tests\integration\routes\posttest.js" configurationId="mocha-javascript-test-runner" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250351000" />
+    <option name="totallyTimeSpent" value="258502000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -572,17 +593,17 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284553" sideWeight="0.5029762" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22185062" sideWeight="0.49702382" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284553" sideWeight="0.49702382" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22561692" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.283997" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2251951" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2291918" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4813008" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24969843" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -598,28 +619,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/keystone/fields/types/file/FileType.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/views/people.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mixins/list.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/views/site/portfolioitem.pug" />
     <entry file="file://$PROJECT_DIR$/templates/views/site/portfolio.pug" />
     <entry file="file://$PROJECT_DIR$/node_modules/keystone/admin/client/App/screens/List/components/Filtering/ListFiltersAddForm.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -676,6 +675,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -891,34 +891,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/integration/routes/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="56" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keystone.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/keystone/lib/core/list.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/integration/routes/posttest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="26" column="52" lean-forward="false" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -931,18 +907,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="81" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/init.js">
+    <entry file="file://$PROJECT_DIR$/.eslintrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/integration/routes/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="56" column="14" lean-forward="false" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keystone.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/integration/routes/posttest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testsinit.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="55" lean-forward="false" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
           <folding />
         </state>
       </provider>
