@@ -18,9 +18,10 @@ exports = module.exports = function (req, res) {
 	view.on('init', function (next) {
 
 		var q = keystone.list('teamMember').model.findOne({
-			state: 'published',
+			// state: 'published',
 			slug: locals.filters.teamMember,
-		}).populate('author categories');
+		});
+			// .populate('author categories');
 
 		q.exec(function (err, result) {
 			locals.data.teamMember = result;

@@ -15,13 +15,13 @@ TeamMember.add({
 	author: { type: Types.Relationship, ref: 'User', index: true },
 	createdAt: { type: Types.Date, default: Date.now },
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
-	teamMemberImage: { type: Types.CloudinaryImage, publicID: 'slug' }
-	fullname: { type: String, required: false },
-	jobtitle: { type: String, required: false },
+	teamMemberImage: { type: Types.CloudinaryImage, publicID: 'slug' },
+	fullname: { type: String },
+	jobtitle: { type: String },
 	description: { type: Types.Html, wysiwyg: false, height: 150 },
 	qualification: { type: Types.Html, wysiwyg: true, height: 50 },
 	phone: { type: Types.Number },
-	email: { type: String, required: false },
+	email: { type: String },
 });
 
 TeamMember.schema.methods.isPublished = function () {

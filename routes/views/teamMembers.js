@@ -13,3 +13,4 @@ exports = module.exports = function (req, res) {
 	// Render View
 	view.render('site/teamMembers');
 };
+

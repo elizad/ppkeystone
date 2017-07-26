@@ -10,15 +10,13 @@ var keystone = require('keystone');
 // and documentation.
 
 keystone.init({
-	'name': 'Profile Pension',
-	'brand': 'Profile Pension',
-
+	'name': 'ProfilePension',
+	'brand': 'ProfilePension',
 	'sass': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'pug',
-
 	'emails': 'templates/emails',
 
 	'auto update': true,
