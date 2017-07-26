@@ -5,8 +5,12 @@ var keystone = require('keystone');
 var chai = require('chai');
 
 keystone.init({
+	'name': 'profilepensions',
+	's3 config': {},
 });
 keystone.import('../models');
+
+chai.should();
 
 keystone.set('locals', {
 	_: require('underscore'),
