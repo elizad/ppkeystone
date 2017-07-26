@@ -55,13 +55,6 @@ describe('', function () {
 				done();
 			});
 	});
-	it('Make sure if pension page exists', function (done) {
-		chai.request('http://localhost:3000')
-			.get('/pension-types/defined-contribution-pension/')
-			.end(function (err, res) {
-				res.should.have.status(200);
-				done();
-			});
-	});
+;
 
 });

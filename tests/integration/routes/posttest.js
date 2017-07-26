@@ -1,9 +1,28 @@
 var keystone = require('keystone');
 var chai = require('chai');
-var dbURI = process.env.MONGO_URL;
+var dbURI = 'mongodb://localhost/profile-pension';
+// require('dotenv').load();
+//
+// keystone.init({
+// 	'name': 'Profile Pension',
+// 	's3 config': {},
+// });
+// keystone.import('../../../models');
+chai.should();
 // CHANGE THIS AS NEEDED
 
 describe('Posts', function () {
+	// before(function (done) {
+	// 	/*keystone.init({
+	// 		'name': 'Profile Pension',
+	// 		's3 config': {},
+	// 	});*/
+	// 	//keystone.import('../../models');
+	// 	//var post = keystone.list('Post');
+	// 	chai.should();
+	// 	done();
+	// });
+
 	beforeEach(function (done) {
 		if (keystone.mongoose.connection.db) return done();
 		console.log('Connecting to ' + dbURI);
@@ -16,11 +35,12 @@ describe('Posts', function () {
 	});
 
 	it('should be a Mongoose Model', function (done) {
-		Post = keystone.list('Post');
+		post = keystone.list('Post');
+		console.log(posts)
 
-		Post.should.be.a('Object');
-		Post.should.have.property('model').be.a('Function');
-		Post.should.have.property('schema').be.a('Object');
+		post.should.be.a('Object');
+		post.should.have.property('model').be.a('Function');
+		post.should.have.property('schema').be.a('Object');
 
 		done();
 	});
