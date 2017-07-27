@@ -4024,20 +4024,5 @@ body.error404 .ui.grid.container .logo svg .logo-text {
 	}
 }
 
-#cookie-law {
-	position: relative;
-	color: #fff;
-	background: #169b62;
-	display: block;
-	z-index: 99999999;
-	width: 100%;
-	text-align: center;
-	top: 0;
-	padding: 5px;
-}
-
-#cookie-law a, a.close-cookie-banner > i.fa.fa-check {
-	color: #fff;
-}
 
 
