@@ -9,7 +9,7 @@ html
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		//- Appstore smart banner
 		meta(name="apple-itunes-app", content="app-id=000111222")
-		
+
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 		//meta/(name='webcrawlers', content='all')/
 		meta(name="author" content="Profile Pensions")
@@ -46,12 +46,62 @@ html
 		if user && user.canAccessKeystone
 			link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
 
-		//- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
-		//- Safely remove this block if you are not targeting IE8
+		//-  Add Modernizr for IE Safely remove this block if you are not targeting IE8
 		//-[if lt IE 9]
-			script(src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js")
-			script(src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js")
+			script(src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js")
 		//-[endif]
+		script(type="text/javascript").
+			// Creare's 'Implied Consent' Cookie Banner v:2.4
+			var dropCookie = true;
+			var cookieDuration = 14;
+			var cookieName = 'complianceCookie';
+			var cookieValue = 'on';
+			function createDiv() {
+				var bodytag = document.getElementsByClassName('navbar navbar-default navbar-fixed-top')[0];
+				var div = document.createElement('div');
+				div.setAttribute('id', 'cookie-law');
+				div.innerHTML = '<p>By continuing you agree to our use of cookies. <a href="/privacy-policy/" rel="nofollow" title="Privacy &amp; Cookies Policy"> Learn more</a> | <a class="close-cookie-banner" href="javascript:void(0);" onclick="removeMe();">Got it <i class="fa fa-check" aria-hidden="true"></i> </a></p>';
+				// Be advised the Close Banner 'X' link requires jQuery
+				// bodytag.appendChild(div); // Adds the Cookie Banner just before the closing </body> tag
+				// or
+				bodytag.insertBefore(div, bodytag.firstChild);
+				document.getElementsByTagName('body')[0].className += ' cookiebanner'; //Adds a class tothe <body> tag when the banner is visible
+				createCookie(window.cookieName, window.cookieValue, window.cookieDuration);
+				// Create the cookie
+			}
+			function createCookie(name, value, days) {
+				if (days) {
+					var date = new Date();
+					date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+					var expires = "; expires=" + date.toGMTString();
+				}
+				else var expires = "";
+				if (window.dropCookie) {
+					document.cookie = name + "=" + value + expires + "; path=/";
+				}
+			}
+			function checkCookie(name) {
+				var nameEQ = name + "=";
+				var ca = document.cookie.split(';');
+				for (var i = 0; i < ca.length; i++) {
+					var c = ca[i];
+					while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+					if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+				}
+				return null;
+			}
+			function eraseCookie(name) {
+				createCookie(name, "", -1);
+			}
+			window.onload = function () {
+				if (checkCookie(window.cookieName) != window.cookieValue) {
+					createDiv();
+				}
+			}
+			function removeMe() {
+				var element = document.getElementById('cookie-law');
+				element.parentNode.removeChild(element);
+			}
 
 		//- Include template-specific stylesheets by extending the css block
 		block css
@@ -74,7 +124,7 @@ html
 	body
 
 		//- HEADER
-		include ../includes/layout/header	
+		include ../includes/layout/header
 
 		//- BODY
 		#body
