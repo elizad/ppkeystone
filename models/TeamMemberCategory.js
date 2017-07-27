@@ -4,20 +4,22 @@ var Types = keystone.Field.Types;
  * team member categoory
  */
 
-var TeamMemberCategory = new keystone.List('TeamMemberCategory', {
+var TeamMemberCategory = new keystone.List('teamMemberCategory', {
 	sortable: true,
-	autokey: { path: 'slug', from: 'name', unique: true },
+	autokey: { from: 'name', path: 'key', unique: true },
 });
 
 TeamMemberCategory.add({
-	name: { type: Types.Text, required: true, index: true, initial: true },
-	title: { type: Types.Text, initial: true },
-	description: { type: Types.Markdown, initial: true },
-	video: { type: Types.Text, initial: true },
-	slug: { type: Types.Text, initial: true },
-	isVisible: { type: Boolean, initial: true, index: true },
+	name: { type: String },
+	description: { type: Types.Markdown },
+	video: { type: Types.Text },
+	slug: { type: String },
+	isVisible: { type: Boolean },
 });
 
-TeamMemberCategory.relationship({ path: 'teamcategory', ref: 'TeamMember', refPath: 'category' });
+TeamMemberCategory.defaultSort = 'name';
+
+// TeamMemberCategory.relationship({ path: 'teamcategory', ref: 'TeamMember', refPath: 'category' });
+TeamMemberCategory.relationship({ ref: 'TeamMember', refPath: 'categories' });
 
 TeamMemberCategory.register();

@@ -7,6 +7,7 @@ var Types = keystone.Field.Types;
 var TeamMember = new keystone.List('teamMember', {
 	map: { name: 'title' },
 	autokey: { from: 'slug', path: 'title', unique: true },
+	plural: 'TeamMembers',
 });
 
 TeamMember.add({
@@ -19,9 +20,13 @@ TeamMember.add({
 	fullname: { type: String },
 	jobtitle: { type: String },
 	description: { type: Types.Html, wysiwyg: false, height: 150 },
-	qualification: { type: Types.Html, wysiwyg: true, height: 50 },
+	qualification: { type: String },
 	phone: { type: Types.Number },
 	email: { type: String },
+});
+
+TeamMember.schema.virtual('url').get(function () {
+	return '/meet-the-team/' + this.slug;
 });
 
 TeamMember.schema.methods.isPublished = function () {
@@ -35,7 +40,7 @@ TeamMember.schema.pre('save', function (next) {
 	next();
 });
 
-//  TeamMember.defaultColumns = 'title, state|20%, author|20%, publishedDate|20%';
+TeamMember.defaultColumns = 'title, state|20%, author|20%, publishedDate|20%';
 
 TeamMember.register();
 

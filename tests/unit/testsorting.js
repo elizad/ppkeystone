@@ -1,4 +1,4 @@
-var sorting = require('../../client/sorting');
+var sorting = require('../../lib/sorting');
 var chai = require('chai');
 // var should = chai.should;
 var expect = chai.expect;

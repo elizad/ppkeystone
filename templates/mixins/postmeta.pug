@@ -1,0 +1,38 @@
+	// meta(property='og:url', content='#{pageUrl} == '' ? 'a' : 'c'')
+
+if data.post
+		if data.post.meta.title
+			title=data.post.meta.title
+			meta(property='og:title', content=data.post.meta.title)
+			meta(name="twitter:title", content=data.post.meta.title)
+		else
+			title= data.post.title
+			meta(property='og:title', content=data.post.meta.title)
+			meta(name="twitter:title", content=data.post.title)
+else
+	if data.post.meta.description
+		meta(name="description", content=data.post.meta.description)
+		meta(property="og:description" , content=data.post.meta.description)
+		meta(name="twitter:description", content=data.post.meta.description)
+	else
+		meta(name="description", content= data.post.content.brief)
+		meta(property="og:description" , content=data.post.content.brief)
+		meta(name="twitter:description", content=data.post.content.brief)
+	if
+		meta(property="og:type", content = "article")
+		meta(name="twitter:card" , content="summary_large_image")
+		meta(property="og:image", content=data.post.image.url)
+		meta(name="twitter:image:src" content=data.post.image.url)
+		meta(property="og:url" , content= data.post.fullPostUrl)
+		meta(name="twitter:url" content=data.post.fullPostUrl)
+		meta(property="article:published_time", content= data.post.publishedDate)
+	foreach data.post.categories{
+		meta(property="article:tag" content="name")
+	end each
+		meta(name="keywords" content="{{# each data.post.categories}}{{name}}, {{/each}}" )
+else if 
+	<title>Profile Pension </title>
+	meta(name="description" content="general description")
+		meta(property="og:image" content="{{baseUrl}}/images/logo.png")
+	meta(name="twitter:image:src" content="{{baseUrl}}/images/logo.png")
+	meta(name="keywords" content="Node.js, development, api")

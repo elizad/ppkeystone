@@ -1,17 +1,16 @@
 var keystone = require('keystone');
 
 exports = module.exports = function (req, res) {
-
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 
 	// Set locals
 	locals.section = 'meet-the-team';
 	locals.filters = {
-		post: req.params.teamMember,
+		teamMember: req.params.teamMember,
 	};
 	locals.data = {
-		posts: [],
+		teamMembers: [],
 	};
 
 	// Load the current post

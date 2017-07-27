@@ -8,13 +8,14 @@ var Types = keystone.Field.Types;
  */
 
 var Post = new keystone.List('Post', {
-	// preview: function (callback) {
-	// 	this.populate('category', function (err) {
-	// 		if (err) return callback(err);
-	// 		if (this.category) return callback(null, '/blog/' + this.category.key + '/' + this.key);
-	// 		callback(null, '/blog/post/' + this.key);
-	// 	}.bind(this));
-	// },
+	// preview: '/blog/post/:key',
+	preview: function (callback) {
+		this.populate('category', function (err) {
+			if (err) return callback(err);
+			if (this.category) return callback(null, '/blog/' + this.category.key + '/' + this.key);
+			callback(null, '/blog/post/' + this.key);
+		}.bind(this));
+	},
 	// preview: {
     //
 	// },
@@ -31,6 +32,10 @@ Post.add({
 	content: {
 		brief: { type: Types.Html, wysiwyg: true, height: 150 },
 		extended: { type: Types.Html, wysiwyg: true, height: 400 },
+	},
+	meta: {
+		title: { type: String },
+		description: { type: String },
 	},
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
 });

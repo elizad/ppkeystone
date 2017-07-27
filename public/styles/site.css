@@ -6292,6 +6292,11 @@ body {
 #body {
   margin-top: 86px; }
 
+.btn-link.btn-view {
+  color: #1d1e1f; }
+  .btn-link.btn-view:hover {
+    color: #00a160; }
+
 ul {
   list-style: none; }
 

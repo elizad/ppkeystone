@@ -29,9 +29,10 @@ block content
 				if teamMembers.length
 					each teamMember in teamMembers
 						.col.col-md-3
-							a(href='http://localhost:3000/meet-the-team/'+teamMember.title)
+							a(href='http://localhost:3000'+teamMember.url)
+							console.log(teamMember.url)
 								h2= teamMember.fullname
-							img(src=teamMember.teamMemberImage)
+							//img(src=teamMember.teamMemberImage)
 								
 							p= teamMember.jobtitle
 				else
