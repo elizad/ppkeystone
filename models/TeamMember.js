@@ -24,7 +24,7 @@ TeamMember.add({
 	qualification: { type: String },
 	phone: { type: Types.Number },
 	email: { type: String },
-	categories: { type: Types.Relationship, ref: 'teamMemberCategory', many: true },
+	teamcategories: { type: Types.Relationship, ref: 'teamMemberCategory', many: true },
 });
 
 TeamMember.schema.methods.isPublished = function () {

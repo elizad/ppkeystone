@@ -8,6 +8,15 @@ block intro
 		li: a(href='/meet-the-team') Meet the team
 
 block content
+	section
+	//console.log( data.categorytitle)
+
+	//if data.categories.length
+		.categories
+			h2 Categories
+			hr
+
+		
 	section.p3rem
 		.container
 			.row.text-center.roe-centered
@@ -21,6 +30,8 @@ block content
 							a(href='http://localhost:3000/meet-the-team/' + teamMember.slug)
 								h2= teamMember.title
 							p= teamMember.jobtitle
+							p= teamMember.teamcategories
+							p.green= data.categorytitle
 				else
 					h3.text-muted There are no team member yet.
 	section.grey.p3rem
@@ -36,6 +47,8 @@ block content
 							a(href='http://localhost:3000/meet-the-team/' + teamMember.slug)
 								h2= teamMember.title
 							p= teamMember.jobtitle
+							
+
 				else
 					h3.text-muted There are no team member yet.
 	section.p3rem
