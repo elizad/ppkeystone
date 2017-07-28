@@ -6,8 +6,9 @@ var Types = keystone.Field.Types;
  */
 var TeamMember = new keystone.List('teamMember', {
 	map: { name: 'title' },
-	autokey: { from: 'slug', path: 'title', unique: true },
+	singular: 'TeamMember',
 	plural: 'TeamMembers',
+	autokey: { path: 'slug', from: 'title', unique: true },
 });
 
 TeamMember.add({

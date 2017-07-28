@@ -6,7 +6,7 @@ var Types = keystone.Field.Types;
 
 var TeamMemberCategory = new keystone.List('teamMemberCategory', {
 	sortable: true,
-	autokey: { from: 'name', path: 'key', unique: true },
+	autokey: { from: 'slug', path: 'key', unique: true },
 });
 
 TeamMemberCategory.add({

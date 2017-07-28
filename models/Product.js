@@ -8,6 +8,8 @@ var Product = new keystone.List('Product', {
 	autokey: { path: 'slug', from: 'title', unique: true },
 });
 
+
+
 Product.add({
 	title: { type: String, requried: true },
 	price: { type: Number },

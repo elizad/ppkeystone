@@ -6,12 +6,12 @@ exports = module.exports = function (req, res) {
 	var locals = res.locals;
 
 	// Set locals
-	locals.section = 'people';
+	locals.section = 'pension';
 
 	// Load the people by sortOrder
-	view.query('peoples', keystone.list('People').model.find().sort('sortOrder'));
+	view.query('pensions', keystone.list('Pension').model.find().sort('sortOrder'));
 
 	// Render the view
-	view.render('site/people');
+	view.render('site/pension');
 
 };

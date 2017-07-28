@@ -3,7 +3,7 @@ extends ../../layouts/default
 block intro
 	section.intro.green.text-center
 		h1 Meet the team 
-		h3 page subtitle
+		h3 Over 120 people helping you make sense of your pension
 	ul.breadcrumb
 		li: a(href='/meet-the-team') Meet the team
 
@@ -16,8 +16,10 @@ block content
 				if teamMembers.length
 					each teamMember in teamMembers
 						.col.col-centered.text-center
-							img(src=teamMember.teamMemberImage)
-							h2= teamMember.fullname
+							span
+								img.img-responsive(src=teamMember.teamMemberImage)
+							a(href='http://localhost:3000/meet-the-team/' + teamMember.slug)
+								h2= teamMember.title
 							p= teamMember.jobtitle
 				else
 					h3.text-muted There are no team member yet.
@@ -29,11 +31,10 @@ block content
 				if teamMembers.length
 					each teamMember in teamMembers
 						.col.col-md-3
-							a(href='http://localhost:3000'+teamMember.url)
-							console.log(teamMember.url)
-								h2= teamMember.fullname
-							//img(src=teamMember.teamMemberImage)
-								
+							span
+								img.img-responsive(src=teamMember.teamMemberImage)
+							a(href='http://localhost:3000/meet-the-team/' + teamMember.slug)
+								h2= teamMember.title
 							p= teamMember.jobtitle
 				else
 					h3.text-muted There are no team member yet.

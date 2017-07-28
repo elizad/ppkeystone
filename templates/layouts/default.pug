@@ -1,10 +1,12 @@
 include ../mixins/flash-messages
 include ../mixins/list
+// include ../mixins/postmeta
 doctype html
 html
 
 	//- HTML HEADER
 	head
+		// +postmeta(metadata)
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		//- Appstore smart banner
@@ -27,16 +29,15 @@ html
 				meta(property='og:description' content=data.post.meta.description)
 
 			//- Add meta image if it exists
-			if typeof(data.post.meta.image.filename) !== 'undefined'
-				meta(property='og:image' content="https://www.profilepensions.co.uk/images/" + data.post.meta.image.filename)
-				meta(name='twitter:card' content='summary_large_image')
-				meta(name='twitter:site' content='@ProfilePension')
-				meta(name='twitter:creator' content='@ProfilePension')
-				meta(name='twitter:title' content=data.post.title)
-				meta(name='twitter:description' content=data.post.meta.description)
-				meta(name='twitter:image' content='https://www.profilepensions.co.uk/images/' + data.post.meta.image.filename)
-
-
+			//if typeof(data.post.meta.image.filename) !== 'undefined'
+			//	meta(property='og:image' content="https://www.profilepensions.co.uk/images/" + data.post.meta.image.filename)
+			//	meta(name='twitter:card' content='summary_large_image')
+			//	meta(name='twitter:site' content='@ProfilePension')
+			//	meta(name='twitter:creator' content='@ProfilePension')
+			//	meta(name='twitter:title' content=data.post.title)
+			//	meta(name='twitter:description' content=data.post.meta.description)
+			//	meta(name='twitter:image' content='https://www.profilepensions.co.uk/images/' + data.post.meta.image.filename)
+			
 		title= title || 'Profile Pension'
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
 		link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
@@ -122,7 +123,6 @@ html
 
 	//- HTML BODY
 	body
-
 		//- HEADER
 		include ../includes/layout/header
 
