@@ -6626,7 +6626,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   color: #ffffff; }
 
 .intro {
-  min-height: 100px;
+  min-height: 120px;
   padding: 1rem; }
 
 .intro h1 {

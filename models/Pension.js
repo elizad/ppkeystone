@@ -13,13 +13,11 @@ var Pension = new keystone.List('Pension', {
 
 Pension.add({
 	name: { type: String, required: true, initial: true },
-	isLightningTalk: { type: Boolean },
-	who: { type: Types.Relationship, ref: 'User', many: true, index: true },
 	description: { type: Types.Html, wysiwyg: true },
 	slides: { type: Types.Url },
-	link: { type: Types.Url }
+	link: { type: Types.Url },
 });
 
 
-Pension.defaultColumns = 'name, who|20%';
+Pension.defaultColumns = 'name ';
 Pension.register();

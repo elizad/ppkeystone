@@ -39,7 +39,7 @@ describe('', function () {
 					done();
 				});
 	});
-	it('Make sure if team members exists', function (done) {
+	it('Make sure if team a members exists', function (done) {
 		chai.request('http://localhost:3000')
 				.get('/meet-the-team/simon-vella')
 				.end(function (err, res) {

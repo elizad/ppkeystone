@@ -24,10 +24,7 @@ TeamMember.add({
 	qualification: { type: String },
 	phone: { type: Types.Number },
 	email: { type: String },
-});
-
-TeamMember.schema.virtual('url').get(function () {
-	return '/meet-the-team/' + this.slug;
+	categories: { type: Types.Relationship, ref: 'teamMemberCategory', many: true },
 });
 
 TeamMember.schema.methods.isPublished = function () {
