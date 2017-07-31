@@ -218,7 +218,7 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
 	color: #4A4A4A;
 	letter-spacing: -0.2px;
 	line-height: 36px;
-	padding: 0 3rem 0;
+	padding: 0 3rem 1rem;
 }
 
 /*Pad in landscape*/
@@ -266,6 +266,23 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
 		line-height: 21.6px;
 	}
 }
+.tp-widget-logo{
+	padding: 1rem 0 0;
+}
+.star-rating{
+	padding: 1rem;
+}
+.star-rating > div {
+	background: #169B62;
+	display: inline-block;
+	max-width: 40px;
+	max-height: 40px;
+}
+.star-rating > div > img {
+	width: 40px;  
+	hight: 40px;
+}
+
 
 /* ====svg=======*/
 svg {
@@ -351,7 +368,10 @@ svg {
 	right: 0;
 	top: 0;
 }
-
+.promise > div > h2 {
+	color: #fff;
+	padding: 1rem 0 2rem;
+}
 .reviews {
 	background-color: #4983cf;
 	padding: 3rem 0;
@@ -361,6 +381,10 @@ svg {
 	margin: 0 10px;
 	background: #fbfbfb;
 	color: #444444;
+}
+.reviews > div > h2{
+	color: #fff;
+	padding: 1rem 0 2rem;
 }
 .lead2 {
 	font-family: Campton-Light;
@@ -375,7 +399,10 @@ svg {
 	padding: 3rem 0;
 	color: #fff;
 }	
-
+.tp-reviews > div > h2 {
+	color:#fff;
+	padding: 1rem 0 2rem;
+}
 .partners{
 	padding: 3rem 0;	
 }

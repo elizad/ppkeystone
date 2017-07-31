@@ -5,19 +5,13 @@ block content
 		h1 PRODUCTS
 		.row
 			.col
-				if products.length
-					each product in products
-						h2= product.title
-						a(href='http://localhost:3000/products/'+product.slug)
-							span= product.title
-					
+				if data.products.length
+					each product in data.products.results
+						h2= data.product.title
+						a(href='http://localhost:3000/products/' + data.product.slug)
+							span= data.product.title
+
 				else
 					h3.text-muted There are no name yet.
-				//- var values = [];
-				//ul
-				//	each val in values
-				//		li= val
-				//	else
-				//		li There are no values
-				//
-					
+
+

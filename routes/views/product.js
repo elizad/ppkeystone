@@ -12,6 +12,7 @@ exports = module.exports = function (req, res) {
 	};
 	locals.data = {
 		products: [],
+		categories: [],
 	};
 
 	view.on('init', function (next) {

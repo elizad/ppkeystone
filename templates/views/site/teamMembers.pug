@@ -11,12 +11,19 @@ block content
 	section
 	//console.log( data.categorytitle)
 
-	//if data.categories.length
+	console.log(data.categories.length)
 		.categories
 			h2 Categories
 			hr
+	if filters.category && !data.category
+		h3.text-muted Invalid Category.
+	else
+		h3= data.teamcategories.length
+		h3= data.teamcategories.title
 
-		
+
+
+
 	section.p3rem
 		.container
 			.row.text-center.roe-centered
@@ -30,8 +37,8 @@ block content
 							a(href='http://localhost:3000/meet-the-team/' + teamMember.slug)
 								h2= teamMember.title
 							p= teamMember.jobtitle
-							p= teamMember.teamcategories
-							p.green= data.categorytitle
+							p= teamMember.categories
+							// p.green= data.categories.categorytitle
 				else
 					h3.text-muted There are no team member yet.
 	section.grey.p3rem
@@ -47,7 +54,7 @@ block content
 							a(href='http://localhost:3000/meet-the-team/' + teamMember.slug)
 								h2= teamMember.title
 							p= teamMember.jobtitle
-							
+
 
 				else
 					h3.text-muted There are no team member yet.

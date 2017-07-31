@@ -40,6 +40,17 @@ Post.add({
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
 });
 
+Post.schema.methods.isPublished = function () {
+	return this.state === 'published';
+};
+
+Post.schema.pre('save', function (next) {
+	if (this.isModified('state') && this.isPublished() && !this.publishedAt) {
+		this.publishedAt = new Date();
+	}
+	next();
+});
+
 Post.schema.virtual('content.full').get(function () {
 	return this.content.extended || this.content.brief;
 });

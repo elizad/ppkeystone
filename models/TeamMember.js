@@ -24,7 +24,7 @@ TeamMember.add({
 	qualification: { type: String },
 	phone: { type: Types.Number },
 	email: { type: String },
-	teamcategories: { type: Types.Relationship, ref: 'teamMemberCategory', many: true },
+	categories: { type: Types.Relationship, ref: 'teamMemberCategory', many: true },
 });
 
 TeamMember.schema.methods.isPublished = function () {
@@ -38,7 +38,7 @@ TeamMember.schema.pre('save', function (next) {
 	next();
 });
 
-TeamMember.defaultColumns = 'title, state|20%, author|20%, publishedDate|20%';
+TeamMember.defaultColumns = 'title, state|20%, author|20%, publishedDate|20% , teamcategories, jobtitle';
 
 TeamMember.register();
 
