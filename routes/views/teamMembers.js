@@ -7,29 +7,16 @@ exports = module.exports = function (req, res) {
 
 	// set locals
 	locals.section = 'meet-the-team';
-	// locals.filters = {
-	// 	teammembercategory: req.params.category,
-	// };
+	locals.filters = {
+		// teammembercategory: req.params.category,
+	};
 	locals.data = {
 		teamMembers: [],
-		// teammembercategories: [],
+		teamcategories: [],
 	};
-	// Load all categories
-	// view.on('init', function (next) {
-    //
-	// 	keystone.list('teamMemberCategory').model.find().sort('name').populate('teamcategories').exec(function (err, results) {
-    //
-	// 		if (err || !results.length) {
-	// 			return next(err);
-	// 		}
-    //
-	// 		locals.data.teammembercategories = results;
-    //
-	// 	}, function (err) {
-	// 		next(err);
-	// 	});
-    //
-	// });
+	console.log(locals.data);
+
+
 	// Load the current category filter
 	// view.on('init', function (next) {
     //
