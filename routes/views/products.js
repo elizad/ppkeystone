@@ -1,33 +1,51 @@
 var keystone = require('keystone');
+var async = require('async');
+var numeral = require('numeral');
 
 exports = module.exports = function (req, res) {
+
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 
-	// Set locals
+	// Init locals
 	locals.section = 'store';
+	locals.numeral = numeral;
 	locals.filters = {
-		product: req.params.product,
+		category: req.params.category,
 	};
 	locals.data = {
 		products: [],
 		categories: [],
 	};
 
-	// load all categories
-	view.on('init', function (next) {
-		keystone.list(ProductCategory).model.find().sort('title').exec(
-			function (err, results) {
-				if (err || !results.length) {
-					return next(err);
-				}
-				locals.data.categories = results;
-			}
-		);
-	});
-	// load current category filter
+	// Load all categories
 	view.on('init', function (next) {
 
+		keystone.list('ProductCategory').model.find().where('primary', true).sort('name').populate('categories').exec(function (err, results) {
+
+			if (err || !results.length) {
+				return next(err);
+			}
+
+			locals.data.categories = results;
+
+			// Load the counts for each category
+			async.each(locals.data.categories, function (category, next) {
+				keystone.list('Product').model.count().where('categories').in([category.id]).exec(function (err, count) {
+					category.productCount = count;
+					next(err);
+				});
+
+			}, function (err) {
+				next(err);
+			});
+
+		});
+
+	});
+
+	// Load the current category filter
+	view.on('init', function (next) {
 		if (req.params.category) {
 			keystone.list('ProductCategory').model.findOne({ key: locals.filters.category }).exec(function (err, result) {
 				locals.data.category = result;
@@ -36,30 +54,36 @@ exports = module.exports = function (req, res) {
 		} else {
 			next();
 		}
+
 	});
 
-
-	// Load Products
-//	view.query('products', keystone.list('Product').model.find());
+	// Load the products
 	view.on('init', function (next) {
 
 		var q = keystone.list('Product').paginate({
 			page: req.query.page || 1,
-			perPage: 10,
+			perPage: 13,
 			maxPages: 10,
-			filters: {
-				state: 'published',
-			},
 		})
-			.sort('-publishedDate')
-			.populate('author categories');
+			.sort('title');
+		// ≈;
 
 		if (locals.data.category) {
-			q.where('categories').in([locals.data.category]);
+			let inCategories = [locals.data.category];
+
+			for (let i = 0; i < locals.data.category.categories.length; i++) {
+				var subCategory = locals.data.category.categories[i];
+
+				inCategories.push(subCategory);
+			}
+
+			q.where('categories').in(inCategories);
 		}
 
 		q.exec(function (err, results) {
 			locals.data.products = results;
+			console.log('Got results');
+			console.log(results);
 			next(err);
 		});
 	});

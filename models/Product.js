@@ -3,21 +3,22 @@ var Types = keystone.Field.Types;
 
 var Product = new keystone.List('Product', {
 	map: { name: 'title' },
-	singular: 'Product',
-	plural: 'Products',
-	autokey: { path: 'slug', from: 'title', unique: true },
+	autokey: { path: 'slug', from: 'title', unique: true }
 });
-
-
 
 Product.add({
-	title: { type: String, requried: true },
-	price: { type: Number },
-	qty: { type: Number },
-	description: { type: Types.Html, wysiwyg: true, height: 300 },
+	title: { type: String, required: true },
 	image: { type: Types.CloudinaryImage },
-	publishedDate: { type: Date, default: Date.now },
+	price: { type: Types.Money, format: '$0,0.00' },
+	taxable: { type: Boolean, default: true },
+	description: { type: Types.Html, wysiwyg: true, height: 250 },
 	categories: { type: Types.Relationship, ref: 'ProductCategory', many: true },
+
 });
 
+Product.schema.virtual('content.full').get(function() {
+	return this.content.extended || this.content.brief;
+});
+
+Product.defaultColumns = 'title, description|%20, price|%20';
 Product.register();
