@@ -16,11 +16,18 @@ exports = module.exports = function (req, res) {
 
 	// Load the current post
 	view.on('init', function (next) {
-
-		var q = keystone.list('Post').model.findOne({
-			state: 'published',
+		// default behavior
+		var postSearch = {
 			slug: locals.filters.post,
-		}).populate('author categories');
+			state: 'published',
+		};
+
+		// allow admin user to see the post in all cases
+		if (locals.user && locals.user.isAdmin) {
+			delete postSearch.state;
+		}
+
+		var q = keystone.list('Post').model.findOne(postSearch).populate('author categories');
 
 		q.exec(function (err, result) {
 			locals.data.post = result;
@@ -28,6 +35,7 @@ exports = module.exports = function (req, res) {
 		});
 
 	});
+
 
 	// Load other posts
 	view.on('init', function (next) {

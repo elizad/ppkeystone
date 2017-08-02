@@ -3,7 +3,17 @@ extends ../../layouts/default
 block content
 	.container
 		h1 PRODUCTS
+		.row
+			.col
+				if data.products.length
+					each product in data.products.results
+						h2= data.product.title
+						a(href='http://localhost:3000/products/' + data.product.slug)
+							span= data.product.title
 
+				else
+					h3.text-muted There are no name yet.
+					
 	.container
 		if data.categories.length
 			.categories
@@ -25,7 +35,7 @@ block content
 				each product in data.products.results
 					.product
 						if product.image.exists
-							.product-image: a(href='/store/' + product.slug): img(src=product._.image.fit(750, 450)).img-responsive
+							.product-image: a(href='/product/' + product.slug): img(src=product._.image.fit(750, 450)).img-responsive
 
-						.product-title: a(href='/store/' + product.slug)= product.title
+						.product-title: a(href='/product/' + product.slug)= product.title
 						.product-price= numeral(product.price).format('$0,0.00')

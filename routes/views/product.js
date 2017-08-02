@@ -8,7 +8,7 @@ exports = module.exports = function (req, res) {
 	var locals = res.locals;
 
 	// Set locals
-	locals.section = 'store';
+	locals.section = 'products';
 	locals.filters = {
 		product: req.params.product,
 	};
