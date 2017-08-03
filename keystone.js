@@ -8,6 +8,17 @@ var keystone = require('keystone');
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
 // and documentation.
+// add a new custom Field Type
+Object.defineProperty(
+	keystone.Field.Types,
+	'Preview',
+	{
+		get: function () {
+			return require('./preview.js');
+		},
+	}
+);
+
 
 keystone.init({
 	'name': 'ProfilePension',

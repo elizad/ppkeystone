@@ -10251,3 +10251,15 @@ if ( !noGlobal ) {
 
 return jQuery;
 } );
+
+
+var target = 'input.EditForm__key-or-id__input';
+
+function addLink() {
+	var slug = $(target).val()
+	if(!slug) return setTimeout(addLink, 1000)
+	$(target).after('<a title="Preview" href="/blog/post/' + slug + '" target="_blank">' + slug + ' (preview)</a>')
+	$(target).remove()
+}
+
+addLink()
