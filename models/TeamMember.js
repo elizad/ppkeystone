@@ -12,12 +12,15 @@ var TeamMember = new keystone.List('teamMember', {
 });
 
 TeamMember.add({
+	// preview: {
+	// 	preview: { type: Types.Preview }
+	// },
 	title: { type: String, required: true },
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	author: { type: Types.Relationship, ref: 'User', index: true },
 	createdAt: { type: Types.Date, default: Date.now },
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
-	teamMemberImage: { type: Types.CloudinaryImage, publicID: 'slug' },
+	teamMemberImage: { type: Types.CloudinaryImage },
 	fullname: { type: String },
 	jobtitle: { type: String },
 	description: { type: Types.Html, wysiwyg: false, height: 150 },

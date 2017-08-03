@@ -9,17 +9,21 @@ block intro
 
 block content
 	section
-	//console.log( data.categorytitle)
-
-	console.log(data.categories.length)
 		.categories
 			h2 Categories
 			hr
 	if filters.category && !data.category
 		h3.text-muted Invalid Category.
 	else
-		h3= data.teamcategories.length
-		h3= data.teamcategories.title
+		h3= data.categories.length
+
+		if data.categories.length
+			.categories
+				hr
+				.list-group
+					each cat in data.categories
+						a(href='/meet-the-team/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : false).list-group-item= cat.name
+		
 
 
 
@@ -29,35 +33,47 @@ block content
 			.row.text-center.roe-centered
 				h1.col-md-12 Our Leadership Team
 				p.col-md-12 Our leadership team oversee our entire operation to make sure it's simple, effective and works for you!
-				if teamMembers.length
-					each teamMember in teamMembers
-						.col.col-centered.text-center
-							span
-								img.img-responsive(src=teamMember.teamMemberImage)
-							a(href='http://localhost:3000/meet-the-team/' + teamMember.slug)
-								h2= teamMember.title
-							p= teamMember.jobtitle
-							p= teamMember.categories
-							// p.green= data.categories.categorytitle
+				if filters.category && !data.category
+					h3.text-muted Invalid Category.
 				else
-					h3.text-muted There are no team member yet.
+					h1= data.category ? data.category.name : 'Store'
+
+					each teamMember in data.teamMembers.results
+						.col.col-centered.text-center
+										span
+											img.img-responsive(src=data.teamMember.teamMemberImage)
+										a(href='http://localhost:3000/meet-the-team/' + teamMember.slug)
+											h2= data.teamMember.title
+										p= data.teamMember.jobtitle
+										p= data.teamMember.categories
+										// p.green= data.categories.categorytitle
+				//if data.teamMembers.length
+				//	each teamMember in data.teamMembers.results
+				//		.col.col-centered.text-center
+				//			span
+				//				img.img-responsive(src=data.teamMember.teamMemberImage)
+				//			a(href='http://localhost:3000/meet-the-team/' + teamMember.slug)
+				//				h2= data.teamMember.title
+				//			p= data.teamMember.jobtitle
+				//			p= data.teamMember.categories
+				//			// p.green= data.categories.categorytitle
+				//else
+				//	h3.text-muted There are no team member yet.
 	section.grey.p3rem
 		.container
 			.row.text-center
-				h1.col-md-12 Our Leadership Team
-				p.col-md-12  Our leadership team oversee our entire operation to make sure it's simple, effective and works for you!
-				if teamMembers.length
-					each teamMember in teamMembers
-						.col.col-md-3
-							span
-								img.img-responsive(src=teamMember.teamMemberImage)
-							a(href='http://localhost:3000/meet-the-team/' + teamMember.slug)
-								h2= teamMember.title
-							p= teamMember.jobtitle
-
-
-				else
-					h3.text-muted There are no team member yet.
+				//h1.col-md-12 Our Leadership Team
+				//p.col-md-12  Our leadership team oversee our entire operation to make sure it's simple, effective and works for you!
+				//if data.teamMembers.length
+				//	each teamMember in data.teamMembers
+				//		.col.col-md-3
+				//			span
+				//				// img.img-responsive(src=teamMember.teamMemberImage)
+				//			a(href='http://localhost:3000/meet-the-team/' + teamMember.slug)
+				//				h2= data.teamMember.title
+				//			p= data.teamMember.jobtitle
+				//else
+				//	h3.text-muted There are no team member yet.
 	section.p3rem
 		.container
 			.row

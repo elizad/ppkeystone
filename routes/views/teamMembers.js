@@ -1,52 +1,51 @@
 var keystone = require('keystone');
 var async = require('async');
+var numeral = require('numeral');
 
 exports = module.exports = function (req, res) {
+
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 
-	// set locals
+	// Init locals
 	locals.section = 'meet-the-team';
+	locals.numeral = numeral;
 	locals.filters = {
-		teamcategory: req.params.category,
+		category: req.params.category,
 	};
 	locals.data = {
 		teamMembers: [],
-		teamcategories: [],
+		categories: [],
 	};
-	// console.log(!{JSON.stringify(locals.data.teamcategories )})
-	// Load the current category filter
-	// view.on('init', function (next) {
-    //
-	// });
+
 	// Load all categories
 	view.on('init', function (next) {
 
-		keystone.list('teamMemberCategory').model.find().sort('name').exec(function (err, results) {
+		keystone.list('teamMemberCategory').model.find().sort('name').populate('categories').exec(function (err, results) {
 
 			if (err || !results.length) {
 				return next(err);
 			}
 
-			locals.data.teamcategories = results;
+			locals.data.categories = results;
 
 			// Load the counts for each category
-			async.each(locals.data.teamcategories, function (category, next) {
-
-				keystone.list('teamMember').model.count().where('teamcategories').in([category.id]).exec(function (err, count) {
-					category.postCount = count;
+			async.each(locals.data.categories, function (category, next) {
+				keystone.list('teamMember').model.count().where('categories').in([category.id]).exec(function (err, count) {
+					category.productCount = count;
 					next(err);
 				});
 
 			}, function (err) {
 				next(err);
 			});
+
 		});
+
 	});
 
 	// Load the current category filter
 	view.on('init', function (next) {
-
 		if (req.params.category) {
 			keystone.list('teamMemberCategory').model.findOne({ key: locals.filters.category }).exec(function (err, result) {
 				locals.data.category = result;
@@ -55,11 +54,26 @@ exports = module.exports = function (req, res) {
 		} else {
 			next();
 		}
+
 	});
 
+	// Load the products
+	view.on('init', function (next) {
 
-// Load team members
-	view.query('teamMembers', keystone.list('teamMember').model.find());
+		var q = keystone.list('teamMember').paginate({
+			page: req.query.page || 1,
+			perPage: 13,
+			maxPages: 10,
+		})
+			.sort('title');
+		// ≈;
+		q.exec(function (err, results) {
+			locals.data.products = results;
+			console.log('Got results');
+			console.log(results);
+			next(err);
+		});
+	});
 
 	// Render View
 	view.render('site/teamMembers');

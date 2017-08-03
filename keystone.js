@@ -9,15 +9,15 @@ var keystone = require('keystone');
 // See http://keystonejs.com/guide/config for available options
 // and documentation.
 // add a new custom Field Type
-Object.defineProperty(
-	keystone.Field.Types,
-	'Preview',
-	{
-		get: function () {
-			return require('./preview.js');
-		},
-	}
-);
+// Object.defineProperty(
+// 	keystone.Field.Types,
+// 	'Preview',
+// 	{
+// 		get: function () {
+// 			return require('./routes/views/preview.js');
+// 		},
+// 	}
+// );
 
 
 keystone.init({

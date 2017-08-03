@@ -10,6 +10,7 @@ exports = module.exports = function (req, res) {
 	};
 	locals.data = {
 		teamMembers: [],
+		categories: [],
 	};
 	// Load the current post
 	view.on('init', function (next) {
