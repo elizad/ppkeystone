@@ -22,9 +22,6 @@ TeamMemberCategory.add({
 });
 
 TeamMemberCategory.defaultSort = 'name';
-
-// TeamMemberCategory.relationship({ path: 'meet-the-team', ref: 'TeamMember', refPath: 'category' });
-// TeamMemberCategory.relationship({ ref: 'TeamMember', path: 'teammembercategories', refPath: 'teammembers' });
 TeamMemberCategory.relationship({ ref: 'teamMember', path: 'meet-the-team', refPath: 'categories' });
 
 TeamMemberCategory.register();

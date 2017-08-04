@@ -17,30 +17,26 @@ exports = module.exports = function (req, res) {
 		teamMembers: [],
 		categories: [],
 	};
-
+	
 	// Load all categories
 	view.on('init', function (next) {
 
-		keystone.list('teamMemberCategory').model.find().sort('name').populate('categories').exec(function (err, results) {
-
+		keystone.list('teamMemberCategory').model.find().sort('createdDate').populate('categories').exec(function (err, results) {
 			if (err || !results.length) {
 				return next(err);
 			}
-
 			locals.data.categories = results;
-
+			console.log(results.name);
 			// Load the counts for each category
 			async.each(locals.data.categories, function (category, next) {
 				keystone.list('teamMember').model.count().where('categories').in([category.id]).exec(function (err, count) {
 					category.teamMemberCount = count;
-					console.log('Got count');
-					console.log(count);
+					console.log('Got categ count' + count);
 					next(err);
 				});
 			}, function (err) {
 				next(err);
 			});
-
 		});
 
 	});
@@ -67,7 +63,6 @@ exports = module.exports = function (req, res) {
 			maxPages: 10,
 		})
 			.sort('title');
-		// ≈;
 		q.exec(function (err, results) {
 			locals.data.teamMembers = results;
 			console.log('Got results');

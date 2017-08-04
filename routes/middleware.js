@@ -9,7 +9,6 @@
  */
 var _ = require('lodash');
 
-
 /**
 	Initialises the standard view locals
 
@@ -22,14 +21,12 @@ exports.initLocals = function (req, res, next) {
 		{ label: 'Home', key: 'home', href: '/' },
 		{ label: 'Content Hub', key: 'blog', href: '/blog' },
 		{ label: 'Meet the Team', key: 'meet-the-team', href: '/meet-the-team' },
-		{ label: 'Gallery', key: 'gallery', href: '/gallery' },
 		{ label: 'Store', key: 'store', href: '/products' },
 		{ label: 'Contact new', key: 'contact', href: '/contact' },
 	];
 	res.locals.user = req.user;
 	next();
 };
-
 
 /**
 	Fetches and clears the flashMessages before a view is rendered
@@ -44,7 +41,6 @@ exports.flashMessages = function (req, res, next) {
 	res.locals.messages = _.some(flashMessages, function (msgs) { return msgs.length; }) ? flashMessages : false;
 	next();
 };
-
 
 /**
 	Prevents people from accessing protected pages when they're not signed in

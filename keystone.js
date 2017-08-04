@@ -58,10 +58,9 @@ keystone.set('nav', {
 	products: 'products',
 	teamMembers: ['team-members', 'team-member-categories'],
 	pensions: 'pensions',
-	galleries: 'galleries',
+	// galleries: 'galleries',
 	enquiries: 'enquiries',
 	users: 'users',
-	//people: 'people',
 });
 
 // Start Keystone to connect to your database and initialise the web server

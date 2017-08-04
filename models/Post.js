@@ -8,27 +8,13 @@ var Types = keystone.Field.Types;
  */
 
 var Post = new keystone.List('Post', {
-	// preview: '/blog/post/:key',
-	// preview: function (callback) {
-	// 	this.populate('category', function (err) {
-	// 		if (err) return callback(err);
-	// 		if (this.category) return callback(null, '/blog/' + this.category.key + '/' + this.key);
-	// 		callback(null, '/blog/post/' + this.key);
-	// 	}.bind(this));
-	// },
-	// preview: {
-    //
-	// },
 	map: { name: 'title' },
 	autokey: { path: 'slug', from: 'title', unique: true },
 });
 
 Post.add({
-	// Aici incerc sa adaug PREVIEW ca si  add a new custom Field Type keystone
-	// nu stiu daca e chair ce mai buna metoda. Ma gandesc ca daca e vb ar putea sa imi linkul in admin 
-	// am incercat asta https://gist.github.com/JedWatson/8519769  se pare ca ori documentia e outdated sau eu nu o citesc cum ar trebui 
 	// preview: {
-	// 	preview: { type: Types.Preview }   // acum este nedefinit 
+	// 	preview: { type: Types.Preview }
 	// },
 	title: { type: String, required: true },
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },

@@ -8,54 +8,28 @@ block intro
 		li: a(href='/meet-the-team') Meet the team
 
 block content
-	section
-		.categories
-			//if filters.category && !data.category
-			//	h3.text-muted Invalid Category.
-			//else
-			//	h3= data.categories.length
-
-		if data.categories.length
-				.col
-					each cat in data.categories
-						a(href='/meet-the-team/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : false).list-group-item= cat.name
-						p= cat.categorytitle
-						p= cat.description
+	if data.categories.length
+		each cat in data.categories
+			section.p3rem
+				.container
+					.row.text-center.row-centered
+						// a(href='/meet-the-team/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : true).list-group-item= cat.name
+						h1.col-md-12= cat.categorytitle
+						p.col-md-12= cat.description
 								if filters.category && !data.category
 									h3.text-muted Invalid teamMembers.
 								else
-									h1= data.category ? data.category.name : 'Advisors'
+									h1= data.category ? data.category.name : ''
 									.row
 										each teamMember in data.teamMembers.results
 											.col.col-centered.text-center
 												span
-													img.img-responsive(src=teamMember.teamMemberImage)
+													img(src=teamMember._.teamMemberImage.fit(150, 150)).ing-responsive.rounded-circle
 												a(href='http://localhost:3000/meet-the-team/' + teamMember.slug)
 													h2= teamMember.title
 												p= teamMember.jobtitle
 												p= teamMember.categories
-
-			
-	section.p3rem
-		.container
-			.row.text-center.roe-centered
-				h1.col-md-12 Our Leadership Team
-				p.col-md-12 Our leadership team oversee our entire operation to make sure it's simple, effective and works for you!
-				if filters.category && !data.category
-					h3.text-muted Invalid teamMembers.
-				else
-					h1= data.category ? data.category.name : 'Advisors'
-					.row
-						each teamMember in data.teamMembers.results
-							.col.col-centered.text-center
-								span
-									img.img-responsive(src=teamMember.teamMemberImage)
-								a(href='http://localhost:3000/meet-the-team/' + teamMember.slug)
-									h2= teamMember.title
-								p= teamMember.jobtitle
-								p= teamMember.categories
-								p.green= data.categories.categorytitle
-							
+		
 	section.grey.p3rem
 		.container
 			.row.text-center

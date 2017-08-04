@@ -37,12 +37,6 @@ exports = module.exports = function (app) {
 	app.get('/', routes.views.index);
 	app.get('/meet-the-team/', routes.views.teamMembers);
 	app.get('/meet-the-team/:teamMember', routes.views.teamMember);
-	// app.get('/team-members', function (req, res) {
-	// 	res.send('We will show a list of people here');
-	// });
-	// app.get('/meet-the-team/:teamMember', function (req, res) {
-	// 	res.send('We will show a tm that has a slug : ' + req.params.teamMemberslug);
-	// });
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
 	app.get('/gallery', routes.views.gallery);

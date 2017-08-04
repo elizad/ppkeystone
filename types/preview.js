@@ -1,6 +1,4 @@
-// 
-// ma agandesc ca daca ar fi vanilla javascript nu ar mai fi dependet de jquery - se poate sa gresesc in ce priveste aborarea 
-//
+
 
 // 'use strict';
 // const target = 'input.EditForm__key-or-id__input';

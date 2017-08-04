@@ -13,9 +13,8 @@ block content
 	.container.p3rem
 		.row
 			.col-md-2.col-xs-4
-				img(src=data.teamMember.teamMemberImage)
+				img(src=data.teamMember._.teamMemberImage.fit(150, 150)).ing-responsive.rounded-circle
 			.col-md-5.col-xs-8.border-right
-				p= data.teamMember.categories
 				h2= data.teamMember.fullname
 				p= data.teamMember.jobtitle
 				p= data.teamMember.description
@@ -28,9 +27,4 @@ block content
 				span= data.teamMember.phone
 				i.fa.fa-envelope
 				span=data.teamMember.mail
-
-
-	//.post
-	//	if data.meetTheTeamMember.image.exists
-	//		.image-wrap: img(src=data.meetTheTeamMember._.image.fit(750, 450)).img-responsive
-	//	!= data.meetTheTeamMember.content.full
+				

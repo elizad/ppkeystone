@@ -1,18 +1,18 @@
 extends ../../layouts/default
 
-//block content
-//	.container
-//		h1 PRODUCTS
-//		.row
-//			.col
-//				if data.products.length
-//					each product in data.products.results
-//						h2= data.product.title
-//						a(href='http://localhost:3000/products/' + data.product.slug)
-//							span= data.product.title
-//
-//				else
-//					h3.text-muted There are no name yet.
+block content
+	.container
+		h1 PRODUCTS
+		.row
+			.col
+				if data.products.length
+					each product in data.products.results
+						h2= data.product.title
+						a(href='http://localhost:3000/products/' + data.product.slug)
+							span= data.product.title
+
+				else
+					h3.text-muted There are no name yet.
 
 
 
