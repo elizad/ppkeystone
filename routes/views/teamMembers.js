@@ -32,10 +32,11 @@ exports = module.exports = function (req, res) {
 			// Load the counts for each category
 			async.each(locals.data.categories, function (category, next) {
 				keystone.list('teamMember').model.count().where('categories').in([category.id]).exec(function (err, count) {
-					category.productCount = count;
+					category.teamMemberCount = count;
+					console.log('Got count');
+					console.log(count);
 					next(err);
 				});
-
 			}, function (err) {
 				next(err);
 			});
@@ -43,12 +44,13 @@ exports = module.exports = function (req, res) {
 		});
 
 	});
-
 	// Load the current category filter
 	view.on('init', function (next) {
 		if (req.params.category) {
 			keystone.list('teamMemberCategory').model.findOne({ key: locals.filters.category }).exec(function (err, result) {
 				locals.data.category = result;
+				console.log('Got result team cat');
+				console.log(result);
 				next(err);
 			});
 		} else {
@@ -56,8 +58,7 @@ exports = module.exports = function (req, res) {
 		}
 
 	});
-
-	// Load the products
+	// Load the team Members
 	view.on('init', function (next) {
 
 		var q = keystone.list('teamMember').paginate({
@@ -68,7 +69,7 @@ exports = module.exports = function (req, res) {
 			.sort('title');
 		// ≈;
 		q.exec(function (err, results) {
-			locals.data.products = results;
+			locals.data.teamMembers = results;
 			console.log('Got results');
 			console.log(results);
 			next(err);
