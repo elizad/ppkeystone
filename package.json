@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "async": "2.1.4",
+    "async": "^2.5.0",
     "dotenv": "4.0.0",
+    "isomorphic-fetch": "^2.2.1",
     "keystone": "^4.0.0-beta.1",
     "keystone-email": "1.0.5",
     "lodash": "^4.13.1",
+    "node-gyp": "^3.6.2",
     "node-sass": "4.5.0",
     "node-sass-middleware": "0.11.0",
     "pug": "2.0.0-beta11"

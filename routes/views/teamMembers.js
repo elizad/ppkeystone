@@ -17,7 +17,7 @@ exports = module.exports = function (req, res) {
 		teamMembers: [],
 		categories: [],
 	};
-	
+	var q = keystone.list('teamMember').model.findOne(postSearch).populate('author categories');
 	// Load all categories
 	view.on('init', function (next) {
 

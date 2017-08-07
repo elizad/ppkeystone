@@ -5,7 +5,8 @@ const URL = require('url');
 
 // reviews
 const options = new URL('https://api.trustpilot.com/v1/business-units/57ff44480000ff000595f84b/reviews?apikey=38ABXsBFEYy7cWQLXkWagwuuCBtfT8BG');
-const req = http.request(options, (res) => {
+const req = http.request(opticonst options = new URL('https://api.trustpilot.com/v1/business-units/57ff44480000ff000595f84b/reviews?apikey=38ABXsBFEYy7cWQLXkWagwuuCBtfT8BG');
+ons, (res) => {
 	// ...
 	console.log(` status ok`);
 	res.on('data', (chunk) => {
@@ -28,6 +29,7 @@ exports = module.exports = function (req, res) {
 		{},
 		{
 			links: [
+				
 				{
 					href: 'https://api.trustpilot.com/v1/business-units/57ff44480000ff000595f84b',
 					method: 'GET',
