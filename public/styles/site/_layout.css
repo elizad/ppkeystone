@@ -392,6 +392,12 @@ svg {
 	color: #fff;
 	padding: 1rem 0 2rem;
 }
+.reviews-trustpilot{
+	background: #fff;
+	color:#000;
+	padding: 2rem;
+}
+
 .lead2 {
 	font-family: Campton-Light;
 	font-size: 18px;

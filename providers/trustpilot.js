@@ -1,6 +1,6 @@
 var fetch = require('isomorphic-fetch');
 var host = 'api.trustpilot.com';
-var cacheLifetimeMilliSeconds = 5000; // 24 * 60 * 60 * 1000;
+var cacheLifetimeMilliSeconds = 100000; // 24 * 60 * 60 * 1000;
 var instance;
 
 class Trustpilot {
@@ -16,7 +16,7 @@ class Trustpilot {
 
 	async getData () {
 		if (this.data) {
-			console.log('cached data');
+			console.log('cached data' + this.data);
 			return this.data;
 		}
 
@@ -30,6 +30,7 @@ class Trustpilot {
 			var result = await fetch(`https://${host}${this.path}`);
 			var json = await result.json();
 			this.data = json;
+			console.log(json);
 		} catch (error) {
 			console.log(error);
 		}
@@ -40,3 +41,4 @@ module.exports = function (path) {
 	if (!instance) instance = new Trustpilot(path);
 	return instance;
 };
+
