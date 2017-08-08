@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cde2f55e-acad-48a1-9f10-f140b28058e5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/TheSpectator.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/adviser.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/athome.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/mirror.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/aegon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/aol.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/aviva.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/blackrock.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/metlife.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/scottishwindows.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/thetelegraph.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/zurich.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/site.css" afterPath="$PROJECT_DIR$/public/styles/site.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/site/_layout.css" afterPath="$PROJECT_DIR$/public/styles/site/_layout.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/views/index.js" afterPath="$PROJECT_DIR$/routes/views/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/index.pug" afterPath="$PROJECT_DIR$/templates/views/index.pug" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -349,12 +333,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1502099052599</updated>
-      <workItem from="1502099055360" duration="51642000" />
+      <workItem from="1502099055360" duration="52174000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51642000" />
+    <option name="totallyTimeSpent" value="52174000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1696" height="1026" extended-state="6" />
@@ -443,7 +427,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1502209266026" expanded="false" signature="164564:179702" ph="data:image/svg+xml" />
+            <marker date="1502211126371" expanded="false" signature="164564:179702" ph="data:image/svg+xml" />
           </folding>
         </state>
       </provider>
