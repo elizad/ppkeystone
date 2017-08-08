@@ -1,0 +1,237 @@
+/* line 59, /home/travis/build/trustpilot/TrustboxMini/app/styles/main.scss */
+
+body.dark {
+	color: #eee
+}
+
+body.dark a {
+	color: #eee
+}
+
+body.dark strong {
+	color: #ddd
+}
+
+#fallback-logo {
+	display: none
+}
+
+.no-svg #fallback-logo {
+	display: inline-block
+}
+
+strong {
+	color: #888
+}
+
+.tp-widget-wrapper {
+	position: relative;
+	width: 180px;
+	min-width: 120px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0;
+	opacity: 0;
+	text-align: center;
+	transition: opacity .5s ease-in
+}
+
+.tp-widget-wrapper.visible {
+	opacity: 1 !important
+}
+
+.tp-widget-businessinfo {
+	font-size: 12px;
+	margin: 0 -30px;
+}
+
+.tp-widget-businessinfo .divider {
+	white-space: pre;
+	margin: 0 8px;
+	display: none
+}
+
+.tp-widget-businessinfo span {
+	display: block
+}
+
+.tp-widget-businessinfo #translations-reviews {
+	display: inline
+}
+
+.star-rating .star-1, .star-rating .star-2, .star-rating .star-3, .star-rating .star-4, .star-rating .star-5 {
+	float: left;
+	background-color: #ccc;
+	border-radius: 2px;
+	margin-right: 2px;
+	padding: 2px 3px 0;
+	width: 48px;
+	height: 47px;
+	width: calc(20% - 2px);
+	height: auto
+}
+
+@media all and (min-width: 250px) {
+	/* line 136, /home/travis/build/trustpilot/TrustboxMini/app/styles/main.scss */
+	.star-rating .star-1, .star-rating .star-2, .star-rating .star-3, .star-rating .star-4, .star-rating .star-5 {
+		margin-right: 4px;
+		padding: 4px 5px 2px;
+		width: calc(20% - 4px);
+		height: auto
+	}
+
+	/* line 143, /home/travis/build/trustpilot/TrustboxMini/app/styles/main.scss */
+	.tp-widget-logo {
+		margin: 0 0 15px
+	}
+
+	/* line 146, /home/travis/build/trustpilot/TrustboxMini/app/styles/main.scss */
+	.tp-widget-stars {
+		margin: 0 0 15px
+	}
+
+	/* line 166, /home/travis/build/trustpilot/TrustboxMini/app/styles/main.scss */
+	.tp-widget-businessinfo span {
+		display: inline-block !important
+	}
+}
+
+
+.tp-widget-logo img {
+	width: 100%;
+	max-width: 255px
+}
+
+
+
+.tp-widget-logo .svg-box:before {
+	content: '';
+	padding-top: 11.2745%;
+	display: block
+}
+
+
+
+.tp-widget-stars {
+	margin: 0 0 10px;
+	max-width: 255px
+}
+
+#tp-widget-fallback-image {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9998;
+	margin: 0 auto;
+	text-align: center;
+	overflow: hidden;
+	opacity: 0;
+	transition: opacity .3s ease-in
+}
+
+#tp-widget-fallback-image img {
+	width: auto;
+	max-width: 50%;
+	z-index: 9999
+}
+
+.tp-widget-fallback-image-revealed {
+	opacity: 1 !important
+}
+
+.star-rating .star-1 img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 5px;
+}
+
+.star-rating .star-2 img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 5px;
+}
+
+.star-rating .star-3 img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 5px;
+}
+
+.star-rating .star-4 img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 5px;
+}
+
+.star-rating .star-5 img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 5px;
+}
+
+.star-rating.star-2 .star-1 {
+	background-color: #f47324
+}
+
+.star-rating.star-2 .star-2 {
+	background-color: #f47324
+}
+
+.star-rating.star-3 .star-1 {
+	background-color: #f8cc18
+}
+
+.star-rating.star-3 .star-2 {
+	background-color: #f8cc18
+}
+
+.star-rating.star-3 .star-3 {
+	background-color: #f8cc18
+}
+
+.star-rating.star-4 .star-1 {
+	background-color: #73b143
+}
+
+.star-rating.star-4 .star-2 {
+	background-color: #73b143
+}
+
+.star-rating.star-4 .star-3 {
+	background-color: #73b143
+}
+
+.star-rating.star-4 .star-4 {
+	background-color: #73b143
+}
+
+.star-rating.star-5 .star-1 {
+	background-color: #007f4e
+}
+
+.star-rating.star-5 .star-2 {
+	background-color: #007f4e
+}
+
+.star-rating.star-5 .star-3 {
+	background-color: #007f4e
+}
+
+.star-rating.star-5 .star-4 {
+	background-color: #007f4e
+}
+
+.star-rating.star-5 .star-5 {
+	background-color: #007f4e
+}
+
+.star-rating.star-1 .star-1 {
+	background-color: #e22027
+}
+
+#header {
+	background: #fff;
+	border-bottom: 1pt #dddddd solid;
+}

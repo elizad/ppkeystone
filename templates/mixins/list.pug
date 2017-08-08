@@ -1,0 +1,36 @@
+mixin list(id, ...items)
+	ul(id=id)
+		each item in items
+			li= item
+
+
+mixin article(title)
+	.article
+		.article-wrapper
+			h1= title
+			if block
+				block
+			else
+				p No content provided			
+
+mixin link(href, name)
+	//- attributes == {class: "btn"}
+	a(class!=attributes.class href=href)= name
+
+mixin company-features(block)
+	div.col-md-3
+		svg.sprite-check-lg.svggreen <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick" viewBox="0 0 29.98 27.81"></use>
+		if block
+			block.company-features__item
+		else
+			span.company-features__item We are not tied to anyone and work in your best interest  
+
+mixin cta(block)
+	section#page-cta.grey
+		.container
+			.row
+				.col-md-8.text-center
+					h2 Need To Track Down Your Pensions?
+					p We find your pensions and tell you about them for free, with no obligation.
+					a.btn.btn-default.btn-cta(href='/get-started-trace', role='button') Get started 
+		
