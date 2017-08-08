@@ -53,3 +53,96 @@
 .alert-danger {
   @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
 }
+
+// Trustpilot colours
+$colour-trustpilot-0-star-bg: #c8c8c8;
+$colour-trustpilot-1-star-bg: #e12729;
+$colour-trustpilot-2-star-bg: #f37324;
+$colour-trustpilot-3-star-bg: #f9cc1b;
+$colour-trustpilot-4-star-bg: #72b043;
+$colour-trustpilot-5-star-bg: #007f4e;
+$colour-trustpilot-inactive-star: #e6e7e8;
+$colour-trustpilot-active-star: #ffffff;
+$colour-trustpilot-green: #017f4f;
+
+
+$star-colours: $colour-trustpilot-1-star-bg $colour-trustpilot-2-star-bg $colour-trustpilot-3-star-bg $colour-trustpilot-4-star-bg $colour-trustpilot-5-star-bg;
+
+.trustpilot-stars {
+
+  .star-1__bg, .star-2__bg, .star-3__bg, .star-4__bg, .star-5__bg {
+	fill: $colour-trustpilot-0-star-bg; //grey bg
+  }
+
+  .star-1, .star-2, .star-3, .star-4, .star-5 {
+	fill: $colour-trustpilot-inactive-star; //grey star
+  }
+
+  @for $i from 1 through 5 {
+	&--#{$i} {
+	  @extend .trustpilot-stars;
+
+	  @for $j from 1 through $i {
+
+		.star-#{$j}__bg {
+		  fill: nth($star-colours, $i);
+		}
+
+		.star-#{$j} {
+		  fill: $colour-trustpilot-active-star;
+		}
+
+	  }
+	}
+  }
+
+}
+
+.trustpilot-banner {
+
+
+  &:hover {
+	.link{
+	  text-decoration: underline;
+	}
+  }
+
+  &__logo {
+	width: 47%;
+	height:auto;
+	margin: 0 auto 2rem;
+  }
+
+  &__stars {
+	width: 33.34%;
+	height:auto;
+	margin: 16px auto 0;
+  }
+
+  &__score {
+	text-align: center;
+	color: $colour-trustpilot-green;
+	font-weight: bold;
+	font-size: 1.334rem;
+	font-family: Helvetica, Arial, Sans-serif;
+	line-height: 1.2;
+	margin: .6em 0 0;
+  }
+
+  &__text {
+	text-align: center;
+	color: white;
+	font-size: rem(13);
+	margin: 11px 0 0;
+  }
+
+  .link {
+	color: $colour-trustpilot-green;
+  }
+}
+
+.controls {
+  overflow: hidden;
+  text-align: center;
+  padding: 30px;
+}
