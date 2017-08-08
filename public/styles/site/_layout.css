@@ -275,21 +275,19 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
 	}
 }
 .tp-widget-logo{
-	padding: 1rem 0 0;
+	padding: 1.5rem 0 0;
 }
-.star-rating{
-	padding: 1rem;
+.trustpilot-banner__stars{
+	padding: 0.5rem;
 }
-.star-rating > div {
-	background: #169B62;
-	display: inline-block;
-	max-width: 40px;
-	max-height: 40px;
+#profile-link:hover {
+	 text-decoration: none;
 }
-.star-rating > div > img {
-	width: 40px;  
-	hight: 40px;
+
+#reviews-summary strong {
+	color: #888;
 }
+
 
 
 /* ====svg=======*/

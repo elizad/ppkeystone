@@ -3410,42 +3410,6 @@ a.badge:focus, a.badge:hover {
 .trustpilot-stars--5 .star-5 {
   fill: #ffffff; }
 
-.trustpilot-banner:hover .link {
-  text-decoration: underline; }
-
-.trustpilot-banner__logo {
-  width: 47%;
-  height: auto;
-  margin: 0 auto 2rem; }
-
-.trustpilot-banner__stars {
-  width: 33.34%;
-  height: auto;
-  margin: 16px auto 0; }
-
-.trustpilot-banner__score {
-  text-align: center;
-  color: #017f4f;
-  font-weight: bold;
-  font-size: 1.334rem;
-  font-family: Helvetica, Arial, Sans-serif;
-  line-height: 1.2;
-  margin: .6em 0 0; }
-
-.trustpilot-banner__text {
-  text-align: center;
-  color: white;
-  font-size: rem(13);
-  margin: 11px 0 0; }
-
-.trustpilot-banner .link {
-  color: #017f4f; }
-
-.controls {
-  overflow: hidden;
-  text-align: center;
-  padding: 30px; }
-
 @keyframes progress-bar-stripes {
   from {
     background-position: 1rem 0; }
@@ -6557,20 +6521,16 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
     line-height: 21.6px; } }
 
 .tp-widget-logo {
-  padding: 1rem 0 0; }
+  padding: 1.5rem 0 0; }
 
-.star-rating {
-  padding: 1rem; }
+.trustpilot-banner__stars {
+  padding: 0.5rem; }
 
-.star-rating > div {
-  background: #169B62;
-  display: inline-block;
-  max-width: 40px;
-  max-height: 40px; }
+#profile-link:hover {
+  text-decoration: none; }
 
-.star-rating > div > img {
-  width: 40px;
-  hight: 40px; }
+#reviews-summary strong {
+  color: #888; }
 
 /* ====svg=======*/
 svg {
