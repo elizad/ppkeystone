@@ -6648,6 +6648,10 @@ svg {
   padding: 3rem 0;
   color: #fff; }
 
+.press > div > h2 {
+  color: #fff;
+  padding: 1rem 0 2rem; }
+
 footer {
   background-color: #169b62;
   padding-top: 2rem;

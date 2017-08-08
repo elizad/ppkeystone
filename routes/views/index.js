@@ -12,7 +12,7 @@ exports = module.exports = async function (req, res) {
 	var locals = res.locals;
 	locals.trustpilot = await trustpilot.getData() || {};
 
-	locals.trustpilot2 = await trustpilot2.getData() || {};
+	locals.trustpilot2 = await trustpilot2.getData(path2) || {};
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
 	locals.section = 'home';
