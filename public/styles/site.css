@@ -6397,11 +6397,25 @@ body {
 ul {
   list-style: none; }
 
+input {
+  padding: 10px 15px;
+  color: #666;
+  border: 1px solid #e5e5e5; }
+
 .clearblock {
   display: block; }
 
 h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
   margin: 1rem 0; }
+
+.btn-mail {
+  margin-left: 10px !important;
+  height: auto !important;
+  width: 20% !important;
+  border-radius: 5px !important;
+  background-color: transparent !important;
+  border: 1px solid #fff !important;
+  padding: 9px 15px; }
 
 .border-right {
   border-right: 1px solid #cecece; }
@@ -6418,6 +6432,10 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
 /* centered columns styles bootstrap customize */
 .row-centered {
   text-align: center; }
+
+.center {
+  margin: 0 auto;
+  display: block; }
 
 .col-centered {
   display: inline-block;
@@ -6438,7 +6456,8 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
   padding: 3rem; }
 
 .fa {
-  padding: 5px; }
+  padding: 5px;
+  font-size: 20px; }
 
 /* cookie bannner */
 #cookie-law {
@@ -6671,6 +6690,11 @@ footer .footer-heading {
 footer a {
   color: #ffffff; }
 
+footer input {
+  background: #fff !important;
+  width: 75% !important;
+  border-radius: 5px !important; }
+
 p.small {
   margin: 0; }
 
@@ -6801,3 +6825,17 @@ ul.breadcrumbs li:after {
 ul.breadcrumbs li:first-child {
   padding-right: 0;
   color: #fbfbfb; }
+
+.form input {
+  width: 100%;
+  margin: 15px 0;
+  font-size: 14px !important;
+  border: 1px solid #cecece;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+  padding: 10px 15px; }
+
+.center {
+  margin: 0 auto;
+  display: block; }

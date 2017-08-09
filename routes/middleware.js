@@ -9,7 +9,6 @@
  */
 var _ = require('lodash');
 
-
 /**
 	Initialises the standard view locals
 
@@ -18,7 +17,6 @@ var _ = require('lodash');
 	or replace it with your own templates / logic.
 */
 
-// de aici este generat meniul meu 
 exports.initLocals = function (req, res, next) {
 	res.locals.navLinks = [
 		// { label: 'Home', key: 'home', href: '/' },
