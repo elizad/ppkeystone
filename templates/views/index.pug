@@ -78,27 +78,19 @@ block content
 	section.tp-reviews
 		.container.text-center
 			h2 Average TrustScore of 9.5 out of 10
-			if(trustpilot2)
-				p= trustpilot2
-				div
-				script.
-					console.log(!{JSON.stringify(trustpilot2)});
-				div
+			if(trustpilot2.reviews)
 
-					//reviews.length
-			else
-				p no
-		
 			div.row
-				- var test = [1,2,3]
+				//- var test = [1,2,3]
 				div#trustpilot-reviews.col-md-12
-					each entry in test
+					each entry in trustpilot2.reviews
 						div.col-md-12
 							div.reviews-trustpilot
-								p= entry
-								h5 trustpilot2.reviews. consumer.displayName   reviews.createdAt
-								p trustpilot2.reviews.   text
-								div(class="trustpilot-stars--" + trustpilot.stars)
+								h5
+									span= entry.consumer.displayName 
+									span= entry.createdAt
+								p= entry.text
+								div(class="trustpilot-stars--" + entry.stars)
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.8 69" style="height: 22px;"><path class="star-1__bg" d="M69 61.7c0 4-3.2 7.3-7.3 7.3H7.3c-4 0-7.3-3.2-7.3-7.3V7.3C0 3.3 3.3 0 7.3 0h54.4c4 0 7.3 3.3 7.3 7.3v54.4z"/><path class="star-1" d="M34.5 11l5.8 18H59L44 40l5.7 18-15.2-11.2-15.2 11L25 40 10 29h18.7"/><path class="star-2__bg" d="M145.5 61.7c0 4-3.3 7.3-7.3 7.3H83.7c-4 0-7.3-3.2-7.3-7.3V7.3c0-4 3.3-7.3 7.3-7.3h54.5c4 0 7.3 3.3 7.3 7.3v54.4z"/><path class="star-2" d="M111 11l5.8 18h18.7l-15.2 11 5.8 18-15-11.2-15.2 11 5.8-17.8-15.2-11H105"/><path class="star-3__bg" d="M222 61.7c0 4-3.4 7.3-7.4 7.3h-54.4c-4 0-7.3-3.2-7.3-7.3V7.3c0-4 3-7.3 7.2-7.3h54.4c4 0 7.3 3.3 7.3 7.3v54.4z"/><path class="star-3" d="M187.4 11l5.8 18H212l-15.2 11 5.8 18-15.2-11.2-15.2 11L178 40l-15.2-11h18.8"/><path class="star-4__bg" d="M298.3 61.7c0 4-3.2 7.3-7.2 7.3h-54.4c-4 0-7.3-3.2-7.3-7.3V7.3c0-4 3.3-7.3 7.3-7.3H291c4 0 7.3 3.3 7.3 7.3v54.4z"/><path class="star-4" d="M263.8 11l5.8 18h18.8l-15.2 11 5.8 18-15.2-11.2-15.2 11 5.8-17.8-15-11H258"/><path class="star-5__bg" d="M374.8 61.7c0 4-3.3 7.3-7.3 7.3H313c-4 0-7.2-3.2-7.2-7.3V7.3c0-4 3.2-7.3 7.2-7.3h54.5c4 0 7.3 3.3 7.3 7.3v54.4z"/><path class="star-5" d="M340.3 11l5.8 18H365l-15 11 5.7 18-15.2-11.2-15.2 11 6-17.8-15.3-11h18.8"/></svg>
 		
 				div.col-md-12.mx-auto

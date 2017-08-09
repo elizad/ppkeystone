@@ -1,7 +1,8 @@
 var fetch = require('isomorphic-fetch');
 var host = 'api.trustpilot.com';
 var cacheLifetimeMilliSeconds = 100000; // 24 * 60 * 60 * 1000;
-var instance;
+var instances = [];
+
 
 class Trustpilot {
 	constructor (path) {
@@ -38,7 +39,7 @@ class Trustpilot {
 };
 
 module.exports = function (path) {
-	if (!instance) instance = new Trustpilot(path);
-	return instance;
+	if (!instances[path]) instances[path] = new Trustpilot(path);
+	return instances[path];
 };
 
