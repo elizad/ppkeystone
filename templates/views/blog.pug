@@ -21,10 +21,15 @@ mixin post(post)
 		p!= post.content.brief
 		if post.content.extended
 			p.read-more: a(href='/content-hub/post/' + post.slug) Read more...
-
 block intro
-	.container
-		h1= data.category ? data.category.name : 'Blog'
+	section.intro.green.text-center
+		h1= data.category ? data.category.name : 'Content Hub'
+		h3 Please let us know who you are (click on a category below), alternatively, please find our most recent content below
+	ul.breadcrumb
+		li: a(href='/content-hub') Content Hub
+		li   /  
+		li= data.category ? data.category.name : 'Content Hub'
+		
 
 block content
 	.container: .row

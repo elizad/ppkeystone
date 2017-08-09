@@ -32,7 +32,7 @@ exports.initLocals = function (req, res, next) {
 			{ label: 'What is a Pension Review', subkey: 'pensionreview', href: '/pension-review/' },
 			{ label: 'What is aPension Tracking', subkey: 'pensiontraking', href: '/pension-tracking/' },
 		] },
-		{ label: 'about', key: 'about', pages: [
+		{ label: 'About Us', key: 'about', pages: [
 			{ label: 'Meet The Team', subkey: 'meet-the-team', href: '/meet-the-team/' },
 			{ label: 'How It Works', subkey: 'processes', href: '/processes/' },
 			{ label: 'Awards and review', subkey: 'awards-and-reviews', href: '/awards-and-reviews/' },
@@ -44,7 +44,6 @@ exports.initLocals = function (req, res, next) {
 	res.locals.user = req.user;
 	next();
 };
-
 
 /**
 	Fetches and clears the flashMessages before a view is rendered
@@ -59,7 +58,6 @@ exports.flashMessages = function (req, res, next) {
 	res.locals.messages = _.some(flashMessages, function (msgs) { return msgs.length; }) ? flashMessages : false;
 	next();
 };
-
 
 /**
 	Prevents people from accessing protected pages when they're not signed in

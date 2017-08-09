@@ -1,0 +1,30 @@
+extends ../../layouts/default
+
+
+block intro
+	section.intro.green.text-center
+		h1= data.teamMember.fullname
+		h3 
+	ul.breadcrumb
+		li: a(href='/meet-the-team') &larr; Meet the team
+		li   /  
+		li= data.teamMember.title
+block content
+	.container.p3rem
+		.row
+			.col-md-2.col-xs-4
+				img(src=data.teamMember._.teamMemberImage.fit(150, 150)).ing-responsive.rounded-circle
+			.col-md-5.col-xs-8.border-right
+				h2= data.teamMember.fullname
+				p= data.teamMember.jobtitle
+				p= data.teamMember.description
+			.col-md-4.col-xs-12
+				h2 My Qualifications
+				ul.profile-list.border-bottom
+					li= data.teamMember.qualification
+				h2 Contact 
+				i.fa.fa-phone
+				span= data.teamMember.phone
+				i.fa.fa-envelope
+				span=data.teamMember.mail
+				

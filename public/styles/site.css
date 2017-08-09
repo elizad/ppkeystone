@@ -6652,6 +6652,11 @@ svg {
   color: #fff;
   padding: 1rem 0 2rem; }
 
+.profilepension-partners__img {
+  max-height: 40px;
+  text-align: center;
+  width: 150px; }
+
 footer {
   background-color: #169b62;
   padding-top: 2rem;
@@ -6751,6 +6756,9 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 /*page headers*/
 .grey {
   background: #fbfbfb; }
+
+.textgreen {
+  color: #169b62; }
 
 .green {
   background: #169b62;

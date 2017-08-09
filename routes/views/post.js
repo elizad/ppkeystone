@@ -1,4 +1,3 @@
-
 var keystone = require('keystone');
 
 exports = module.exports = function (req, res) {
@@ -7,7 +6,7 @@ exports = module.exports = function (req, res) {
 	var locals = res.locals;
 
 	// Set locals
-	locals.section = 'content-hub';
+	locals.section = 'blog';
 	locals.filters = {
 		post: req.params.post,
 	};
@@ -17,11 +16,17 @@ exports = module.exports = function (req, res) {
 
 	// Load the current post
 	view.on('init', function (next) {
-
-		var q = keystone.list('Post').model.findOne({
-			state: 'published',
+		var postSearch = {
 			slug: locals.filters.post,
-		}).populate('author categories');
+			state: 'published',
+		};
+
+		// allow admin user to see the post in all cases
+		if (locals.user && locals.user.isAdmin) {
+			delete postSearch.state;
+		}
+
+		var q = keystone.list('Post').model.findOne(postSearch).populate('author categories');
 
 		q.exec(function (err, result) {
 			locals.data.post = result;
