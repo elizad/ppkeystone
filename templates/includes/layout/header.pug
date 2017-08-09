@@ -12,8 +12,8 @@
 				
 					each link in navLinks
 						//li(class=(section == link.key ? 'active' : null)): a.nav-link(href=link.href)= link.label
-						
-						
+						// aici am incercat ceva dupa https://stackoverflow.com/questions/38994107/drop-down-sub-menus-in-keystonejs
+						// si dupa https://github.com/keystonejs/keystone/issues/428
 						if(section)
 							li(class=(section == link.key ? 'active' : null)): a.nav-link(href=link.href)= link.label
 						else
