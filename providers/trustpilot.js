@@ -1,6 +1,6 @@
 var fetch = require('isomorphic-fetch');
 var host = 'api.trustpilot.com';
-var cacheLifetimeMilliSeconds = 100000; // 24 * 60 * 60 * 1000;
+var cacheLifetimeMilliSeconds =  24 * 60 * 60 * 1000; // 5000;
 var instances = [];
 
 

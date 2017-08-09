@@ -1,6 +1,14 @@
 extends ../layouts/default
 include ../mixins/tpdata
+include ../mixins/company-features
+include ../mixins/process	
+include ../mixins/promises
+include ../mixins/carouselreviews1
 include ../mixins/tpreviews
+include ../mixins/partners	
+include ../mixins/press	
+	
+
 block content
 	section#homehead
 		.container.text-center
@@ -11,104 +19,16 @@ block content
 					p We find your pensions and tell you about them for free, with no obligation.
 					a(href='/get-started-trace').btn.btn-lg.btn-primary Find Pensions
 					+tpdata()
-
-		//include includes/layout/ctafooter.pug
-	section.features
-		.container
-			div.row.no-gutters
-				+company-features('We')
-				+company-features('are')
-				+company-features('authorised')
-				+company-features('We are authorised and regulated by the FCA')
-
-	section.process
-		.container.text-center
-			h2 How we find your pensions
-			div.row.text-center
-				.col-md-4
-					//img.className#IdName(src="/images/start.jpg" alt="Image Title")
-					p Submit your details online.
-				.col-md-4
-					svg.sprite-check-lg.svgyellow <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick" viewBox="0 0 29.98 27.81"></use>
-					p We will send you two forms by email and post. Respond to either of these by signing the forms and returning them. This gives your approval for us to start the pension trace.
-				.col-md-4
-					svg.sprite-check-lg.svgyellow <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick" viewBox="0 0 29.98 27.81"></use>
-					p One of our pension advisers will be in contact to talk through the results of the pension trace and run through the next steps.
-				.col-md-12.text-center
-					a(href='/get-started-trace').btn.btn-lg.btn-primary Find Pensions
-				.col-md-12.text-center
-					a(href='/get-started-trace') Our charges explained
-
-	section.promise
-		.container.text-center
-			h2 Our promise to you
-			div.row
-				div.col-md-4
-					svg.sprite-check-lg.svgyellow <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick" viewBox="0 0 29.98 27.81"></use>
-					span.company-features__item We are not tied to anyone and work in your best interest
-				div.col-md-4
-					svg.sprite-check-lg.svgyellow <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick" viewBox="0 0 29.98 27.81"></use>
-					span.company-features__item We are not tied to anyone and work in your best interest
-				div.col-md-4
-					svg.sprite-check-lg.svgyellow <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick" viewBox="0 0 29.98 27.81"></use>
-					span.company-features__item We are not tied to anyone and work in your best interest		
-
-	section.reviews
-		.container.text-center
-			h2 On average we find £25,000 per missing pension
-			div.row
-				div.light-slider.col-md-12
-					div.col-md-12.text-center.review-customer
-						<div class="review-image compat-object-fit" style="background-image: url(&quot;https://www.profilepensions.co.uk/wp-content/uploads/2017/05/pt-2.jpg&quot;);">                    
-						<img src="https://www.profilepensions.co.uk/wp-content/uploads/2017/05/pt-2.jpg" alt="" class="img full-width">
-						</div> 
-						.div.customer-about
-							p.lead2 Shaun, Found a £27,603 pension with Prudential. Lives in Penarth
-							p The result of my pension trace was great! Profile helped me find pensions that I’d lost through moving employers and put everything into layman’s terms. Even though I paid out, I’m better off in the long run and in control of my pension pot.
-					div.col-md-12.text-center.review-customer
-						<div class="customer-image compat-object-fit" style="background-image: url(&quot;https://www.profilepensions.co.uk/wp-content/uploads/2017/05/pt-3.jpg&quot;);">                    
-						<img src="https://www.profilepensions.co.uk/wp-content/uploads/2017/05/pt-3.jpg" alt="" class="img full-width">
-						</div>
-						div.col-md-12.text-center.review-customer
-							p.lead2 Mark, Found a £24,899 pension with Re-assure. Lives in Bath
-							p The process was entirely pain free, very professional and explained in a way that was easy to understand. The best part was that I found money that I didn’t know I had! I would definitely recommend Profile to anyone who needs pension advice or to find a lost pension.</p> 
-					div.col-md-12.text-center.review-customer  your content 1 
-					div.col-md-12.text-center.review-customer  your content 2
+	
+	+company-features()
+				
+	+process()
+	
+	+promises()
+	
+	+carouselreviews1()
+	
 	+tpreviews()
-					
-	section.partners
-		.container.text-center
-			h2 Working with all the UK's leading pension providers and funds including
-			div.row
-				div.profilepension-partners.col-md-12
-					div.col-md-12
-						img.profilepension-partners__img(src="/images/metlife.svg" alt="Met Life")
-					div.col-md-12
-						img.profilepension-partners__img(src="/images/scottishwindows.svg" alt="Scottish Windows")
-					div.col-md-12
-						img.profilepension-partners__img(src="/images/lv.png" alt="LIVERPOOL VICTORIA" style="height: 40px;")
-					div.col-md-12
-						img.profilepension-partners__img(src="/images/aegon.svg" alt="AEGON")
-					div.col-md-12
-						img.profilepension-partners__img(src="/images/aviva.svg" alt="Aviva")
-					div.col-md-12
-						img.profilepension-partners__img(src="/images/blackrock.svg" alt="BlackRock" )
-	section.press
-		.container.text-center
-			h2 Profile in the press
-			div.row
-				div.profilepension-press.col-md-12
-					div.col-md-12
-						img.profilepension-partners__img(src="/images/aol.svg" alt="Aol." style="height: 40px;")
-					div.col-md-12
-						img.profilepension-partners__img(src="/images/thetelegraph.svg" alt="The Telegraph" style="height: 40px;")
-					div.col-md-12
-						img.profilepension-partners__img(src="/images/thespectator.png" alt="The Spectator" )
-					div.col-md-12
-						img.profilepension-partners__img(src="/images/adviser.png" alt="Advisor")
-					div.col-md-12
-						img.profilepension-partners__img(src="/images/athome.png" alt="At Home" style="height: 40px;")
-					div.col-md-12
-						img.profilepension-partners__img(src="/images/mirror.png" alt="Mirror")
-						
-
+	+partners()
+	+press()
+	

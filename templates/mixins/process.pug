@@ -1,0 +1,48 @@
+mixin process()
+	section.process
+		.container.text-center
+			h2 How we find your pensions
+			div.row.text-center
+				.col-md-4
+					svg.sprite-check-lg.svgyellow <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick" viewBox="0 0 29.98 27.81"></use>
+					//img.className#IdName(src="/images/start.jpg" alt="Image Title")
+					p Submit your details online.
+				.col-md-4
+					svg.sprite-check-lg.svgyellow <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick" viewBox="0 0 29.98 27.81"></use>
+					p We will send you two forms by email and post. Respond to either of these by signing the forms and returning them. This gives your approval for us to start the pension trace.
+				.col-md-4
+					svg.sprite-check-lg.svgyellow <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick" viewBox="0 0 29.98 27.81"></use>
+					p One of our pension advisers will be in contact to talk through the results of the pension trace and run through the next steps.
+				.col-md-12.text-center
+					a(href='/get-started-trace').btn.btn-lg.btn-primary Find Pensions
+				.col-md-12.text-center
+					a(style='text-decoration: underline;' data-toggle='modal' href='#modal-money-0') Our charges explained
+					
+			
+			div#modal-money-0.modal.fade(style='display: none;')
+				div.modal-dialog
+					div.modal-content
+							div.modal-header
+								h4#exampleModalLabel.modal-title.justify-content-md-center Our charges explained
+								button.close.pull-right(type="button" data-dismiss="modal" aria-label="Close" aria-hidden="true" data-target="#modal-money-0")
+									span(aria-hidden="true") &times;
+							div.modal-body.text-center.align-items-center
+								div.panel.border
+									h5 Our advice comes with no obligation and we only charge a fee if you decide to switch.
+								div.col
+									br
+									<h5>Our Pension Tracing Fee:</h5>
+									<p>Our pension tracing service is completely no obligation and we don’t charge you if we find any missing pensions. We only charge a fee if you decide to switch anything that we’re able to find.</p>
+									<h5>Our Switch Fee:</h5>
+									<p>If you agree with the switch, there will be a one-off arrangement fee of 1.75% of the amount transferred + £450 which will be deducted from your pension. In the event you do not take our recommendation you will not be charged.</p>
+									<h5>Our Ongoing Advice Fee:</h5>
+									<p>This will cost 0.4% per annum should you choose to take it.</p>
+									<h5>Do we receive payments from elsewhere?</h5>
+									<p>No. The above charges are our only source of income and we only work for you.</p>
+							
+							div.modal-footer.justify-content-md-center
+								button.btn.btn-primary(type="button" data-dismiss="modal") Close
+							
+						
+					
+						
