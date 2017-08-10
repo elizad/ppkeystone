@@ -38,15 +38,32 @@ exports = module.exports = function (req, res) {
 	// Load other posts
 	view.on('init', function (next) {
 
-		var q = keystone.list('Post').model.find().where('state', 'published').sort('-publishedDate').populate('author').limit('4');
+		// 
 
-		q.exec(function (err, results) {
-			locals.data.posts = results;
-			next(err);
-		});
+		var categories = keystone.list('PostCategory').model.find().exec(function(err, categories) {
+			if(err) {
+				console.log(err);
+				locals.data.categories = [];
+			} else {
+				locals.data.categories = categories;
+			}
+			
+			var q = keystone.list('Post').model.find().where('state', 'published').sort('-publishedDate').populate('author').limit(2);
 
-	});
+			q.exec(function (err, results) {
+				locals.data.posts = results;
+				console.log(results);
+				console.log(err);
+				next(err);
+			});
+			
+			console.log(categories);
+		})
 
+		
+		
+
+	})
 	// Render the view
 	view.render('post');
 };

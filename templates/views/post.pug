@@ -48,12 +48,20 @@ block content
 			div
 				h2 More things you might like
 				div.row
+					each  post in data.posts
+						div.col-md-6.col-lg-6
+							a.equal(href="")
+								.image-wrap: img(src=post._.image.fit(150, 50)).img-responsive
+						
+					
+					
 					div.col-md-6.col-lg-6
 						a.equal(href="")
 							.image-wrap: img(src=data.post._.image.fit(150, 50)).img-responsive
 						div.equal
 							div.article-card
 								h2.title
+								div= post.title
 									a(href="https://www.profilepensions.co.uk/six-million-people-40s-wait-another-year-receive-state-pension/") State pension age rise                                           
 								div.meta
 									span.date 20/07/2017
