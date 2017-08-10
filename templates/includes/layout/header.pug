@@ -9,21 +9,74 @@
 					svg#profile-pension-logo( height='54') <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#profile-pension-logo" viewBox="0 0 574 232"></use>
 			#navbarSupportedContent.collapse.navbar-collapse
 				ul.navbar-nav.ml-auto
-				
-					each link in navLinks
-						//li(class=(section == link.key ? 'active' : null)): a.nav-link(href=link.href)= link.label
-						// aici am incercat ceva dupa https://stackoverflow.com/questions/38994107/drop-down-sub-menus-in-keystonejs
-						// si dupa https://github.com/keystonejs/keystone/issues/428
-						if(section)
-							li(class=(section == link.key ? 'active' : null)): a.nav-link(href=link.href)= link.label
-						else
-							//li(class='dropdown '+(section == link.key ? 'active' : null)): a.nav-link(href=link.href)= link.label
-							li(id='menu1').dropdown
-								a(data-toggle='dropdown', href='#menu1').dropdown-toogle Dropdown
-									b.caret
+					li.nav-link.dropdown
+						a(href="#" class="dropdown-toggle-left" tabindex="-1") What We Do
+						a(href="#" data-toggle="dropdown" class="dropdown-toggle visible-xs visible-sm" aria-haspopup="true")
+						ul.dropdown-menu
+							li.nav-link 
+								a(href="/") Finding Your Pensions
+							li.nav-link 
+								a(href="/pension-switch/") Switching You To The Best Pension
+					li.nav-link.dropdown
+						a(href="#" class="dropdown-toggle-left" tabindex="-1") About Pensions
+						a(href="#" data-toggle="dropdown" class="dropdown-toggle visible-xs visible-sm" aria-haspopup="true")
+						ul.dropdown-menu
+							li.nav-link 
+								a(href="/pension-calculator/") Pension Calculator
+							li.nav-link.dropdown-submenu 
+								a(href="/content-hub/" class="dropdown-toggle-left" tabindex="-1") Content Hub
+								a(href="#" data-toggle="dropdownsub" class="dropdownsub-toggle visible-xs visible-sm" aria-haspopup="true")
 								ul.dropdown-menu
-									each link in navLinks
-										li(class=(section == link.key ? 'active' : null)): a.nav-link(href=link.href)= link.label
+									li.nav-link
+										a(href="/content-hub/beginners-guides/") Beginners Guides
+									li.nav-link
+										a(href="/content-hub/blog/") Blog
+									li.nav-link: a(href="/content-hub/news/") News
+									li.nav-link: a(href="/content-hub/infographics/") Infographics
+									li.nav-link: a(href="/content-hub/videos/") Videos
+							li.nav-link.dropdown-submenu
+								a(href="/pension-types/" class="dropdown-toggle-left" tabindex="-1") Pensions We Review
+								a(href="#" data-toggle="dropdownsub" class="dropdownsub-toggle visible-xs visible-sm" aria-haspopup="true")
+								ul.dropdown-menu
+									li.nav-link: a(href="/pension-types/defined-contribution-pension/") Defined Contribution Pensions
+									li.nav-link: a(href="/pension-types/fsavc-pension/") FSAVC Pension
+									li.nav-link: a(href="/pension-types/group-personal-pension/") Group Personal Pension
+									li.nav-link: a(href="/pension-types/money-purchase-pension/") Money Purchase Pension
+									li.nav-link: a(href="/pension-types/private-pension/") Private Pension
+									li.nav-link: a(href="/pension-types/personal-pension/") Personal Pensions
+									li.nav-link: a(href="pension-types/section-32-buy-pensions/") Section 32 Buy Out Pensions
+									li.nav-link: a(href="/pension-types/self-employed-pension/") Self-Employed Pensions
+									li.nav-link: a(href="/pension-types/serps-pension/") SERPS Pensions</a></li>
+									li.nav-link: a(href="/pension-types/sipp-pension/") SIPP Pension</a></li>
+									li.nav-link: a(href="/pension-types/stakeholder-pensions/") Stakeholder Pension
+							li.nav-link: a(href="/pension-review/") What Is A Pension Review?
+							li.nav-link: a(href="/pension-tracing/") What Is Pension Tracing?
+					li.nav-link.dropdown
+						a.dropdown-toggle-left(href="/about-us/" tabindex="-1") About Us
+							a.dropdown-toggle(href="/" data-toggle="dropdown" class="" aria-haspopup="true")
+							ul.dropdown-menu
+								li.nav-link: a(href="/meet-the-team/") Meet The Team
+								li.nav-link: a(href="/processes/") How It Works
+								li.nav-link: a(href="/about-us/awards-and-reviews/") Awards And Reviews
+								li.nav-link: a(href="/partners/") Our Partners
+								li.nav-link: a(href="/contact/") Contact
+					li
+						a.btn.btn-lg.btn-primary(href="/get-started-trace/") Find Pensions
+							// a.text-white(href="/get-started-trace/") Find Pensions
+					//each link in navLinks
+					//	//li(class=(section == link.key ? 'active' : null)): a.nav-link(href=link.href)= link.label
+					//	// aici am incercat ceva dupa https://stackoverflow.com/questions/38994107/drop-down-sub-menus-in-keystonejs
+					//	// si dupa https://github.com/keystonejs/keystone/issues/428
+					//	if(section)
+					//		li(class=(section == link.key ? 'active' : null)): a.nav-link(href=link.href)= link.label
+					//	else
+					//		//li(class='dropdown '+(section == link.key ? 'active' : null)): a.nav-link(href=link.href)= link.label
+					//		li(id='menu1').dropdown
+					//			a(data-toggle='dropdown', href='#menu1').dropdown-toogle Dropdown
+					//				b.caret
+					//			ul.dropdown-menu
+					//				each link in navLinks
+					//					li(class=(section == link.key ? 'active' : null)): a.nav-link(href=link.href)= link.label
 
 
 			//{{# each navLinks}}

@@ -51,26 +51,28 @@ block content
 				div.row
 					each item in data.posts
 						div.col-md-6.col-lg-6
-							a.equal(href="")
-								.image-wrap: img(src=item._.image.fit(150, 50)).img-responsive
-							div.equal
-								h2= item.title
-								div.meta
-									span.date= item.publishedDate
-									span.author= item.author.name.first
-								p.excerpt= item.content.brief
-								div.share
-									span Share | 
-									a(href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.profilepensions.co.uk%2Fsix-million-people-40s-wait-another-year-receive-state-pension" target="_blank" style="font-size: 18px;")
-										i.fitted.fa.fa-facebook.f.icon
-									a(href="https://twitter.com/home?status=https%3A%2F%2Fwww.profilepensions.co.uk%2Fsix-million-people-40s-wait-another-year-receive-state-pension" target="_blank" style="font-size: 18px;")
-										i.fitted.fa.fa-twitter.icon
-									a(href="https://plus.google.com/share?url=https%3A%2F%2Fwww.profilepensions.co.uk%2Fsix-million-people-40s-wait-another-year-receive-state-pension" target="_blank" style="font-size: 18px;")
-										i.fitted.fa.fa-google-plus.icon
-									a(href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.profilepensions.co.uk%2Fsix-million-people-40s-wait-another-year-receive-state-pension&amp;title=State+pension+age+rise+-+Profile+Pensions&amp;summary=&amp;source=" target="_blank" style="font-size: 18px;")
-										i.fitted.fa.fa-linkedin.icon
-									a(href="mailto:?body=https%3A%2F%2Fwww.profilepensions.co.uk%2Fsix-million-people-40s-wait-another-year-receive-state-pension" style="font-size: 18px;")
-										i.icon.fa.fa-envelope
+							div.row.advice
+								a.col-md-5.equal.advice-image(href="")
+									img(src=item._.image.fit(150, 177)).img-responsive
+								div.col-md-7.equal.advice-content
+									h2.advice-title= item.title
+									div.advice-meta
+										if item.publishedDate
+											span.advice-meta__date #{item._.publishedDate.format('DD/MM/YYYY')}
+										if item.author.name.first
+											span.advice-meta__author #{item.author.name.first}
+									p.excerpt= item.content.brief
+									div.share
+										span Share | 
+										a(href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + item.slug + '' target="_blank" style="font-size: 18px;")
+											i.fitted.fa.fa-facebook.f.icon
+										a(href='https://twitter.com/home?status=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + item.slug + '' target="_blank" style="font-size: 18px;")
+											i.fitted.fa.fa-twitter.icon
+										a(href='https://plus.google.com/share?url=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + item.slug + '' target="_blank" style="font-size: 18px;")
+											i.fitted.fa.fa-google-plus.icon
+										a(href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + item.slug + '&amp;title=' + data.post.title + '+-+Profile+Pensions&amp;summary=&amp;source=" target="_blank" style="font-size: 18px;')
+											i.fitted.fa.fa-linkedin.icon
+										a(href='mailto:?body=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + item.slug + '' style="font-size: 18px;")
 
 										
 		.col-sm-12.col-md-3.sidebar

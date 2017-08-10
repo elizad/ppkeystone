@@ -190,7 +190,13 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
 .p3rem{
 	padding:3rem;
 }
-.fa {
+a i.fa{
+	color: #169b62;
+}
+a i.fa:hover, a i.fa:active{
+	color: #75d539;
+}
+.fa{
 	padding: 5px;
     font-size: 20px;
 }
@@ -490,6 +496,7 @@ p.small{
 	line-height: 23px;
 	font-family: Campton-Book;
 	margin-top: 0.5rem;
+	margin-left: 0.5rem;
 }
 .media-box{
 	justify-content: center;
@@ -626,3 +633,95 @@ ul.breadcrumbs li:first-child {
 	display: block;
 }
 
+ .advice{
+	 margin-bottom: 2rem;
+}
+ .advice-content{
+	 padding: 1rem;
+	 border: 1px solid #cecece;
+ }
+ .advice-title {
+	 -o-text-overflow: ellipsis;
+	 text-overflow: ellipsis;
+	 overflow: hidden;
+	 text-align: left;
+	 margin: 0;
+	 font-family: Campton-Medium;
+	 font-size: 14px;
+	 height: auto;
+	 line-height: 16.8px;
+ }
+ .advice-title a{
+	 color: #169b62;
+ }
+ .advice-meta__date{
+	 box-sizing: border-box;
+	 color: rgb(74, 74, 74);
+	 display: inline;
+	 font-family: Campton-Light;
+	 font-size: 12px;
+	 height: auto;
+	 line-height: 28.8px;
+	 width: auto;
+	 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+ }
+.advice-meta__author{
+	color: #cecece;
+	font-size: 12px;
+	height: auto;
+	line-height: 28.8px;
+	margin-left: 5px;
+}
+ .advice-text, .advice-text>p{
+	box-sizing: border-box;
+	color: rgb(74, 74, 74);
+	display: inline;
+	font-family: Campton-Light;
+	font-size: 12px;
+	height: auto;
+	line-height: 15px;
+}
+ .pagination{
+	 display: inline-block;
+	 float: right;
+ }
+.pagination li{
+	display: inline;
+	margin: 0.5px;
+	max-height: 41px;
+	height: 41px;
+}
+.pagination li.active a {
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+	padding: 0.75rem;
+	background-color: #92de63;
+}
+
+.pagination li a:hover {
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+	padding: 0.75rem;
+	background-color: #92de63;
+}
+
+.pagination li a {
+	color: #fff;
+	text-decoration: none;
+	background-color: #169b62;
+	cursor: pointer;
+	padding: 0.75rem;
+}
+.pagination li:last-child a i {
+	padding-right: 1rem;
+}
+.pagination li a i{
+	height: 32.03px;
+}
+.navbar-toggler-right {
+	position: absolute;
+	right: 1rem;
+	border: 1px solid #169b62;
+}

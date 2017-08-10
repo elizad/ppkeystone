@@ -19,7 +19,7 @@ Post.add({
 	longtitle: { type: String },
 	image: { type: Types.CloudinaryImage },
 	content: {
-		brief: { type: Types.Html, wysiwyg: true, height: 150 },
+		brief: { type: String, max: { chars: 50, mode: 'crop' } },
 		extended: { type: Types.Html, wysiwyg: true, height: 400 },
 	},
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
