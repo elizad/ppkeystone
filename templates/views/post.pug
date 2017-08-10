@@ -8,7 +8,8 @@ block intro
 			h1= data.post.longtitle
 		if data.post.author
 			h3 by #{data.post.author.name.first}
-	ul.breadcrumb
+	div.grey
+		ul.container.breadcrumb
 			li: a(href='/content-hub') &larr; Content Hub
 			li   /  
 			if !data.post
@@ -48,49 +49,16 @@ block content
 			div
 				h2 More things you might like
 				div.row
-					each  post in data.posts
+					each item in data.posts
 						div.col-md-6.col-lg-6
 							a.equal(href="")
-								.image-wrap: img(src=post._.image.fit(150, 50)).img-responsive
-						
-					
-					
-					div.col-md-6.col-lg-6
-						a.equal(href="")
-							.image-wrap: img(src=data.post._.image.fit(150, 50)).img-responsive
-						div.equal
-							div.article-card
-								h2.title
-								div= post.title
-									a(href="https://www.profilepensions.co.uk/six-million-people-40s-wait-another-year-receive-state-pension/") State pension age rise                                           
+								.image-wrap: img(src=item._.image.fit(150, 50)).img-responsive
+							div.equal
+								h2= item.title
 								div.meta
-									span.date 20/07/2017
-									span.author Lizi Riehl
-								p.excerpt Following the Government’s announcement on 19th July 2017, millions of hard-working people will need to […]</p>	
-								div.share
-									span Share | 
-									a(href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.profilepensions.co.uk%2Fsix-million-people-40s-wait-another-year-receive-state-pension" target="_blank" style="font-size: 18px;")
-										i.fitted.fa.fa-facebook.f.icon
-									a(href="https://twitter.com/home?status=https%3A%2F%2Fwww.profilepensions.co.uk%2Fsix-million-people-40s-wait-another-year-receive-state-pension" target="_blank" style="font-size: 18px;")
-										i.fitted.fa.fa-twitter.icon
-									a(href="https://plus.google.com/share?url=https%3A%2F%2Fwww.profilepensions.co.uk%2Fsix-million-people-40s-wait-another-year-receive-state-pension" target="_blank" style="font-size: 18px;")
-										i.fitted.fa.fa-google-plus.icon
-									a(href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.profilepensions.co.uk%2Fsix-million-people-40s-wait-another-year-receive-state-pension&amp;title=State+pension+age+rise+-+Profile+Pensions&amp;summary=&amp;source=" target="_blank" style="font-size: 18px;")
-										i.fitted.fa.fa-linkedin.icon
-									a(href="mailto:?body=https%3A%2F%2Fwww.profilepensions.co.uk%2Fsix-million-people-40s-wait-another-year-receive-state-pension" style="font-size: 18px;")
-										i.icon.fa.fa-envelope
-										
-					div.col-md-6.col-lg-6
-						a.equal(href="")
-							.image-wrap: img(src=data.post._.image.fit(150, 50)).img-responsive
-						div.equal
-							div.article-card
-								h2.title
-									a(href="https://www.profilepensions.co.uk/six-million-people-40s-wait-another-year-receive-state-pension/") State pension age rise                                           
-								div.meta
-									span.date 20/07/2017
-									span.author Lizi Riehl
-								p.excerpt Following the Government’s announcement on 19th July 2017, millions of hard-working people will need to […]</p>	
+									span.date= item.publishedDate
+									span.author= item.author.name.first
+								p.excerpt= item.content.brief
 								div.share
 									span Share | 
 									a(href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.profilepensions.co.uk%2Fsix-million-people-40s-wait-another-year-receive-state-pension" target="_blank" style="font-size: 18px;")
