@@ -18,13 +18,8 @@ Pension.add({
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	author: { type: Types.Relationship, ref: 'User', index: true },
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
-	longtitle: { type: String },
-	image: { type: Types.CloudinaryImage },
-	content: {
-		brief: { type: String, max: { chars: 50, mode: 'crop' } },
-		extended: { type: Types.Html, wysiwyg: true, height: 400 },
-	},
-	categories: { type: Types.Relationship, ref: 'PensionCategory', many: true },
+	content: { type: Types.Html, wysiwyg: true, height: 400 },
+	// categories: { type: Types.Relationship, ref: 'PensionCategory', many: true },
 });
 
 Pension.defaultColumns = 'name ';

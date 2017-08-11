@@ -38,8 +38,8 @@ exports = module.exports = function (app) {
 	app.get('/pension-calculator', routes.views.pensioncalculator);
 	app.get('/content-hub/:category?', routes.views.blog);
 	app.get('/content-hub/post/:post', routes.views.post);
-	// app.get('/pension-types', routes.views.pensiontypes);
-	// app.get('/pension-types/:pensiontype', routes.views.pensiontype);
+	app.get('/pension-types', routes.views.pensiontypes);
+	app.get('/pension-types/:pensiontype', routes.views.pensiontype);
 	app.get('/about-us', routes.views.aboutus);
 	app.get('/meet-the-team/', routes.views.teamMembers);
 	app.get('/meet-the-team/:teamMember', routes.views.teamMember);

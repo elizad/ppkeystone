@@ -1,0 +1,17 @@
+extends ../layouts/default
+
+
+block intro
+	section.intro.green.text-center
+		h1= data.pension.content
+	div.grey
+		.container
+			ul.breadcrumb
+				li: a(href='/pension-types') Pension We Review
+				li /
+				li= data.pension.name
+
+block content
+	.container
+		.row
+			h2 hello
