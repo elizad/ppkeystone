@@ -1,6 +1,6 @@
 var keystone = require('keystone');
 var chai = require('chai');
-var dbURI = 'mongodb://localhost/profile-pension';
+var dbURI = 'mongodb://pippa:8KWsKu1k9qhjRvuN@sandbox-shard-00-00-uxy9p.mongodb.net:27017,sandbox-shard-00-01-uxy9p.mongodb.net:27017,sandbox-shard-00-02-uxy9p.mongodb.net:27017/profile-pension?ssl=true&replicaSet=sandbox-shard-0&authSource=admin';
 chai.should();
 
 describe('Posts', function () {
