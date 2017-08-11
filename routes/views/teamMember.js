@@ -15,10 +15,10 @@ exports = module.exports = function (req, res) {
 	// Load the current post
 	view.on('init', function (next) {
         //
-		// var q = keystone.list('teamMember').model.findOne({
-		// 	state: 'published',
-		// 	slug: locals.filters.teamMember,
-		// });
+		var q = keystone.list('teamMember').model.findOne({
+			state: 'published',
+			slug: locals.filters.teamMember,
+		});
 
 		var postSearch = {
 			slug: locals.filters.teamMember,
@@ -39,6 +39,6 @@ exports = module.exports = function (req, res) {
 	// // Load other posts
 
 	// Render the view
-	view.render('site/teamMember');
+	view.render('teamMember');
 };
 

@@ -1,0 +1,59 @@
+extends ../layouts/default
+include ../mixins/cta
+
+block intro
+	section.intro.green.text-center
+		h1 About Us
+		h3 Impartial advice to maximise the value of your pension, reduce charges and get you access to your cash when you need it
+	div.grey
+		ul.container.breadcrumb
+			li About Us
+block content
+	section.p3rem
+		.container
+			.row
+				.col-md-6.col-sm-12
+					h2 No obligation, no-pressure pension advice from qualified pension advisers.
+					p Who does your pension adviser really work for? At Profile Pensions it's you. Find out, in their own words, why our team are on a mission to give people better pension services. And how they do that better than anyone else.
+				.col-md-6.col-sm-12
+					a.col-md-12(href="https://www.youtube.com/embed/B0s4Ef1kEeY?rel=0" data-lity="")
+						img.img-responsive.col-md-12(src="https://www.profilepensions.co.uk/wp-content/uploads/2016/09/Video-Thumbnail.jpg")
+
+
+	section.grey
+		.container
+			.row
+				.col.text-center
+					h2 The pensions industry is broken
+					p.text-center    This was the starting point back in 2013. People were crying out for impartial pension advice. So we built a team of qualified pension professionals. And developed a process to give you the best possible pension service. We do this through:
+			.row.text-center
+				.col
+					div.circle-green
+						img
+					h3 Unique Pension Advice
+					p Deal 1-2-1 with qualified, pension advisers.
+				.col
+					div.circle-green
+						img
+					h3 Expertise
+					p We work differently, and we've been doing this for 4 years
+				.col
+					div.circle-green
+						img
+					h3 Customer Service
+					p Over 12,000 happy customers. See what they say about us online
+				.col
+					div.circle-green
+						img
+					h3 Finding better de
+					p We find a better deal for 7 out of every 10 pensions reviewed
+				.col-md-12
+					a.btn.btn-lg.btn-faq(href='/pensions-faqs') Frequently Asked Questions
+	section.green
+		.container
+			.row
+			.col-md-12.text-center
+				h2.text-white Meet The Team
+				p Everyone at Profile Pensions wants you to have an outstanding experience. Find out who's in charge of what and learn more about our leadership team and experienced team of pension advisers.
+				a.btn.btn-default.btn-faq(href='/meet-the-team') Learn More
+	+cta

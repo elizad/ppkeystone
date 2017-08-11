@@ -200,6 +200,7 @@ a i.fa:hover, a i.fa:active{
 	padding: 5px;
     font-size: 20px;
 }
+
 /* cookie bannner */
 #cookie-law {
 	position: relative;
@@ -212,11 +213,9 @@ a i.fa:hover, a i.fa:active{
 	top: 0;
 	padding: 5px;
 }
-
 #cookie-law a, a.close-cookie-banner > i.fa.fa-check {
 	color: #fff;
 }
-
 .nav-up {
 	top: -70px;
 	opacity: 0;
@@ -272,7 +271,6 @@ a i.fa:hover, a i.fa:active{
 		line-height: 36px;
 	}
 }
-
 /*iPhone 6 in landscape*/
 @media only screen and (min-width: 375px) and (max-width: 667px) and (orientation: landscape) {
 	#homehead h1 {
@@ -288,7 +286,6 @@ a i.fa:hover, a i.fa:active{
 	}
 
 }
-
 /*iPhone 6 in portrait*/
 @media only screen and (max-width: 667px) and (orientation: portrait) {
 	#homehead h1 {
@@ -575,7 +572,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 .grey{
 	background: #fbfbfb;
 }
-.textgreen{
+.text-green{
 	color: #169b62;
 }
 .green {
@@ -725,3 +722,12 @@ ul.breadcrumbs li:first-child {
 	right: 1rem;
 	border: 1px solid #169b62;
 }
+.circle-green{   
+	background: #169b62;
+	display: inline-block;
+	border-radius: 50%;
+	PADDING: 1rem;
+	
+	
+}
+

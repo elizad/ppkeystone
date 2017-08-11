@@ -41,7 +41,7 @@ TeamMember.schema.pre('save', function (next) {
 	next();
 });
 
-TeamMember.defaultColumns = 'title, state|20%, author|20%, publishedDate|20% , teamcategories, jobtitle';
+TeamMember.defaultColumns = 'title, state|20%, author|20%, publishedDate|20% , categories, jobtitle';
 
 TeamMember.register();
 

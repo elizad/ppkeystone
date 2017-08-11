@@ -1,14 +1,15 @@
-extends ../../layouts/default
+extends ../layouts/default
 
 
 block intro
 	section.intro.green.text-center
 		h1= data.teamMember.fullname
-		h3 
-	ul.breadcrumb
-		li: a(href='/meet-the-team') &larr; Meet the team
-		li   /  
-		li= data.teamMember.title
+		h3
+	div.grey
+		ul.container.breadcrumb
+			li: a(href='/meet-the-team') &larr; Meet the team
+			li   /  
+			li= data.teamMember.title
 block content
 	.container.p3rem
 		.row
@@ -23,8 +24,6 @@ block content
 				ul.profile-list.border-bottom
 					li= data.teamMember.qualification
 				h2 Contact 
-				i.fa.fa-phone
-				span= data.teamMember.phone
-				i.fa.fa-envelope
-				span=data.teamMember.mail
+				div: i.fa.fa-phone.text-green: span= data.teamMember.phone
+				div: i.fa.fa-envelope.text-green: span=data.teamMember.mail
 				

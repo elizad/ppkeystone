@@ -33,11 +33,11 @@ exports.initLocals = function (req, res, next) {
 			{ label: 'What is aPension Tracking', subkey: 'pensiontraking', href: '/pension-tracking/' },
 		] },
 		{ label: 'About Us', key: 'about', pages: [
-			{ label: 'Meet The Team', subkey: 'meet-the-team', href: '/meet-the-team/' },
+			{ label: 'Meet The Team', key: 'meet-the-team', href: '/meet-the-team/' },
 			{ label: 'How It Works', subkey: 'processes', href: '/processes/' },
 			{ label: 'Awards and review', subkey: 'awards-and-reviews', href: '/awards-and-reviews/' },
 			{ label: 'Our Partner', subkey: 'partners', href: '/partners/' },
-			{ label: 'Contact', subkey: 'contact', href: '/contact/' },
+			{ label: 'Contact', key: 'contact', href: '/contact/' },
 		] },
 		{ label: 'Find Pensions ', key: 'getstarted', href: '/get-started-trace' },
 	];

@@ -6791,7 +6791,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 .grey {
   background: #fbfbfb; }
 
-.textgreen {
+.text-green {
   color: #169b62; }
 
 .green {
@@ -6936,3 +6936,9 @@ ul.breadcrumbs li:first-child {
   position: absolute;
   right: 1rem;
   border: 1px solid #169b62; }
+
+.circle-green {
+  background: #169b62;
+  display: inline-block;
+  border-radius: 50%;
+  PADDING: 1rem; }

@@ -1,0 +1,49 @@
+extends ../layouts/default
+
+
+block intro
+	section.intro.green.text-center
+		h1 Contact
+		h3 You can find us at our two office locations in Preston and London. Feel free to drop us an email or give us a call.
+	div.grey
+		ul.container.breadcrumb
+			li Contact
+block content
+	.container
+		.row
+			.col.card
+				div#prestonMap.map
+					<img class="card-img-top" src="..." alt="Google Map Preston">
+				div.adress-details.card-block
+					h2 Preston Office
+					p Profile Pensions
+					p Norwest Court
+					p Guildhall Street
+					p Preston
+					p PR1 3NU
+					p: i.fa.fa-phone.text-green <span class="rTapNumber240596" style="visibility: visible;">01772 364157</span>
+					p: i.fa.fa-envelope.text-green <a href="mailto:contact@profilepensions.co.uk"> contact@profilepensions.co.uk</a>
+			.col: .card
+				div#londonMap.map
+					<img class="card-img-top" src="..." alt="Google Map London">
+				div.adress-details.card-block
+					h2 London Office
+					p Profile Pensions
+					p 46 Wicklow Street
+					p Kings Cross
+					p London
+					p WC1X 9HR
+					p: i.fa.fa-phone.text-green <span class="rTapNumber240596" style="visibility: visible;">01772 364157</span>
+					p: i.fa.fa-envelope.text-green <a href="mailto:contact@profilepensions.co.uk"> contact@profilepensions.co.uk</a>		
+				
+	section.grey
+		.container
+			div.follow-us(style="padding: 4rem 0; margin-top:4rem;")
+				h1 Follow us
+				.row-centered
+					<a href="https://www.facebook.com/ProfilePensions/"><i class="fa fa-facebook fa-4x"></i></a>
+					<a href="https://twitter.com/profilepensions"><i class="fa fa-twitter fa-4x"></i></a>
+					<a href="https://www.linkedin.com/company/profile-financial-solutions-ltd?trk=mini-profile"><i class="fa fa-linkedin icon fa-4x"></i></a>
+					<a href=""><i class="fa fa-google fa-4x"></i></a>
+				
+		

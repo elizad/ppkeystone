@@ -1,74 +1,65 @@
-extends ../../layouts/default
+extends ../layouts/default
+include ../mixins/promises
+
 
 block intro
 	section.intro.green.text-center
 		h1 Meet the team 
 		h3 Over 120 people helping you make sense of your pension
-	ul.breadcrumb
-		li: a(href='/meet-the-team') Meet the team
+	div.grey
+		ul.container.breadcrumb
+			li: a(href='/meet-the-team') Meet the team
 
 block content
 	if data.categories.length
-		each cat in data.categories
+		each category in data.categories
 			section.p3rem
 				.container
 					.row.text-center.row-centered
-						// a(href='/meet-the-team/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : true).list-group-item= cat.name
-						h1.col-md-12= cat.categorytitle
-						p.col-md-12= cat.description
-								if filters.category && !data.category
-									h3.text-muted Invalid teamMembers.
-								else
-									h1= data.category ? data.category.name : ''
-									.row
-										each teamMember in data.teamMembers.results
-											.col.col-centered.text-center
-												span
-													img(src=teamMember._.teamMemberImage.fit(150, 150)).ing-responsive.rounded-circle
-												a(href='http://localhost:3000/meet-the-team/' + teamMember.slug)
-													h2= teamMember.title
-												p= teamMember.jobtitle
-												p= teamMember.categories
-		
-	section.grey.p3rem
-		.container
-			.row.text-center
-				//h1.col-md-12 Our Leadership Team
-				//p.col-md-12  Our leadership team oversee our entire operation to make sure it's simple, effective and works for you!
-				//if data.teamMembers.length
-				//	each teamMember in data.teamMembers
-				//		.col.col-md-3
-				//			span
-				//				// img.img-responsive(src=teamMember.teamMemberImage)
-				//			a(href='http://localhost:3000/meet-the-team/' + teamMember.slug)
-				//				h2= data.teamMember.title
-				//			p= data.teamMember.jobtitle
-				//else
-				//	h3.text-muted There are no team member yet.
+						h2.col-md-12= category.categorytitle
+						p.col-md-12= category.description
+						each teamMember in data.teamMembers
+							.col-md-3
+								if teamMember.categories.indexOf(category._id) > -1
+									span
+										img(src=teamMember._.teamMemberImage.fit(150, 150)).ing-responsive.rounded-circle
+									a(href='http://localhost:3000/meet-the-team/' + teamMember.slug)
+										h3= teamMember.title
+									p= teamMember.jobtitle
+
+
+
+	//section.grey.p3rem
+	//	.container
+	//		.row.text-center
+	//			//h1.col-md-12 Our Leadership Team
+	//			//p.col-md-12  Our leadership team oversee our entire operation to make sure it's simple, effective and works for you!
+	//			//if data.teamMembers.length
+	//			//	each teamMember in data.teamMembers
+	//			//		.col.col-md-3
+	//			//			span
+	//			//				// img.img-responsive(src=teamMember.teamMemberImage)
+	//			//			a(href='http://localhost:3000/meet-the-team/' + teamMember.slug)
+	//			//				h2= data.teamMember.title
+	//			//			p= data.teamMember.jobtitle
+	//			//else
+	//			//	h3.text-muted There are no team member yet.
 	section.p3rem
 		.container
 			.row
-				.col-md-5
-					video
-				.col-md-7
+				.col-md-6.col-sm-12
+					a.col-md-12(href="https://www.youtube.com/embed/B0s4Ef1kEeY?rel=0" data-lity="")
+						img.img-responsive.col-md-12(src="https://www.profilepensions.co.uk/wp-content/uploads/2016/09/Video-Thumbnail.jpg")
+				.col-md-6.col-sm-12
 					h2 The Profile Pensions Team
-					p desc
+					p This is a video of some of our team. They’re all committed to delivering an outstanding experience with Profile Pensions. If at any stage your experience falls short you can contact them directly. (They also like hearing when their team’s done well).
 	section.grey.p3rem
 		.container
 			.row.text-center
 				.col-md-12
 					h2 Need To Track Down Your Pensions?
-					p desc
-	section.promise
-		.container.text-center
-			h2 Our promise to you
-			div.row
-				div.col-md-4
-					svg.sprite-check-lg.svgyellow <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick" viewBox="0 0 29.98 27.81"></use>
-					span.company-features__item We are not tied to anyone and work in your best interest
-				div.col-md-4
-					svg.sprite-check-lg.svgyellow <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick" viewBox="0 0 29.98 27.81"></use>
-					span.company-features__item We are not tied to anyone and work in your best interest
-				div.col-md-4
-					svg.sprite-check-lg.svgyellow <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick" viewBox="0 0 29.98 27.81"></use>
-					span.company-features__item We are not tied to anyone and work in your best interest			
+					p Get impartial advice to maximise the value of your pension, reduce charges and get you access to your cash when you need it.
+					p We find a better pension for 7 out of every 10 people we speak to.
+					a.btn.btn-lg.btn-primary(href='/get-started-trace/') Find Pensions
+
+	+promises

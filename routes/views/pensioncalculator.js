@@ -6,8 +6,8 @@ exports = module.exports = function (req, res) {
 	var locals = res.locals;
 
 	// Set locals
-	locals.section = 'contact';
+	locals.section = 'pensioncalculator';
 
 
-	view.render('contact');
+	view.render('pensioncalculator');
 };
