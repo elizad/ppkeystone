@@ -1,3 +1,17 @@
+// var keystone = require('keystone');
+//
+// exports = module.exports = function (req, res) {
+//
+// 	var view = new keystone.View(req, res);
+// 	var locals = res.locals;
+//
+// 	// Set locals
+// 	locals.section = 'ppension';
+//
+//
+// 	view.render('ppension');
+// };
+
 var path = '/v1/business-units/57ff44480000ff000595f84b/?apikey=38ABXsBFEYy7cWQLXkWagwuuCBtfT8BG';
 var path2 = '/v1/business-units/57ff44480000ff000595f84b/reviews?apikey=38ABXsBFEYy7cWQLXkWagwuuCBtfT8BG';
 var trustpilot = require('../../providers/trustpilot')(path);

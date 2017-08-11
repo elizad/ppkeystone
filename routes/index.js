@@ -47,7 +47,7 @@ exports = module.exports = function (app) {
 	app.get('/pension-review', routes.views.ppension);
 	app.get('/contact', routes.views.contact);
 	app.all('/get-started-trace', routes.views.getstarted);
-	
+
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);

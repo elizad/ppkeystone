@@ -7,7 +7,5 @@ exports = module.exports = function (req, res) {
 
 	// Set locals
 	locals.section = 'processes';
-
-
 	view.render('processes');
 };
