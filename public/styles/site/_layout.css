@@ -595,6 +595,10 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 	font-family: Campton-SemiBold;
 	font-size: 1.2rem;
 }
+ul.container.breadcrumb{
+	margin-bottom: 0;
+}
+
 ul.breadcrumb{
 	list-style: none;
 }
