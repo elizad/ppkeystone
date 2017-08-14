@@ -1,0 +1,25 @@
+extends ../layouts/default
+include ../mixins/process
+include ../mixins/carouselreviews1
+include ../mixins/tpreviews
+include ../mixins/cta	
+
+block intro
+	section.intro.green.text-center
+		h1= data.pensionreview.longtitle
+	div.grey
+		ul.container.breadcrumb
+			li= data.pensionreviewbreadcrumbstitle
+block content
+	.container.text-center.col-md-12.p3rem
+		.row
+			.col-md-12= data.pensionreview.content
+				
+	+process()
+	
+	+carouselreviews1()
+	
+	+tpreviews()
+		
+	+cta()
+
