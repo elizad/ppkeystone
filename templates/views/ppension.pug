@@ -6,21 +6,15 @@ include ../mixins/cta
 
 block intro
 	section.intro.green.text-center
-		h1 No Obligation Pension Review
+		h1= data.pensionreview.longtitle
 	div.grey
 		ul.container.breadcrumb
-			li Take a Pension Review Which Really Works
+			li= data.pensionreviewbreadcrumbstitle
 block content
-	.container.text-center
+	.container.text-center.col-md-12.p3rem
 		.row
-			.col-md-12
-				h2 Pension Reviews and their reputation
-				div:p  Pension reviews have a terrible reputation right now. You may have been bombarded by dozens of cold-callers offering a free pension review. And you’re right to be sceptical. Many people have been mis-sold pensions via this tactic. So many, that the Financial Conduct Authority (FCA) is reviewing how to apply for compensation if you think you did receive bad advice.
-					p But, ironically, this has increased the need for pension review services. More people than ever before are in need of legitimate, impartial pension guidance. So how can you ensure you’re getting the best advice?
-					p There’s Pension Wise, which is a UK government-backed service to talk people through their pension options. So you can trust you’re getting impartial guidance from them.
-					p But, they can only give guidance. They can’t comment on your current pension or recommend another pension.
-				h2 A Profile Pensions Review
-				div: p Firstly, we are fully transparent and always strive to put our customers first. Just take a look at some of our third party customer reviews. Not everyone in the industry shares these types of reviews or has a rating like ours. Secondly, we’re authorised and regulated by the FCA (registration number 596398). We follow their rules and regulations. And you can check out our accountability here. But there’s a third reason. When our founders set up Profile Pensions they spotted an opportunity. The industry was then running a switch and we’ll take a commission business. Profile Pensions wanted to do things differently – in a more fair and transparent way. Our pension advisers are committed to making your no obligation pension as painless as possible in simple, jargon-free language. So a lot of companies offer a no obligation pension review service. And that’s what we offer. But it’s not the same. We put every effort into making your customer experience as positive as possible and we genuinely care about doing the best for you. More straightforward, less pressured, and more tailored to your unique requirements.
+			.col-md-12= data.pensionreview.content
+				
 	+process()
 	
 	+carouselreviews1()

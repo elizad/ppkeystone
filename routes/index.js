@@ -45,6 +45,8 @@ exports = module.exports = function (app) {
 	app.get('/meet-the-team/:teamMember', routes.views.teamMember);
 	app.get('/processes', routes.views.processes);
 	app.get('/pension-review', routes.views.ppension);
+	app.get('/pension-tracing', routes.views.pensiontracing);
+	app.get('/about-us/awards-and-reviews/', routes.views.awardsandreviews);
 	app.get('/contact', routes.views.contact);
 	app.all('/get-started-trace', routes.views.getstarted);
 

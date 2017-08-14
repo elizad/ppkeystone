@@ -1,4 +1,3 @@
-
 var path = '/v1/business-units/57ff44480000ff000595f84b/?apikey=38ABXsBFEYy7cWQLXkWagwuuCBtfT8BG';
 var path2 = '/v1/business-units/57ff44480000ff000595f84b/reviews?apikey=38ABXsBFEYy7cWQLXkWagwuuCBtfT8BG';
 var trustpilot = require('../../providers/trustpilot')(path);
@@ -14,17 +13,17 @@ exports = module.exports = async function (req, res) {
 
 	locals.trustpilot2 = await trustpilot2.getData(path2) || {};
 	try {
-		var pensionreview = await keystone.list('Pensionreview').model.findOne().exec();
+		var pensiontracing = await keystone.list('Pensiontracing').model.findOne().exec();
 	} catch (error) {
 		console.log(' ---------- ', error);
 	}
 	// item in the header navigation.
-	locals.section = 'ppension';
+	locals.section = 'pension-tracing';
 	locals.filters = {
-		pensionreview: req.params.pensionreview,
+		pensiontracing: req.params.pensiontracing,
 	};
 	locals.data = {
-		pensionreview,
+		pensiontracing,
 	};
 	//  Load pension review
 	view.on('init', function (next) {
@@ -32,5 +31,5 @@ exports = module.exports = async function (req, res) {
 	});
 
 	// Render the view
-	view.render('ppension');
+	view.render('pensiontracing');
 };

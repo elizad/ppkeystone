@@ -13,7 +13,7 @@ block intro
 block content
 	if data.categories.length
 		each category in data.categories
-			section.p3rem
+			section.p3rem(class='class'+ category.id)
 				.container
 					.row.text-center.row-centered
 						h2.col-md-12= category.categorytitle

@@ -6163,9 +6163,6 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 
 /* Icons */
 @font-face {
-  font-family: "slick";
-  src: url("./fonts/slick.eot");
-  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -6393,6 +6390,9 @@ body {
 
 .btn-link.btn-view:hover {
   color: #00a160; }
+
+.btn-faq {
+  border-color: #92de63; }
 
 ul {
   list-style: none; }
@@ -6648,6 +6648,20 @@ svg {
   color: #fff;
   padding: 1rem 0 2rem; }
 
+.review-image > .full-width {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  margin: auto;
+  object-fit: cover;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center center;
+  height: 200px;
+  width: 200px; }
+
 .reviews-trustpilot {
   background: #fff;
   color: #000;
@@ -6789,7 +6803,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   position: relative; }
 
 /*page headers*/
-.grey {
+.grey, .class597f0c43f708efc824e2e607 {
   background: #fbfbfb; }
 
 .text-green {
@@ -6964,15 +6978,21 @@ ul.breadcrumbs li:first-child {
   -webkit-transition: .4s ease all;
   -moz-transition: .4s ease all;
   -o-transition: .4s ease all;
-  transition: .4s ease all;
-  display: block; }
+  transition: .4s ease all; }
 
 .pension-type:hover {
   background: #169b62; }
 
 .pension-type a {
   padding: 20px;
-  color: #169b62; }
+  color: #169b62;
+  display: table;
+  min-height: 150px;
+  min-width: 150px; }
 
 .pension-type a:hover {
   color: #fff; }
+
+.pension-type__title {
+  display: table-cell;
+  vertical-align: middle; }

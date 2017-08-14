@@ -6,14 +6,15 @@ include ../mixins/cta
 
 block intro
 	section.intro.green.text-center
-		h1= data.pensionreview.longtitle
+		h1= data.pensiontracing.longtitle
+		h3= data.pensiontracing.subtitle
 	div.grey
 		ul.container.breadcrumb
-			li= data.pensionreviewbreadcrumbstitle
+			li= data.pensiontracing.breadcrumbstitle
 block content
 	.container.text-center.col-md-12.p3rem
 		.row
-			.col-md-12= data.pensionreview.content
+			.col-md-12= data.pensiontracing.content
 				
 	+process()
 	
