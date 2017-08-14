@@ -20,7 +20,6 @@ exports = module.exports = function (req, res) {
 			slug: locals.filters.post,
 			state: 'published',
 		};
-
 		// allow admin user to see the post in all cases
 		if (locals.user && locals.user.isAdmin) {
 			delete postSearch.state;
@@ -38,7 +37,6 @@ exports = module.exports = function (req, res) {
 	// Load other posts
 	view.on('init', function (next) {
 
-		//
 
 		var categories = keystone.list('PostCategory').model.find().exec(function (err, categories) {
 			if (err) {

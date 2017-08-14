@@ -1,57 +1,29 @@
 var keystone = require('keystone');
 
-// exports = module.exports = function (req, res) {
-//
-// 	var view = new keystone.View(req, res);
-// 	var locals = res.locals;
-//
-// 	// Set locals
-// 	locals.section = 'pensiontype';
-// 	view.render('pensiontype');
-// };
+exports = module.exports = async function (req, res) {
 
-
-exports = module.exports = function (req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
-	// Set locals
+	try {
+		var pension = await keystone.list('Pension').model.findOne().exec();
+		console.log(pension);
+	} catch (error) {
+		console.log(' ---------- ', error);
+	}
+	// Init locals
 	locals.section = 'pension-types';
-
 	locals.filters = {
 		pension: req.params.pension,
 	};
 	locals.data = {
-		pensions: [],
-		//categories: [],
+		pension,
 	};
-	// Load the current post
-
+	// Load the team Members
 	view.on('init', function (next) {
-		var q = keystone.list('Pension').model.findOne({
-			slug: locals.filters.pension,
-		});
-    //
-	// 	var postSearch = {
-	// 		slug: locals.filters.pensions,
-	// 		state: 'published',
-	// 	};
-	// 	// allow admin user to see the post in all cases
-	// 	if (locals.user && locals.user.isAdmin) {
-	// 		delete postSearch.state;
-	// 	}
-    //
-		q.exec(function (err, result) {
-			locals.data.pension = result;
-			next(err);
-			console.log(result);
-		});
-
+		next();
 	});
 
-	// // Load other posts
-
-	// Render the view
+	// Render View
 	view.render('pensiontype');
 };
-
 

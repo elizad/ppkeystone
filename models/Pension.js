@@ -18,9 +18,9 @@ Pension.add({
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	author: { type: Types.Relationship, ref: 'User', index: true },
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
-	content: { type: Types.Html, wysiwyg: true, height: 400 },
-	// categories: { type: Types.Relationship, ref: 'PensionCategory', many: true },
+	content: { type: Types.Html, wysiwyg: false, height: 250 },
+	categories: { type: Types.Relationship, ref: 'PensionCategory', many: true },
 });
 
-Pension.defaultColumns = 'name ';
+Pension.defaultColumns = 'name, title, categories';
 Pension.register();

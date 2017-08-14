@@ -6408,6 +6408,13 @@ input {
 h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
   margin: 1rem 0; }
 
+h2 {
+  margin: 1rem 0 1rem;
+  font-weight: 300;
+  font-family: Campton-Bold;
+  font-size: 28px;
+  letter-spacing: -0.2px; }
+
 .btn-mail {
   margin-left: 10px !important;
   height: auto !important;
@@ -6585,13 +6592,6 @@ svg {
   fill: #fff; }
 
 /*end svg*/
-.container.text-center h2 {
-  margin: 1rem 0 1rem;
-  font-weight: 300;
-  font-family: Campton-Bold;
-  font-size: 28px;
-  letter-spacing: -0.2px; }
-
 .features {
   background: #169B62;
   color: #fff;
@@ -6946,3 +6946,33 @@ ul.breadcrumbs li:first-child {
   display: inline-block;
   border-radius: 50%;
   PADDING: 1rem; }
+
+.pension {
+  margin-bottom: 2%;
+  display: block; }
+
+.pension-type {
+  position: relative;
+  max-width: 300px;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ededed;
+  color: #169b62;
+  -webkit-transition: .4s ease all;
+  -moz-transition: .4s ease all;
+  -o-transition: .4s ease all;
+  transition: .4s ease all;
+  display: block; }
+
+.pension-type:hover {
+  background: #169b62; }
+
+.pension-type a {
+  padding: 20px;
+  color: #169b62; }
+
+.pension-type a:hover {
+  color: #fff; }

@@ -11,10 +11,10 @@ exports = module.exports = async function (req, res) {
 			categoriesById[category._id] = category;
 		});
 		var pensions = await keystone.list('Pension').model.find().exec();
-			// console.log('teamMembers', teamMembers.results);
+
 		console.log(pensions);
 	} catch (error) {
-		console.log(' ---------- ', error);
+		console.log(' ---- ', error);
 	}
 		// Init locals
 	locals.section = 'pension-types';

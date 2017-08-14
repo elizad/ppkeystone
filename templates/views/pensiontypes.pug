@@ -11,8 +11,19 @@ block intro
 				li: a(href='/') Pension We Review
 
 block content
-	.container
-		.row
-			h2 H 
+	if data.categories.length
+		each category in data.categories
+			section.p3rem
+				.container
+					.row.text-center
+						h2.col-md-12  #{category.categorytitle}
+						p.col-md-12  #{category.description}
+
+							each pension in data.pensions
+								.col-lg-2.col-md-4.col-sm-6.col-xs-12.pension
+									div.rounded-circle.green.pension-type
+										a(href='/pension-types/' + pension.slug)
+											div.pension-type__title= pension.title
+					
 			
 	+cta()

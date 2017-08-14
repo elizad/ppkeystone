@@ -11,8 +11,6 @@ exports = module.exports = async function (req, res) {
 			categoriesById[category._id] = category;
 		});
 		var teamMembers = await keystone.list('teamMember').model.find().exec();
-		// console.log('teamMembers', teamMembers.results);
-		console.log(teamMembers);
 	} catch (error) {
 		console.log(' ---------- ', error);
 	}
