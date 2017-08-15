@@ -4,11 +4,11 @@ exports = module.exports = async function (req, res) {
 
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
+	var pension = {};	// assuming pension should be an object
 	try {
-		var pension = await keystone.list('Pension').model.findOne().exec();
-		console.log(pension);
+		pension = await keystone.list('Pension').model.findOne().exec();
 	} catch (error) {
-		console.log(' ---------- ', error);
+		console.log(' could not find pension ', error);
 	}
 	// Init locals
 	locals.section = 'pension-types';
