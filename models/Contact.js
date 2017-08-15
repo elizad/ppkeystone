@@ -1,10 +1,7 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
-/**
- * Pension Page Model
- * ===========
- */
+
 var Contact = new keystone.List('Contact', {
 	map: { name: 'title' },
 	autokey: { path: 'slug', from: 'title', unique: true },

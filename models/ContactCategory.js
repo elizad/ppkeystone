@@ -1,8 +1,5 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
-/**
- * Contact types category
- */
 
 var ContactCategory = new keystone.List('ContactCategory', {
 	sortable: true,

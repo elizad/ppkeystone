@@ -3,7 +3,6 @@ var Types = keystone.Field.Types;
 
 /**
  * User Model
- * ==========
  */
 var User = new keystone.List('User');
 

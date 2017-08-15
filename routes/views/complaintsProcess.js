@@ -27,6 +27,5 @@ exports = module.exports = async function (req, res) {
 		next();
 	});
 	// Set locals
-	
 	view.render('complaintsprocess');
 };

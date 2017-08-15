@@ -2,7 +2,7 @@ var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
 /**
- * Pension Page Model
+ * Pension review page
  * ===========
  */
 

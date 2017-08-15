@@ -47,6 +47,7 @@ keystone.set('nav', {
 	posts: ['posts', 'post-categories'],
 	teamMembers: ['team-members', 'team-member-categories'],
 	pensions: ['pensions', 'pension-categories'],
+	address: ['contacts', 'contact-categories'],
 	users: 'users',
 });
 

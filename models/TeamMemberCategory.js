@@ -1,7 +1,7 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
 /**
- * team member category
+ * Team member category
  */
 
 var TeamMemberCategory = new keystone.List('teamMemberCategory', {

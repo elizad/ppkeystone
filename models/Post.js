@@ -3,7 +3,6 @@ var Types = keystone.Field.Types;
 
 /**
  * Post Model
- * ==========
  */
 
 var Post = new keystone.List('Post', {

@@ -2,7 +2,7 @@ var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
 /**
- * Pension Switch as homepage template
+ * Team Member
  */
 var TeamMember = new keystone.List('teamMember', {
 	map: { name: 'title' },

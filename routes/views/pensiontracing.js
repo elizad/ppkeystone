@@ -11,7 +11,6 @@ exports = module.exports = async function (req, res) {
 	var pensiontracing;
 	var locals = res.locals;
 	locals.trustpilot = await trustpilot.getData() || {};
-
 	locals.trustpilot2 = await trustpilot2.getData(path2) || {};
 	try {
 		pensiontracing = await keystone.list('Pensiontracing').model.findOne().exec();

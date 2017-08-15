@@ -2,7 +2,6 @@ var keystone = require('keystone');
 
 /**
  * PostCategory Model
- * ==================
  */
 
 var PostCategory = new keystone.List('PostCategory', {
