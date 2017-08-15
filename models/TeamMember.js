@@ -23,7 +23,7 @@ TeamMember.add({
 	teamMemberImage: { type: Types.CloudinaryImage },
 	fullname: { type: String },
 	jobtitle: { type: String },
-	description: { type: Types.Html, wysiwyg: false, height: 150 },
+	description: { type: Types.Html, wysiwyg: true, height: 150 },
 	qualification: { type: String },
 	phone: { type: Types.Number },
 	email: { type: String },

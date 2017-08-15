@@ -18,7 +18,7 @@ exports = module.exports = async function (req, res) {
 	locals.data = {
 		pension,
 	};
-	// Load the pension types
+	// Load the pension type
 	view.on('init', function (next) {
 		next();
 	});

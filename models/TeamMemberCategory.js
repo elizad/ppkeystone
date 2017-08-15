@@ -13,9 +13,8 @@ var TeamMemberCategory = new keystone.List('teamMemberCategory', {
 
 TeamMemberCategory.add({
 	name: { type: String },
-	// categories: { type: Types.Relationship, ref: 'teamMemberCategory', many: true },
 	categorytitle: { type: String },
-	description: { type: Types.Markdown },
+	description: { type: Types.Html, wysiwyg: true, height: 150 },
 	video: { type: Types.Text },
 	// slug: { type: String },
 	isVisible: { type: Boolean },

@@ -13,9 +13,6 @@ exports = module.exports = async function (req, res) {
 	locals.trustpilot = await trustpilot.getData() || {};
 
 	locals.trustpilot2 = await trustpilot2.getData(path2) || {};
-	console.log(locals);
-	// locals.section is used to set the currently selected
-	// item in the header navigation.
 	locals.section = 'pension-switch';
 
 	// Render the view

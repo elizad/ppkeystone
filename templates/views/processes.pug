@@ -1,7 +1,5 @@
 extends ../layouts/default
-include ../mixins/process
-include ../mixins/carouselreviews1
-include ../mixins/cta	
+include ../mixins/cta
 
 block intro
 	section.intro.green.text-center
@@ -11,6 +9,10 @@ block intro
 		ul.container.breadcrumb
 			li How It Works
 block content
-	+process
-	+carouselreviews1
+	section.p3rem
+		.container.text-center
+			.row
+				h2 Privacy Policy
+				.col-md-12
+
 	+cta

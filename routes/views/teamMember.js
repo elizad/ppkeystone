@@ -12,7 +12,7 @@ exports = module.exports = function (req, res) {
 		teamMembers: [],
 		categories: [],
 	};
-	// Load the current post
+	// Load the current Team Member
 	view.on('init', function (next) {
         //
 		var q = keystone.list('teamMember').model.findOne({
@@ -20,15 +20,13 @@ exports = module.exports = function (req, res) {
 			slug: locals.filters.teamMember,
 		});
 
-		var postSearch = {
+		var memberSearch = {
 			slug: locals.filters.teamMember,
 			state: 'published',
 		};
-			// allow admin user to see the post in all cases
 		if (locals.user && locals.user.isAdmin) {
-			delete postSearch.state;
+			delete memberSearch.state;
 		}
-			// .populate('author categories');
 		q.exec(function (err, result) {
 			locals.data.teamMember = result;
 			next(err);

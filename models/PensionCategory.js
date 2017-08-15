@@ -14,7 +14,7 @@ var PensionCategory = new keystone.List('PensionCategory', {
 PensionCategory.add({
 	name: { type: String },
 	categorylongtitle: { type: String },
-	description: { type: Types.Markdown },
+	description: { type: Types.Html, wysiwyg: true, height: 150 },
 	// slug: { type: String },
 	isVisible: { type: Boolean },
 });

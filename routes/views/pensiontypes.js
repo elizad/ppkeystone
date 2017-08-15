@@ -26,7 +26,7 @@ exports = module.exports = async function (req, res) {
 		categories,
 		categoriesById,
 	};
-		// Load the team Members
+		// Load 
 	view.on('init', function (next) {
 		next();
 	});

@@ -17,7 +17,7 @@ block content
 				.container
 					.row.text-center.row-centered
 						h2.col-md-12= category.categorytitle
-						p.col-md-12= category.description
+						span.col-md-12!= category.description
 						each teamMember in data.teamMembers
 							.col-md-3
 								if teamMember.categories.indexOf(category._id) > -1
