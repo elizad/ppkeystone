@@ -4,13 +4,14 @@ exports = module.exports = async function (req, res) {
 
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
+	var pensions = {};
 	try {
 		var categories = await keystone.list('PensionCategory').model.find().exec();
 		var categoriesById = [];
 		categories.map((category) => {
 			categoriesById[category._id] = category;
 		});
-		var pensions = await keystone.list('Pension').model.find().exec();
+		pensions = await keystone.list('Pension').model.find().exec();
 
 		console.log(pensions);
 	} catch (error) {

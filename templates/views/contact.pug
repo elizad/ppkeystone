@@ -3,38 +3,44 @@ extends ../layouts/default
 
 block intro
 	section.intro.green.text-center
-		h1 Contact
-		h3 You can find us at our two office locations in Preston and London. Feel free to drop us an email or give us a call.
+		if data.categories.length
+			each category in data.categories
+				h1.col-md-12= category.name
+				p.col-md-12!= category.description
 	div.grey
 		ul.container.breadcrumb
-			li Contact
-block content
-	.container.p3rem
-		.row.p3rem
-			.col.card.grey
-				div#prestonMap.map
-					<img class="card-img-top" src="..." alt="Google Map Preston">
-				div.adress-details.card-block
-					h2 Preston Office
-					p Profile Pensions
-					p Norwest Court
-					p Guildhall Street
-					p Preston
-					p PR1 3NU
-					p: i.fa.fa-phone.text-green <a href="tel:+441772 364157" class="rTapNumber240596" > 01772 364157</a> 
-					p: i.fa.fa-envelope.text-green <a href="mailto:contact@profilepensions.co.uk"> contact@profilepensions.co.uk</a>
-			.col: .card.grey
-				div#londonMap.map
-					<img class="card-img-top" src="..." alt="Google Map London">
-				div.adress-details.card-block
-					h2 London Office
-					p Profile Pensions
-					p 46 Wicklow Street
-					p Kings Cross
-					p London
-					p WC1X 9HR
-					p: i.fa.fa-phone.text-green <a href="tel:+441772 364157" class="rTapNumber240596" > 01772 364157</a> 
-					p: i.fa.fa-envelope.text-green <a href="mailto:contact@profilepensions.co.uk"> contact@profilepensions.co.uk</a>		
+			if data.categories.length
+				each category in data.categories
+					li= category.name
+	block content
+		.container.p3rem
+			.row.p3rem
+				if data.categories.length
+					each category in data.categories
+						each contact in data.contacts
+							.col: .card.grey
+								div#prestonMap.map=contact.map
+								div.adress-details.card-block
+									h2= contact.bussinesoffice
+									p= contact.bussinesname
+									p= contact.address1
+									p= contact.address2
+									p= contact.city
+									p= contact.postcode
+									p: i.fa.fa-phone.text-green <a href="tel:+44#{contact.phone}" class="rTapNumber240596" > #{contact.phone}</a> 
+									p: i.fa.fa-envelope.text-green <a href="mailto:#{contact.email}"> #{contact.email}</a>
+			//.col: .card.grey
+			//	div#londonMap.map
+			//		<img class="card-img-top" src="..." alt="Google Map London">
+			//	div.adress-details.card-block
+			//		h2 London Office
+			//		p Profile Pensions
+			//		p 46 Wicklow Street
+			//		p Kings Cross
+			//		p London
+			//		p WC1X 9HR
+			//		p: i.fa.fa-phone.text-green <a href="tel:+441772 364157" class="rTapNumber240596" > 01772 364157</a> 
+			//		p: i.fa.fa-envelope.text-green <a href="mailto:contact@profilepensions.co.uk"> contact@profilepensions.co.uk</a>		
 				
 	section.grey
 		.container

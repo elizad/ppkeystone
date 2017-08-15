@@ -1,35 +1,36 @@
 var keystone = require('keystone');
 
-// exports = module.exports = function (req, res) {
-//
-// 	var view = new keystone.View(req, res);
-// 	var locals = res.locals;
 exports = module.exports = async function (req, res) {
 
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
-	var contact = {};
-	var categories = {}; // assuming should be an object
+	var contacts = {};
 	try {
-		categories = await keystone.list('ContactCategory').model.find().exec();
-		contact = await keystone.list('Contact').model.findOne().exec();
+		var categories = await keystone.list('ContactCategory').model.find().exec();
+		var categoriesById = [];
+		categories.map((category) => {
+			categoriesById[category._id] = category;
+		});
+		contacts = await keystone.list('Contact').model.find().exec();
+
+		console.log(contacts);
 	} catch (error) {
-		console.log('could not find contact', error);
+		console.log('could not find contact types ', error);
 	}
 	// Init locals
 	locals.section = 'contact';
 	locals.filters = {
-		contact: req.params.contact,
 		category: req.params.category,
 	};
 	locals.data = {
-		contact,
+		contacts,
 		categories,
+		categoriesById,
 	};
-	// Load the contacts
+	// Load contacts
 	view.on('init', function (next) {
 		next();
 	});
-	// Render Views
+	// Render View
 	view.render('contact');
 };

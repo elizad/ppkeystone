@@ -12,7 +12,6 @@ ContactCategory.add({
 	name: { type: String },
 	categorylongtitle: { type: String },
 	description: { type: Types.Html, wysiwyg: true, height: 150 },
-	// slug: { type: String },
 	isVisible: { type: Boolean },
 });
 
