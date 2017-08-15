@@ -35,6 +35,7 @@ var routes = {
 exports = module.exports = function (app) {
 	// Views
 	app.get('/', routes.views.index);
+	app.get('/pension-switch', routes.views.pensionswitch);
 	app.get('/pension-calculator', routes.views.pensioncalculator);
 	app.get('/content-hub/:category?', routes.views.blog);
 	app.get('/content-hub/post/:post', routes.views.post);
@@ -47,6 +48,7 @@ exports = module.exports = function (app) {
 	app.get('/pension-review', routes.views.ppension);
 	app.get('/pension-tracing', routes.views.pensiontracing);
 	app.get('/about-us/awards-and-reviews/', routes.views.awardsandreviews);
+	app.get('/partners', routes.views.ourpartners);
 	app.get('/contact', routes.views.contact);
 	app.all('/get-started-trace', routes.views.getstarted);
 

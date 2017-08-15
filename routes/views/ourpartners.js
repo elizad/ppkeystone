@@ -6,6 +6,6 @@ exports = module.exports = function (req, res) {
 	var locals = res.locals;
 
 	// Set locals
-	locals.section = 'aboutus';
-	view.render('aboutus');
+	locals.section = 'partners';
+	view.render('ourpartners');
 };

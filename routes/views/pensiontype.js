@@ -6,9 +6,8 @@ exports = module.exports = async function (req, res) {
 	var locals = res.locals;
 	try {
 		var pension = await keystone.list('Pension').model.findOne().exec();
-		console.log(pension);
 	} catch (error) {
-		console.log(' ---------- ', error);
+		console.log('could not find pension', error);
 	}
 	// Init locals
 	locals.section = 'pension-types';

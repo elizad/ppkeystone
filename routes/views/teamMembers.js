@@ -12,7 +12,7 @@ exports = module.exports = async function (req, res) {
 		});
 		var teamMembers = await keystone.list('teamMember').model.find().exec();
 	} catch (error) {
-		console.log(' ---------- ', error);
+		console.log(' could not find teamMember ', error);
 	}
 	// Init locals
 	locals.section = 'meet-the-team';

@@ -1,0 +1,36 @@
+
+
+extends ../layouts/reviewdefault
+include ../mixins/process
+include ../mixins/carouselreviews1
+include ../mixins/tpreviews
+include ../mixins/cta
+
+block intro
+
+	section.intro.green.text-center
+		h1 Awards and Reviews
+		h3 Have a look at the awards we have won and what our customers are saying about us
+	div.grey
+		.container
+			ul.breadcrumb
+				li: a(href='/about-us') About Us
+				li /
+				li Awards and Reviews
+block content
+
+	.container.col-md-12.p3rem
+		.row
+			.col-md-8
+				h2.text-center Financial Lifetime
+			.col-md-8
+				p Financial Lifetime are an appointed representative for Profile Pensions. You can also see their status as an appointed representative on the FCA register here. For more information about Financial Lifetime, feel free to contact us.
+				p Alternatively you can contact them directly on the details listed below:
+				p T: 01772 977125
+				p E: info@financiallifetime.co.uk
+			.col-md-4
+				img.text-center(src="/images/financial-lifetime-logo-300x96.png" alt="Financial Lifetime")
+				
+			
+				
+	+cta()

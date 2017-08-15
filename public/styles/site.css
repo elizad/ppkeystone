@@ -6955,6 +6955,9 @@ ul.breadcrumbs li:first-child {
   right: 1rem;
   border: 1px solid #169b62; }
 
+.navbar-nav.ml-auto > li:last-child {
+  margin-left: 20px; }
+
 .circle-green {
   background: #169b62;
   display: inline-block;
@@ -6996,3 +6999,25 @@ ul.breadcrumbs li:first-child {
 .pension-type__title {
   display: table-cell;
   vertical-align: middle; }
+
+.panel {
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 4px; }
+
+.panel-body {
+  padding: 10px; }
+
+.company-services .panel-success {
+  height: 100%;
+  padding: 10px 10px 0 10px;
+  border-color: #169b62; }
+
+.company-services-image {
+  background: #fafef8;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  display: block;
+  margin: 0px auto 20px auto; }
