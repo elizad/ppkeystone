@@ -6,17 +6,16 @@ var trustpilot2 = require('../../providers/trustpilot')(path2);
 var keystone = require('keystone');
 
 exports = module.exports = async function (req, res) {
-	console.log('tp2' + await trustpilot2.getData());
-
+	var pensionreview;
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 	locals.trustpilot = await trustpilot.getData() || {};
 
 	locals.trustpilot2 = await trustpilot2.getData(path2) || {};
 	try {
-		var pensionreview = await keystone.list('Pensionreview').model.findOne().exec();
+		pensionreview = await keystone.list('Pensionreview').model.findOne().exec();
 	} catch (error) {
-		console.log(' ---------- ', error);
+		console.log('could not find pensionreview ', error);
 	}
 	// item in the header navigation.
 	locals.section = 'ppension';

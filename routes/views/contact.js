@@ -7,7 +7,5 @@ exports = module.exports = function (req, res) {
 
 	// Set locals
 	locals.section = 'contact';
-
-
 	view.render('contact');
 };

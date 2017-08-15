@@ -8,14 +8,15 @@ exports = module.exports = async function (req, res) {
 	console.log('tp2' + await trustpilot2.getData());
 
 	var view = new keystone.View(req, res);
+	var pensiontracing;
 	var locals = res.locals;
 	locals.trustpilot = await trustpilot.getData() || {};
 
 	locals.trustpilot2 = await trustpilot2.getData(path2) || {};
 	try {
-		var pensiontracing = await keystone.list('Pensiontracing').model.findOne().exec();
+		pensiontracing = await keystone.list('Pensiontracing').model.findOne().exec();
 	} catch (error) {
-		console.log(' ---------- ', error);
+		console.log('could not find pension tracing', error);
 	}
 	// item in the header navigation.
 	locals.section = 'pension-tracing';

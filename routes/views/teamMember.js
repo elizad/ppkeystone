@@ -35,9 +35,6 @@ exports = module.exports = function (req, res) {
 		});
 
 	});
-
-	// // Load other posts
-
 	// Render the view
 	view.render('teamMember');
 };

@@ -14,7 +14,7 @@ exports = module.exports = async function (req, res) {
 
 		console.log(pensions);
 	} catch (error) {
-		console.log(' ---- ', error);
+		console.log('could not find pension types ', error);
 	}
 		// Init locals
 	locals.section = 'pension-types';
@@ -30,7 +30,6 @@ exports = module.exports = async function (req, res) {
 	view.on('init', function (next) {
 		next();
 	});
-
 		// Render View
 	view.render('pensiontypes');
 };
