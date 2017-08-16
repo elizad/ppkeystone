@@ -42,8 +42,6 @@ exports.initLocals = function (req, res, next) {
 		{ label: 'Find Pensions ', key: 'getstarted', href: '/get-started-trace' },
 	];
 	res.locals.user = req.user;
-	res.locals.baseUrl = req.keystone.get('baseUrl');
-
 	next();
 };
 

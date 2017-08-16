@@ -13,11 +13,8 @@ html
 		meta(name="apple-itunes-app", content="app-id=000111222")
 
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
-		meta(name="author" content="Profile Pensions")
-		meta(name="robots" content="index,follow")
-		meta(name="revisit-after" content="1 days")
-		+postmeta(metadata)
-		title= title || 'Profile Pension'
+		block metadata 
+			
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
 		link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', rel="stylesheet")
 		//- Customise the stylesheet for your site by editing /public/styles/site.sass
@@ -149,4 +146,3 @@ html
 		include ../includes/layout/analytics
 		//- Include template-specific javascript files by extending the js block
 		block js
-        

@@ -4,13 +4,13 @@
   "private": true,
   "dependencies": {
     "async": "^2.5.0",
-    "dotenv": "4.0.0",
+    "dotenv": "^4.0.0",
     "isomorphic-fetch": "^2.2.1",
-    "keystone": "4.0.0-beta.5",
-    "lodash": "^4.13.1",
+    "keystone": "^4.0.0-beta.5",
+    "lodash": "^4.17.4",
     "node-sass": "^4.5.3",
     "node-sass-middleware": "^0.11.0",
-    "pug": "2.0.0-beta11",
+    "pug": "^2.0.0-beta11",
     "trustpilot": "^2.2.0"
   },
   "devDependencies": {

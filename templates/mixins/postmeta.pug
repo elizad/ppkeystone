@@ -1,17 +1,17 @@
 mixin postmeta(metadata)
-	// if metadata
-	if data.post
-		if data.post.meta.title
-			title= data.post.meta.title
-			meta(property='og:title', content= data.post.meta.title )
-			meta(name="twitter:title", content= data.post.meta.title )
-		else
-			title= data.post.title
-			meta(property='og:title', content= data.post.meta.title )
+	if metadata
+		if data.post
+			if data.post.meta.title
+				title= data.post.meta.title
+				meta(property='og:title', content= data.post.meta.title )
+				meta(name="twitter:title", content= data.post.meta.title )
+			else
+				title= data.post.title
+				meta(property='og:title', content= data.post.meta.title )
 
 	else
 		<title>Profile Pension </title>
 		meta(name="description" content="general description")
-		meta(property="og:image" content="{{baseUrl}}/images/logo.png")
-		meta(name="twitter:image:src" content="{{baseUrl}}/images/logo.png")
+		meta(property="og:image" content="#{baseUrl}/images/logo.png")
+		meta(name="twitter:image:src" content="#{baseUrl}/images/logo.png")
 		meta(name="keywords" content="Node.js, development, api")
