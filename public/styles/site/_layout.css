@@ -199,10 +199,10 @@ h2{
 	max-width: 320px;
 }
 .p3rem{
-	padding:3rem;
+	padding:3rem 0;
 }
 .p1rem{
-	padding:1.5rem;
+	padding:1.5rem 0;
 }
 a i.fa{
 	color: #169b62;
@@ -835,12 +835,12 @@ ul.breadcrumbs li:first-child {
 	width: 200px;
 }
 .review-image::after {
-	/*content: "";*/
-	/*position: relative;*/
-	/*height: 200px;*/
-	/*width: 200px;*/
-	/*background-color: rgba(0, 224, 214, 0.33);*/
-	/*top: 0;*/
-	/*right: 0;*/
+	content: "";
+	position: absolute;
+	height: 200px;
+	width: 200px;
+	background-color: rgba(0, 224, 214, 0.33);
+	top: 0;
+	right: 0;
 	/* border-radius: 50%; */
 }

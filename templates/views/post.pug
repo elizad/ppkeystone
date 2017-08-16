@@ -17,7 +17,7 @@ block intro
 			else
 				li= data.post.title
 block content
-	.container: .row
+	.container: .row.p3rem
 		.col-md-9.col-sm-12.border-right
 			article
 			if !data.post
@@ -31,7 +31,7 @@ block content
 						if data.post.categories && data.post.categories.length
 							| in 
 							each cat, cat_i in data.post.categories
-								a(href='/blog/' + cat.key)= cat.name
+								a(href='/content-hub/' + cat.key)= cat.name
 								if cat_i < data.post.categories.length - 1
 									| , 
 								else
@@ -46,40 +46,40 @@ block content
 				a(href="https://www.profilepensions.co.uk/pension-options-retirement/") Next Post 
 					i.right.fa.fa-caret-right
 			
-			div
-				h2 More things you might like
+			div.p3rem
+				h2.p1rem More things you might like
 				div.row
-					each item in data.posts
+					each post in data.posts
 						div.col-md-6.col-lg-6
 							div.row.advice
 								a.col-md-5.equal.advice-image(href="")
-									img(src=item._.image.fit(150, 177)).img-responsive
+									img(src=post._.image.fit(150, 177)).img-responsive
 								div.col-md-7.equal.advice-content
-									h2.advice-title= item.title
+									h2.advice-title= post.title
 									div.advice-meta
-										if item.publishedDate
-											span.advice-meta__date  #{item._.publishedDate.format('DD/MM/YYYY')}
-										if item.author.name.first
-											span.advice-meta__author  #{item.author.name.first}
-									p.excerpt= item.content.brief
+										if post.publishedDate
+											span.advice-meta__date  #{post._.publishedDate.format('DD/MM/YYYY')}
+										if post.author.name.first
+											span.advice-meta__author  #{post.author.name.first}
+									p.excerpt!= post.content.brief
 									div.share
 										span Share | 
-										a(href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + item.slug + '' target="_blank" style="font-size: 18px;")
+										a(href='https://www.facebook.com/sharer/sharer.php?u=' + post.fullPostUrl + '' target="_blank" style="font-size: 18px;")
 											i.fitted.fa.fa-facebook.f.icon
-										a(href='https://twitter.com/home?status=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + item.slug + '' target="_blank" style="font-size: 18px;")
+										a(href='https://twitter.com/home?status=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + post.slug + '' target="_blank" style="font-size: 18px;")
 											i.fitted.fa.fa-twitter.icon
-										a(href='https://plus.google.com/share?url=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + item.slug + '' target="_blank" style="font-size: 18px;")
+										a(href='https://plus.google.com/share?url=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + post.slug + '' target="_blank" style="font-size: 18px;")
 											i.fitted.fa.fa-google-plus.icon
-										a(href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + item.slug + '&amp;title=' + data.post.title + '+-+Profile+Pensions&amp;summary=&amp;source=" target="_blank" style="font-size: 18px;')
+										a(href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + post.slug + '&amp;title=' + data.post.title + '+-+Profile+Pensions&amp;summary=&amp;source=" target="_blank" style="font-size: 18px;')
 											i.fitted.fa.fa-linkedin.icon
-										a(href='mailto:?body=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + item.slug + '' style="font-size: 18px;")
+										a(href='mailto:?body='+ post.fullPostUrl + '' style="font-size: 18px;")
 
 										
 		.col-sm-12.col-md-3.sidebar
 				div.share.area
 					h2.shares-header Share
 					div.shares
-						a(href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.profilepensions.co.uk%2F'+data.post.slug+'' target="_blank" style="font-size: 18px;")
+						a(href='https://www.facebook.com/sharer/sharer.php?u='+ data.post.fullPostUrl +'' target="_blank" style="font-size: 18px;")
 							i.fitted.fa.fa-facebook.f.icon
 						a(href='https://twitter.com/home?status=https%3A%2F%2Fwww.profilepensions.co.uk%2F'+data.post.slug+'' target="_blank" style="font-size: 18px;")
 							i.fitted.fa.fa-twitter.icon
