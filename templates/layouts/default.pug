@@ -9,10 +9,10 @@ html
 		// 
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
-		//- Appstore smart banner
-		meta(name="apple-itunes-app", content="app-id=000111222")
-
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="robots" content="index,follow")
+		meta(name="revisit-after" content="1 days")
+		meta(name="author" content= "Profile Pensions")
 		block metadata 
 			
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
@@ -84,6 +84,7 @@ html
 
 		//- Include template-specific stylesheets by extending the css block
 		block css
+		block headjs
 
 		//- Add any other template-specific HEAD tags by extending the head block
 		block head
@@ -140,7 +141,6 @@ html
 		//- which generate links to edit content for users who can access Keystone
 		if user && user.canAccessKeystone
 			script(src='/keystone/js/content/editor.js')
-
 		//- Add scripts that are globally required by your site here.
 		//- ANALYTICS
 		include ../includes/layout/analytics

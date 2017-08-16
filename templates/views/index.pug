@@ -1,19 +1,29 @@
 extends ../layouts/default
 include ../mixins/tpdata
 include ../mixins/company-features
-include ../mixins/process	
+include ../mixins/process
 include ../mixins/promises
 include ../mixins/carouselreviews1
 include ../mixins/tpreviews
-include ../mixins/partners	
-include ../mixins/press	
+include ../mixins/partners
+include ../mixins/press
 
 block metadata
-	//+postmeta(metadata)
-	meta(name="author" content="Profile Pensions")
-	meta(name="robots" content="index,follow")
-	meta(name="revisit-after" content="1 days")
-	title= title || 'Profile Pension'
+	if  (data)
+		title= title || 'Profile Pension'
+		description
+		keywords
+		facebook
+			image
+			title
+			description
+		twitter
+			image
+			title
+			description
+	else
+		+postmeta()
+
 
 block content
 	section#homehead
@@ -25,15 +35,15 @@ block content
 					p We find your pensions and tell you about them for free, with no obligation.
 					a(href='/get-started-trace').btn.btn-lg.btn-primary Find Pensions
 					+tpdata()
-	
+
 	+company-features()
-				
+
 	+process()
-	
+
 	+promises()
-	
+
 	+carouselreviews1()
-	
+
 	+tpreviews()
 	+partners()
 	+press()

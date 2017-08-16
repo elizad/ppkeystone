@@ -1,11 +1,15 @@
 
 
-extends ../layouts/reviewdefault
+extends ../layouts/default
 include ../mixins/process
 include ../mixins/carouselreviews1
 include ../mixins/tpreviews
 include ../mixins/cta
-
+block metadata
+	
+block headjs
+	script(src="//widget.trustpilot.com/bootstrap/v5/tp.widget.sync.bootstrap.min.js", async)
+		
 block intro
 
 	section.intro.green.text-center

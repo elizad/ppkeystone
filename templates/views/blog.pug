@@ -1,5 +1,20 @@
 extends ../layouts/default
-
+block metadata
+	if  (data.category)
+		title=data.category ? data.category.name : 'Content Hub' || 'Profile Pension'
+		description
+		keywords
+		facebook
+			image
+			title
+			description
+		twitter
+			image
+			title
+			description
+	else
+		+postmeta()
+		
 mixin post(post)
 	.post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
 		div.row.advice
