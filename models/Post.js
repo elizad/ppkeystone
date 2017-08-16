@@ -18,10 +18,19 @@ Post.add({
 	longtitle: { type: String },
 	image: { type: Types.CloudinaryImage },
 	content: {
-		brief: { type: String, max: { chars: 50, mode: 'crop' } },
+		brief: { type: String },
 		extended: { type: Types.Html, wysiwyg: true, height: 400 },
 	},
+	// post.content.brief
+	// data.post.meta.title
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
+	meta: {
+		title: { type: String },
+		description: { type: Types.Html, wysiwyg: false, height: 100 },
+		image: {
+			filename: { type: Types.CloudinaryImage },
+		},
+	},
 });
 
 Post.schema.virtual('content.full').get(function () {

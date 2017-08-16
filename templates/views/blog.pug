@@ -13,7 +13,7 @@ mixin post(post)
 						span.advice-meta__date #{post._.publishedDate.format('DD/MM/YYYY')}
 					if post.author.name.first
 						span.advice-meta__author #{post.author.name.first}
-				p.advice-text= post.content.brief
+				p.advice-text!= post.content.brief
 				div.share
 					span Share | 
 					a(href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + post.slug + '' target="_blank" style="font-size: 18px;")
