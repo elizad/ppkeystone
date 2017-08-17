@@ -4,7 +4,7 @@ exports = module.exports = async function (req, res) {
 
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
-	var complaintsprocess = {};	// assuming pension should be an object
+	var complaintsprocess = {};	// assuming it should be an object
 	try {
 		complaintsprocess = await keystone.list('ComplaintsProcess').model.findOne().exec();
 	} catch (error) {
@@ -18,7 +18,7 @@ exports = module.exports = async function (req, res) {
 	locals.data = {
 		complaintsprocess,
 	};
-	// Load the pension types
+	// Load
 	view.on('init', function (next) {
 		next();
 	});
