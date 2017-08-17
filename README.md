@@ -3,6 +3,13 @@ Profile Pension Website
 
 The source code for re-platforming the www.profilefinancial.co.uk website
 
+## Built With
+
+# [Keystone]version 4.0.0-beta.5 (http://keystonejs.com/) - Node.js CMS & Web Application Platform
+# [Node] 8.2.1
+# [MongoDB] 3.4
+# [npm]  5.3.0
+
 ##Coding Guidelines
 This Project is generally following the guidelines set out in [AirBnB's Javascript Style Guide](https://github.com/airbnb/javascript), with the exception of using real tabs for indentation.
 
@@ -36,11 +43,7 @@ Date          | Time          | Notes
 08/08/2017    | 10.02         | move to node 8
 
 
-## Built With
 
-* [Keystone] (http://keystonejs.com/) - Node.js CMS & Web Application Platform
-* [Node] 8.2.1
-* [MongoDB] 3.4
 
 ## Authors
 
