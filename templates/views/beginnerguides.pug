@@ -12,7 +12,7 @@ block metadata
 		meta(name="twitter:card" , content="#{data.category.metatwittercard}" )
 		meta(name="keywords" content="#{data.beginnerguide.metakeywords}" )
 	else
-		+beginnerguidemeta()
+		+postmeta()
 		
 mixin beginnerguide(beginnerguide)
 	.beginnerguide(data-ks-editable=editable(user, { list: 'BeginnerGuide', id: beginnerguide.id }))

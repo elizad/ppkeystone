@@ -38,7 +38,7 @@ exports = module.exports = function (app) {
 	app.get('/pension-switch', routes.views.pensionswitch);
 	app.get('/pension-calculator', routes.views.pensioncalculator);
 	app.get('/beginner-guides/:category?', routes.views.beginnerguides);
-	app.get('/beginner-guides/beginner-guide/:beginner-guide', routes.views.beginnerguide);
+	app.get('/beginner-guides/beginner-guide/:beginnerguide', routes.views.beginnerguide);
 	app.get('/content-hub/:category?', routes.views.blog);
 	app.get('/content-hub/post/:post', routes.views.post);
 	app.get('/infographics/:category?', routes.views.infographics);

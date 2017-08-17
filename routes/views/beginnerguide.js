@@ -6,7 +6,7 @@ exports = module.exports = function (req, res) {
 	var locals = res.locals;
 
 	// Set locals
-	locals.section = 'blog';
+	locals.section = 'beginner-guide';
 	locals.filters = {
 		beginnerguide: req.params.beginnerguide,
 	};
@@ -25,7 +25,7 @@ exports = module.exports = function (req, res) {
 			delete beginnerguideSearch.state;
 		}
 
-		var q = keystone.list('beginnerguide').model.findOne(beginnerguideSearch).populate('author categories');
+		var q = keystone.list('BeginnerGuide').model.findOne(beginnerguideSearch).populate('author categories');
 
 		q.exec(function (err, result) {
 			locals.data.beginnerguide = result;
@@ -46,7 +46,7 @@ exports = module.exports = function (req, res) {
 				locals.data.categories = categories;
 			}
 
-			var q = keystone.list('beginnerguide').model.find().where('state', 'published').sort('-publishedDate').populate('author').limit(2);
+			var q = keystone.list('BeginnerGuide').model.find().where('state', 'published').sort('-publishedDate').populate('author').limit(2);
 
 			q.exec(function (err, results) {
 				locals.data.beginnerguides = results;

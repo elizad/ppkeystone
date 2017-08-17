@@ -21,8 +21,6 @@ Post.add({
 		brief: { type: String },
 		extended: { type: Types.Html, wysiwyg: true, height: 400 },
 	},
-	// post.content.brief
-	// data.post.meta.title
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
 	metadata: {
 		metatitle: { type: String },

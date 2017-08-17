@@ -1,8 +1,8 @@
 extends ../layouts/default
 block metadata
-	if  data.beginnerguide
-		title= data.beginnerguide.metatitle || 'Profile Pension'
-		meta(property='og:title', content="" +data.beginnerguide.metatitle  )
+	if  !data.beginnerguide
+		title= data.beginnerguide.metadata.metatitle || 'Profile Pension'
+		meta(property='og:title', content="" +data.beginnerguide.metadata.metatitle  )
 		meta(name="twitter:title", content='#{data.beginnerguide.metatwittertitle}' )
 		meta(name="description" content='#{data.beginnerguide.metadescription}' )
 		meta(property="og:description" , content='#{data.beginnerguide.metafbdescription}' )
@@ -38,7 +38,7 @@ block content
 			else
 				header
 					h2= data.beginnerguide.title
-					h5 beginnerguideed 
+					h5 posted 
 						if data.beginnerguide.publishedDate
 							| on #{data.beginnerguide._.publishedDate.format('DD/MM/YYYY')} 
 						if data.beginnerguide.categories && data.beginnerguide.categories.length
