@@ -10,52 +10,52 @@ block metadata
 		meta(property="og:image" content='#{data.category.metafbimageurl}' )
 		meta(name="twitter:image:src" content='#{data.category.metatwitterdescription}' )
 		meta(name="twitter:card" , content="#{data.category.metatwittercard}" )
-		meta(name="keywords" content="#{data.post.metakeywords}" )
+		meta(name="keywords" content="#{data.infographic.metakeywords}" )
 	else
 		+postmeta()
 		
-mixin post(post)
-	.post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
+mixin infographic(infographic)
+	.infographic(data-ks-editable=editable(user, { list: 'Infographic', id: infographic.id }))
 		div.row.advice
-			a.col-md-5.equal.advice-imagea(href='/content-hub/post/' + post.slug)
-				if post.image.exists
-					img(src=post._.image.fit(150, 177)).img-responsive
+			a.col-md-5.equal.advice-imagea(href='/infographics/infographic/' + infographic.slug)
+				if infographic.image.exists
+					img(src=infographic._.image.fit(150, 177)).img-responsive
 			div.col-md-7.equal.advice-content
-				h2.advice-title: a(href='/content-hub/post/' + post.slug)= post.title
+				h2.advice-title: a(href='/infographics/infographic/' + infographic.slug)= infographic.title
 				div.advice-meta
-					if post.publishedDate
-						span.advice-meta__date #{post._.publishedDate.format('DD/MM/YYYY')}
-					if post.author.name.first
-						span.advice-meta__author #{post.author.name.first}
-				p.advice-text!= post.content.brief
+					if infographic.publishedDate
+						span.advice-meta__date #{infographic._.publishedDate.format('DD/MM/YYYY')}
+					if infographic.author.name.first
+						span.advice-meta__author #{infographic.author.name.first}
+				p.advice-text!= infographic.content.brief
 				div.share
 					span Share | 
-					a(href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + post.slug + '' target="_blank" style="font-size: 18px;")
+					a(href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + infographic.slug + '' target="_blank" style="font-size: 18px;")
 						i.fitted.fa.fa-facebook.f.icon
-					a(href='https://twitter.com/home?status=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + post.slug + '' target="_blank" style="font-size: 18px;")
+					a(href='https://twitter.com/home?status=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + infographic.slug + '' target="_blank" style="font-size: 18px;")
 						i.fitted.fa.fa-twitter.icon
-					a(href='https://plus.google.com/share?url=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + post.slug+ '' target="_blank" style="font-size: 18px;")
+					a(href='https://plus.google.com/share?url=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + infographic.slug+ '' target="_blank" style="font-size: 18px;")
 						i.fitted.fa.fa-google-plus.icon
-					a(href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + post.slug + '&amp;title=' + post.title + '+-+Profile+Pensions&amp;summary=&amp;source=" target="_blank" style="font-size: 18px;')
+					a(href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + infographic.slug + '&amp;title=' + infographic.title + '+-+Profile+Pensions&amp;summary=&amp;source=" target="_blank" style="font-size: 18px;')
 						i.fitted.fa.fa-linkedin.icon
-					a(href='mailto:?body=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + post.slug + '' style="font-size: 18px;")
+					a(href='mailto:?body=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + infographic.slug + '' style="font-size: 18px;")
 					
 block intro
 	section.intro.green.text-center
-		h1= data.category ? data.category.name : 'Content Hub'
+		h1= data.category ? data.category.name : 'Infographics'
 		h3 Please let us know who you are (click on a category below), alternatively, please find our most recent content below
 	div.grey
 		.container
 			ul.breadcrumb
-				li: a(href='/content-hub') Content Hub
+				li: a(href='/infographics') Infographics
 				li   /  
-				li= data.category ? data.category.name : 'Blog  '
+				li= data.category ? data.category.name : ' Infographics '
 				.pull-right
 					if data.categories.length
 						span
-							a(href='/content-hub', class=!data.category ? 'active' : false) All Categories  /  
+							a(href='/infographics', class=!data.category ? 'active' : false) All Categories  /  
 						each cat in data.categories
-							a(href='/content-hub/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : false).span= cat.name +' /  '	
+							a(href='/infographics/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : false).span= cat.name +' /  '	
 			
 block content
 	.container
@@ -64,42 +64,42 @@ block content
 				if filters.category && !data.category
 					h3.text-muted Invalid Category.
 				else
-					if data.posts.results.length
-						if data.posts.totalPages > 1
+					if data.infographics.results.length
+						if data.infographics.totalPages > 1
 							h4.text-weight-normal Showing 
-								strong #{data.posts.first}
+								strong #{data.infographics.first}
 								|  to 
-								strong #{data.posts.last}
+								strong #{data.infographics.last}
 								|  of 
-								strong #{data.posts.total}
-								|  posts.
+								strong #{data.infographics.total}
+								|  infographics.
 						else
-							h4.text-weight-normal Showing #{utils.plural(data.posts.results.length, '* post')}.
+							h4.text-weight-normal Showing #{utils.plural(data.infographics.results.length, '* infographic')}.
 						.row
-							each post in data.posts.results
+							each infographic in data.infographics.results
 								.col-md-6.col-sm-12
-									+post(post)
+									+infographic(infographic)
 						
-						if data.posts.totalPages > 1
+						if data.infographics.totalPages > 1
 							ul.pagination
-								if data.posts.previous
-									li: a(href='?page=' + data.posts.previous): i.fa.fa-angle-left
+								if data.infographics.previous
+									li: a(href='?page=' + data.infographics.previous): i.fa.fa-angle-left
 								else
 									li.disabled: a(href='?page=' + 1): i.fa.fa-angle-left
-								each p, i in data.posts.pages
-									li(class=data.posts.currentPage == p ? 'active' : null)
-										a(href='?page=' + (p == '...' ? (i ? data.posts.totalPages : 1) : p ))= p
-								if data.posts.next
-									li: a(href='?page=' + data.posts.next) Next page
+								each p, i in data.infographics.pages
+									li(class=data.infographics.currentPage == p ? 'active' : null)
+										a(href='?page=' + (p == '...' ? (i ? data.infographics.totalPages : 1) : p ))= p
+								if data.infographics.next
+									li: a(href='?page=' + data.infographics.next) Next page
 										i.fa.fa-angle-right 
 								else
-									li.disabled: a(href='?page=' + data.posts.totalPages) Next page
+									li.disabled: a(href='?page=' + data.infographics.totalPages) Next page
 										i.entypo.fa.fa-angle-right
 					else
 						if data.category
-							h3.text-muted There are no posts in the category #{data.category.name}.
+							h3.text-muted There are no infographics in the category #{data.category.name}.
 						else
-							h3.text-muted There are no posts yet.
+							h3.text-muted There are no infographics yet.
 			.col-sm-4.col-md-3.sidebar
 				div.subscribe.area
 					h2 Subscribe to our Newsletter

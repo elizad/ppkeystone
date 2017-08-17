@@ -1,21 +1,14 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
 /**
- * Pension types category
+ * InfographicCategory Model
  */
 
-var PensionCategory = new keystone.List('PensionCategory', {
-	sortable: true,
-	singular: 'pensioncategory',
-	plural: 'pensioncategories',
+var InfographicCategory = new keystone.List('InfographicCategory', {
 	autokey: { from: 'name', path: 'key', unique: true },
-});
-
-PensionCategory.add({
 	name: { type: String },
 	categorylongtitle: { type: String },
 	description: { type: Types.Html, wysiwyg: true, height: 150 },
-	isVisible: { type: Boolean },
 	metadata: {
 		metatitle: { type: String },
 		metadescription: { type: String },
@@ -30,7 +23,10 @@ PensionCategory.add({
 	},
 });
 
-PensionCategory.defaultSort = 'name';
-PensionCategory.relationship({ ref: 'Pension', path: 'pension-types', refPath: 'categories' });
+InfographicCategory.add({
+	name: { type: String, required: true },
+});
 
-PensionCategory.register();
+InfographicCategory.relationship({ ref: 'Infographic', path: 'infographics', refPath: 'categories' });
+
+InfographicCategory.register();
