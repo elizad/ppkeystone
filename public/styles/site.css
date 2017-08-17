@@ -6525,6 +6525,12 @@ a i.fa:hover, a i.fa:active {
   .dropdown-menu .dropdown-submenu {
     width: auto; } }
 
+.navbar-nav.ml-auto > .nav-link > a {
+  color: #106e46; }
+
+.navbar-nav.ml-auto > .nav-link > a:hover {
+  color: #4a4a4a; }
+
 .navbar-toggler {
   top: 1rem; }
 

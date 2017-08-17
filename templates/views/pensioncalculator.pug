@@ -1,5 +1,18 @@
 extends ../layouts/default
-
+block metadata
+	if  (data.pensioncalculator)
+		title= data.pensioncalculator.metatitle || 'Profile Pension'
+		meta(property='og:title', content="" +data.pensioncalculator.metatitle  )
+		meta(name="twitter:title", content='#{data.pensioncalculator.metatwittertitle}' )
+		meta(name="description" content='#{data.pensioncalculator.metadescription}' )
+		meta(property="og:description" , content='#{data.pensioncalculator.metafbdescription}' )
+		meta(name="twitter:description", content='#{data.pensioncalculator.metatwitterdescription}' )
+		meta(property="og:image" content='#{data.pensioncalculator.metafbimageurl}' )
+		meta(name="twitter:image:src" content='#{data.pensioncalculator.metatwitterdescription}' )
+		meta(name="twitter:card" , content="#{data.pensioncalculator.metatwittercard}" )
+		meta(name="keywords" content="#{data.pensioncalculator.metakeywords}" )
+	else
+		+postmeta()
 block intro
 	section.intro.green.text-center
 		h1 Pension Calculator

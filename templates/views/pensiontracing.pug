@@ -2,8 +2,21 @@ extends ../layouts/default
 include ../mixins/process
 include ../mixins/carouselreviews1
 include ../mixins/tpreviews
-include ../mixins/cta	
-
+include ../mixins/cta
+block metadata
+	if  (data.pensiontracing)
+		title= data.pensiontracing.metatitle || 'Profile Pension'
+		meta(property='og:title', content="" +data.pensiontracing.metatitle  )
+		meta(name="twitter:title", content='#{data.pensiontracing.metatwittertitle}' )
+		meta(name="description" content='#{data.pensiontracing.metadescription}' )
+		meta(property="og:description" , content='#{data.pensiontracing.metafbdescription}' )
+		meta(name="twitter:description", content='#{data.pensiontracing.metatwitterdescription}' )
+		meta(property="og:image" content='#{data.pensiontracing.metafbimageurl}' )
+		meta(name="twitter:image:src" content='#{data.pensiontracing.metatwitterdescription}' )
+		meta(name="twitter:card" , content="#{data.pensiontracing.metatwittercard}" )
+		meta(name="keywords" content="#{data.pensiontracing.metakeywords}" )
+	else
+		+postmeta()
 block intro
 	section.intro.green.text-center
 		h1= data.pensiontracing.longtitle

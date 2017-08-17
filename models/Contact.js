@@ -21,6 +21,18 @@ Contact.add({
 	postcode: { type: String },
 	phone: { type: String },
 	email: { type: String },
+	metadata: {
+		metatitle: { type: String },
+		metadescription: { type: String },
+		metakeywords: { type: String },
+		metafbtitle: { type: String },
+		metafbdescription: { type: String },
+		metafbimageurl: { type: String },
+		metatwittertitle: { type: String },
+		metatwittercard: { type: String },
+		metatwitterdescription: { type: String },
+		metatwitterimageurl: { type: String },
+	},
 	categories: { type: Types.Relationship, ref: 'ContactCategory', many: true },
 });
 

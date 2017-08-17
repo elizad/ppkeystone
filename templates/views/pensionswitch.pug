@@ -6,8 +6,21 @@ include ../mixins/promises
 include ../mixins/carouselreviews1
 include ../mixins/tpreviews
 include ../mixins/partners	
-include ../mixins/press	
-	
+include ../mixins/press
+block metadata
+	if  (data.pensionswitch)
+		title= data.pensionswitch.metatitle || 'Profile Pension'
+		meta(property='og:title', content="" +data.pensionswitch.metatitle  )
+		meta(name="twitter:title", content='#{data.pensionswitch.metatwittertitle}' )
+		meta(name="description" content='#{data.pensionswitch.metadescription}' )
+		meta(property="og:description" , content='#{data.pensionswitch.metafbdescription}' )
+		meta(name="twitter:description", content='#{data.pensionswitch.metatwitterdescription}' )
+		meta(property="og:image" content='#{data.pensionswitch.metafbimageurl}' )
+		meta(name="twitter:image:src" content='#{data.pensionswitch.metatwitterdescription}' )
+		meta(name="twitter:card" , content="#{data.pensionswitch.metatwittercard}" )
+		meta(name="keywords" content="#{data.pensionswitch.metakeywords}" )
+	else
+		+postmeta()	
 
 block content
 	section#homehead

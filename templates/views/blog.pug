@@ -2,16 +2,15 @@ extends ../layouts/default
 block metadata
 	if  (data.category)
 		title=data.category ? data.category.name : 'Content Hub' || 'Profile Pension'
-		description
-		keywords
-		facebook
-			image
-			title
-			description
-		twitter
-			image
-			title
-			description
+		meta(property='og:title', content="" +data.category.metatitle  )
+		meta(name="twitter:title", content='#{data.category.metatwittertitle}' )
+		meta(name="description" content='#{data.category.metadescription}' )
+		meta(property="og:description" , content='#{data.category.metafbdescription}' )
+		meta(name="twitter:description", content='#{data.category.metatwitterdescription}' )
+		meta(property="og:image" content='#{data.category.metafbimageurl}' )
+		meta(name="twitter:image:src" content='#{data.category.metatwitterdescription}' )
+		meta(name="twitter:card" , content="#{data.category.metatwittercard}" )
+		meta(name="keywords" content="#{data.post.metakeywords}" )
 	else
 		+postmeta()
 		

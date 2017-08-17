@@ -2,45 +2,42 @@ var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
 /**
- * aboutUs page
+ * getStarted page
  * ===========
  */
 
-var aboutUs = new keystone.List('AboutUs', {
+var getStarted = new keystone.List('GetStarted', {
 	track: true,
 	sortable: true,
 	map: { name: 'title' },
 	autokey: { path: 'slug', from: 'title', unique: true },
 });
 
-aboutUs.add({
+getStarted.add({
 	title: { type: String, required: true },
-	longtitle: { type: String },
-	breadcrumbstitle: { type: String },
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	author: { type: Types.Relationship, ref: 'User', index: true },
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
+	getstartedTitle: { type: String },
+	getstartedContent: { type: Types.Html, wysiwyg: true, height: 250 },
+	getstartedReferal: { type: String },
 	s1title: { type: String },
-	s1content: { type: Types.Html, wysiwyg: true, height: 250 },
-	s1video: { type: String },
-	s1videoimage: { type: String },
+	s1content1: { type: Types.Html, wysiwyg: true, height: 50 },
+	s1content2: { type: Types.Html, wysiwyg: true, height: 50 },
+	s1content3: { type: Types.Html, wysiwyg: true, height: 50 },
 	s2title: { type: String },
-	s2content: { type: Types.Html, wysiwyg: true, height: 250 },
 	s2feature1: { type: String },
-	s2feature1text: { type: String },
+	s2feature1svg: { type: String },
 	s2feature2: { type: String },
-	s2feature2text: { type: String },
+	s2feature2svg: { type: String },
 	s2feature3: { type: String },
-	s2feature3text: { type: String },
-	s2feature4: { type: String },
-	s2feature4text: { type: String },
-	s2button: { type: String },
+	s2feature3svg: { type: String },
 	s3title: { type: String },
 	s3content: { type: Types.Html, wysiwyg: true, height: 250 },
-	s3button: { type: String },
 	s4title: { type: String },
-	s4content: { type: Types.Html, wysiwyg: true, height: 250 },
-	s4button: { type: String },
+	s4content1: { type: Types.Html, wysiwyg: true, height: 250 },
+	s4content2: { type: Types.Html, wysiwyg: true, height: 250 },
+	s4content3: { type: Types.Html, wysiwyg: true, height: 250 },
 	metadata: {
 		metatitle: { type: String },
 		metadescription: { type: String },
@@ -55,5 +52,5 @@ aboutUs.add({
 	},
 });
 
-aboutUs.defaultColumns = 'name, title, categories';
-aboutUs.register();
+getStarted.defaultColumns = 'name, title';
+getStarted.register();

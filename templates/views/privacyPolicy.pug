@@ -1,6 +1,19 @@
 extends ../layouts/default
 include ../mixins/cta
-
+block metadata
+	if  (data.privacypolicy)
+		title= data.privacypolicy.metatitle || 'Profile Pension'
+		meta(property='og:title', content="" +data.privacypolicy.metatitle  )
+		meta(name="twitter:title", content='#{data.privacypolicy.metatwittertitle}' )
+		meta(name="description" content='#{data.privacypolicy.metadescription}' )
+		meta(property="og:description" , content='#{data.privacypolicy.metafbdescription}' )
+		meta(name="twitter:description", content='#{data.privacypolicy.metatwitterdescription}' )
+		meta(property="og:image" content='#{data.privacypolicy.metafbimageurl}' )
+		meta(name="twitter:image:src" content='#{data.privacypolicy.metatwitterdescription}' )
+		meta(name="twitter:card" , content="#{data.privacypolicy.metatwittercard}" )
+		meta(name="keywords" content="#{data.privacypolicy.metakeywords}" )
+	else
+		+postmeta()
 block intro
 	section.intro.green.text-center
 		h1= data.privacypolicy.title

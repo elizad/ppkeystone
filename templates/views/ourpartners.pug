@@ -1,36 +1,44 @@
-
-
-extends ../layouts/reviewdefault
+extends ../layouts/default
 include ../mixins/process
 include ../mixins/carouselreviews1
 include ../mixins/tpreviews
 include ../mixins/cta
-
+block metadata
+	if  (data.ourpartners)
+		title= data.ourpartners.metatitle || 'Profile Pension'
+		meta(property='og:title', content="" +data.ourpartners.metatitle  )
+		meta(name="twitter:title", content='#{data.ourpartners.metatwittertitle}' )
+		meta(name="description" content='#{data.ourpartners.metadescription}' )
+		meta(property="og:description" , content='#{data.ourpartners.metafbdescription}' )
+		meta(name="twitter:description", content='#{data.ourpartners.metatwitterdescription}' )
+		meta(property="og:image" content='#{data.ourpartners.metafbimageurl}' )
+		meta(name="twitter:image:src" content='#{data.ourpartners.metatwitterdescription}' )
+		meta(name="twitter:card" , content="#{data.ourpartners.metatwittercard}" )
+		meta(name="keywords" content="#{data.ourpartners.metakeywords}" )
+	else
+		+postmeta()
 block intro
 
 	section.intro.green.text-center
-		h1 Awards and Reviews
-		h3 Have a look at the awards we have won and what our customers are saying about us
+		h1= data.ourpartners.title
+		h3= data.ourpartners.longtitle
 	div.grey
 		.container
 			ul.breadcrumb
 				li: a(href='/about-us') About Us
 				li /
-				li Awards and Reviews
+				li= data.ourpartners.breadcrumbstitle
 block content
-
-	.container.col-md-12.p3rem
-		.row
-			.col-md-8
-				h2.text-center Financial Lifetime
-			.col-md-8
-				p Financial Lifetime are an appointed representative for Profile Pensions. You can also see their status as an appointed representative on the FCA register here. For more information about Financial Lifetime, feel free to contact us.
-				p Alternatively you can contact them directly on the details listed below:
-				p T: 01772 977125
-				p E: info@financiallifetime.co.uk
-			.col-md-4
-				img.text-center(src="/images/financial-lifetime-logo-300x96.png" alt="Financial Lifetime")
-				
-			
-				
+	section.p3rem
+		.container.col-md-12
+			.row.justify-content-center
+				.col-md-7
+					h2.text-center= data.ourpartners.ourPartnersTitle
+				.col-md-8
+					p!= data.ourpartners.ourPartnersContent
+					p= data.ourpartners.phone
+					p= data.ourpartners.email
+				.col-md-4
+					img.text-center(src="/images/financial-lifetime-logo-300x96.png" alt="Financial Lifetime")
+					
 	+cta()

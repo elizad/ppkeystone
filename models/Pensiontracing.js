@@ -10,6 +10,18 @@ var Pensiontracing = new keystone.List('Pensiontracing', {
 	sortable: true,
 	map: { name: 'title' },
 	autokey: { path: 'slug', from: 'title', unique: true },
+	metadata: {
+		metatitle: { type: String },
+		metadescription: { type: String },
+		metakeywords: { type: String },
+		metafbtitle: { type: String },
+		metafbdescription: { type: String },
+		metafbimageurl: { type: String },
+		metatwittertitle: { type: String },
+		metatwittercard: { type: String },
+		metatwitterdescription: { type: String },
+		metatwitterimageurl: { type: String },
+	},
 });
 
 Pensiontracing.add({

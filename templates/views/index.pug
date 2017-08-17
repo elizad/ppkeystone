@@ -9,41 +9,34 @@ include ../mixins/partners
 include ../mixins/press
 
 block metadata
-	if  (data)
-		title= title || 'Profile Pension'
-		description
-		keywords
-		facebook
-			image
-			title
-			description
-		twitter
-			image
-			title
-			description
+	if  (data.index)
+		title= data.index.metatitle || 'Profile Pension'
+		meta(property='og:title', content="" +data.index.metatitle  )
+		meta(name="twitter:title", content='#{data.index.metatwittertitle}' )
+		meta(name="description" content='#{data.index.metadescription}' )
+		meta(property="og:description" , content='#{data.index.metafbdescription}' )
+		meta(name="twitter:description", content='#{data.index.metatwitterdescription}' )
+		meta(property="og:image" content='#{data.index.metafbimageurl}' )
+		meta(name="twitter:image:src" content='#{data.index.metatwitterdescription}' )
+		meta(name="twitter:card" , content="#{data.index.metatwittercard}" )
+		meta(name="keywords" content="#{data.index.metakeywords}" )
 	else
 		+postmeta()
-
-
+		
 block content
 	section#homehead
 		.container.text-center
-
-			h1 Straight-talking pension advice 				
+			h1= data.index.s1title
 			div.row.justify-content-center
 				div.col-xs-8.col-md-6
-					p We find your pensions and tell you about them for free, with no obligation.
-					a(href='/get-started-trace').btn.btn-lg.btn-primary Find Pensions
+					p!=data.index.s1content
+					a(href='/'+data.index.s1buttonlink).btn.btn-lg.btn-primary= data.index.s1button
 					+tpdata()
 
 	+company-features()
-
 	+process()
-
 	+promises()
-
 	+carouselreviews1()
-
 	+tpreviews()
 	+partners()
 	+press()

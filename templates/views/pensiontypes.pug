@@ -1,7 +1,20 @@
 extends ../layouts/default
 include ../mixins/cta
 
-
+block metadata
+	if  (data.category)
+		title= data.category.metatitle || 'Profile Pension'
+		meta(property='og:title', content="" +data.category.metatitle  )
+		meta(name="twitter:title", content='#{data.category.metatwittertitle}' )
+		meta(name="description" content='#{data.category.metadescription}' )
+		meta(property="og:description" , content='#{data.category.metafbdescription}' )
+		meta(name="twitter:description", content='#{data.category.metatwitterdescription}' )
+		meta(property="og:image" content='#{data.category.metafbimageurl}' )
+		meta(name="twitter:image:src" content='#{data.category.metatwitterdescription}' )
+		meta(name="twitter:card" , content="#{data.category.metatwittercard}" )
+		meta(name="keywords" content="#{data.category.metakeywords}" )
+	else
+		+postmeta()
 block intro
 	section.intro.green.text-center
 		h1 Pensions We Review

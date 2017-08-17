@@ -9,14 +9,30 @@ exports = module.exports = async function (req, res) {
 	console.log('tp2' + await trustpilot2.getData());
 
 	var view = new keystone.View(req, res);
+	var index;
 	var locals = res.locals;
 	locals.trustpilot = await trustpilot.getData() || {};
 	locals.trustpilot2 = await trustpilot2.getData(path2) || {};
-	console.log(locals);
+	// console.log(locals);
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
+	try {
+		index = await keystone.list('Index').model.findOne().exec();
+	} catch (error) {
+		console.log('could not find index data', error);
+	}
+	// item in the header navigation.
 	locals.section = 'home';
-
+	locals.filters = {
+		index: req.params.index,
+	};
+	locals.data = {
+		index,
+	};
+	//  Load pension review
+	view.on('init', function (next) {
+		next();
+	});
 	// Render the view
 	view.render('index');
 };

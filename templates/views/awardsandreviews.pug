@@ -6,7 +6,19 @@ include ../mixins/carouselreviews1
 include ../mixins/tpreviews
 include ../mixins/cta
 block metadata
-	
+	if  (data.awardsandreview)
+		title= data.awardsandreview.metatitle || 'Profile Pension'
+		meta(property='og:title', content="" +data.awardsandreview.metatitle  )
+		meta(name="twitter:title", content='#{data.awardsandreview.metatwittertitle}' )
+		meta(name="description" content='#{data.awardsandreview.metadescription}' )
+		meta(property="og:description" , content='#{data.awardsandreview.metafbdescription}' )
+		meta(name="twitter:description", content='#{data.awardsandreview.metatwitterdescription}' )
+		meta(property="og:image" content='#{data.awardsandreview.metafbimageurl}' )
+		meta(name="twitter:image:src" content='#{data.awardsandreview.metatwitterdescription}' )
+		meta(name="twitter:card" , content="#{data.awardsandreview.metatwittercard}" )
+		meta(name="keywords" content="#{data.awardsandreview.metakeywords}" )
+	else
+		+postmeta()	
 block headjs
 	script(src="//widget.trustpilot.com/bootstrap/v5/tp.widget.sync.bootstrap.min.js", async)
 		

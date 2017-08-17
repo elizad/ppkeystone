@@ -1,6 +1,19 @@
 extends ../layouts/default
 include ../mixins/cta
-
+block metadata
+	if  (data.processes)
+		title= data.processes.metatitle || 'Profile Pension'
+		meta(property='og:title', content="" +data.processes.metatitle  )
+		meta(name="twitter:title", content='#{data.processes.metatwittertitle}' )
+		meta(name="description" content='#{data.processes.metadescription}' )
+		meta(property="og:description" , content='#{data.processes.metafbdescription}' )
+		meta(name="twitter:description", content='#{data.processes.metatwitterdescription}' )
+		meta(property="og:image" content='#{data.processes.metafbimageurl}' )
+		meta(name="twitter:image:src" content='#{data.processes.metatwitterdescription}' )
+		meta(name="twitter:card" , content="#{data.processes.metatwittercard}" )
+		meta(name="keywords" content="#{data.processes.metakeywords}" )
+	else
+		+postmeta()
 block intro
 	section.intro.green.text-center
 		h1 How It Works

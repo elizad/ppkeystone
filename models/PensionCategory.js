@@ -17,6 +17,18 @@ PensionCategory.add({
 	description: { type: Types.Html, wysiwyg: true, height: 150 },
 	// slug: { type: String },
 	isVisible: { type: Boolean },
+	metadata: {
+		metatitle: { type: String },
+		metadescription: { type: String },
+		metakeywords: { type: String },
+		metafbtitle: { type: String },
+		metafbdescription: { type: String },
+		metafbimageurl: { type: String },
+		metatwittertitle: { type: String },
+		metatwittercard: { type: String },
+		metatwitterdescription: { type: String },
+		metatwitterimageurl: { type: String },
+	},
 });
 
 PensionCategory.defaultSort = 'name';

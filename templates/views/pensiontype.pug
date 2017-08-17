@@ -1,5 +1,18 @@
 extends ../layouts/default
-
+block metadata
+	if  (data.pension)
+		title= data.pension.metatitle || 'Profile Pension'
+		meta(property='og:title', content="" +data.pension.metatitle  )
+		meta(name="twitter:title", content='#{data.pension.metatwittertitle}' )
+		meta(name="description" content='#{data.pension.metadescription}' )
+		meta(property="og:description" , content='#{data.pension.metafbdescription}' )
+		meta(name="twitter:description", content='#{data.pension.metatwitterdescription}' )
+		meta(property="og:image" content='#{data.pension.metafbimageurl}' )
+		meta(name="twitter:image:src" content='#{data.pension.metatwitterdescription}' )
+		meta(name="twitter:card" , content="#{data.pension.metatwittercard}" )
+		meta(name="keywords" content="#{data.pension.metakeywords}" )
+	else
+		+postmeta()
 
 block intro
 	section.intro.green.text-center

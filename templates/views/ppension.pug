@@ -2,8 +2,21 @@ extends ../layouts/default
 include ../mixins/process
 include ../mixins/carouselreviews1
 include ../mixins/tpreviews
-include ../mixins/cta	
-
+include ../mixins/cta
+block metadata
+	if  (data.pensionreview)
+		title= data.pensionreview.metatitle || 'Profile Pension'
+		meta(property='og:title', content="" +data.pensionreview.metatitle  )
+		meta(name="twitter:title", content='#{data.pensionreview.metatwittertitle}' )
+		meta(name="description" content='#{data.pensionreview.metadescription}' )
+		meta(property="og:description" , content='#{data.pensionreview.metafbdescription}' )
+		meta(name="twitter:description", content='#{data.pensionreview.metatwitterdescription}' )
+		meta(property="og:image" content='#{data.pensionreview.metafbimageurl}' )
+		meta(name="twitter:image:src" content='#{data.pensionreview.metatwitterdescription}' )
+		meta(name="twitter:card" , content="#{data.pensionreview.metatwittercard}" )
+		meta(name="keywords" content="#{data.pensionreview.metakeywords}" )
+	else
+		+postmeta()
 block intro
 	section.intro.green.text-center
 		h1= data.pensionreview.longtitle
