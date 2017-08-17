@@ -15,19 +15,19 @@ block metadata
 		+postmeta()
 block intro
 	section.intro.green.text-center
-		h1 Pension Calculator
-		h3 Just how much are charges impacting your total pension pot?
+		h1= data.pensioncalculator.title
+		h3= data.pensioncalculator.longtitle
 	div.grey
 		ul.container.breadcrumb
-			li Pension Calculator
+			li= data.pensioncalculator.breadcrumbstitle
 block content
 	section.p3rem
 		.container.text-center
 			.row
 				.col-md-6.col-sm-12
 				.col-md-6.col-sm-12.text-center
-					p We estimate over 70% of people with a personal pension could find a better deal. But many people don't want the hassle of changing providers. So they stick with the same Annual Management Charges (AMCs) for years. It seems like small numbers. But even a small reduction in fees - like 0.5 of a % - can make a big difference at retirement age.
-					p To see if you could find a better deal, take a look at our Pension Pot calculator below. (Then phone us to see what rate we can get for you. You're under no obligation to switch or do anything more).
-					a.btn.btn-lg.btn-primary(href='/get-started-trace', role='button') Get started 
+					h2= data.pensioncalculator.pensionCalculatorTitle
+					p!= data.pensioncalculator.pensionCalculatorContent
+					a.btn.btn-lg.btn-primary(href='/'+data.pensioncalculator.pensionCalculatorButtonUrl , role='button')=data.pensioncalculator.pensionCalculatorButton
 				
 					

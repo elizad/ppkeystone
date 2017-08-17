@@ -24,10 +24,11 @@ block intro
 		ul.container.breadcrumb
 			li= data.pensionreview.breadcrumbstitle
 block content
-	.container.text-center.col-md-12.p3rem
-		.row
-			.col-md-12
-				div!= data.pensionreview.content
+	section.p3rem
+		.container.text-center.col-md-12.p3rem
+			.row
+				.col-md-12
+					div!= data.pensionreview.content
 				
 	+process()
 	

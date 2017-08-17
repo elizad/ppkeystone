@@ -25,9 +25,10 @@ block intro
 		ul.container.breadcrumb
 			li= data.pensiontracing.breadcrumbstitle
 block content
-	.container.col-md-12.p3rem
-		.row
-			.col-md-12!= data.pensiontracing.content
+	section.p3rem
+		.container.col-md-12
+			.row
+				.col-md-12!= data.pensiontracing.content
 				
 	+process()
 	

@@ -1,73 +1,52 @@
-
-
 extends ../layouts/default
 include ../mixins/process
 include ../mixins/carouselreviews1
 include ../mixins/tpreviews
 include ../mixins/cta
-block metadata
-	if  (data.awardsandreview)
-		title= data.awardsandreview.metatitle || 'Profile Pension'
-		meta(property='og:title', content="" +data.awardsandreview.metatitle  )
-		meta(name="twitter:title", content='#{data.awardsandreview.metatwittertitle}' )
-		meta(name="description" content='#{data.awardsandreview.metadescription}' )
-		meta(property="og:description" , content='#{data.awardsandreview.metafbdescription}' )
-		meta(name="twitter:description", content='#{data.awardsandreview.metatwitterdescription}' )
-		meta(property="og:image" content='#{data.awardsandreview.metafbimageurl}' )
-		meta(name="twitter:image:src" content='#{data.awardsandreview.metatwitterdescription}' )
-		meta(name="twitter:card" , content="#{data.awardsandreview.metatwittercard}" )
-		meta(name="keywords" content="#{data.awardsandreview.metakeywords}" )
-	else
-		+postmeta()	
+include ../mixins/postmeta
+	
 block headjs
 	script(src="//widget.trustpilot.com/bootstrap/v5/tp.widget.sync.bootstrap.min.js", async)
 		
 block intro
 
 	section.intro.green.text-center
-		h1 Awards and Reviews
-		h3 Have a look at the awards we have won and what our customers are saying about us
+		h1= data.awardsandreviews.title
+		h3= data.awardsandreviews.longtitle
 	div.grey
 		.container
 			ul.breadcrumb
 				li: a(href='/about-us') About Us
 				li /
-				li Awards and Reviews
+				li= data.awardsandreviews.breadcrumbstitle
 block content
 	.container.text-center.col-md-12.p3rem
 		.row
 			.col-md-12
-				<!-- TrustBox widget - Grid -->
-				<div class="trustpilot-widget" data-locale="en-GB" data-template-id="539adbd6dec7e10e686debee" data-businessunit-id="57ff44480000ff000595f84b" data-style-height="600px" data-style-width="100%" data-stars="1,2,3,4,5" data-schema-type="Organization"><a href="https://uk.trustpilot.com/review/www.profilepensions.co.uk" target="_blank" rel="noopener">Trustpilot</a></div>
-				<!-- End TrustBox widget -->
-				<br />
-	.container.text-center.col-md-12.p3rem
-		.row
-			.col-md-4
-				img.profilepension-awards__img(src="/images/WINNER-FXA17-3.png" alt="Financial Services Experience Awards")
-				p UK Financial Services Experience Awards 
-				p Best Pension Service
-			.col-md-4
-				img.profilepension-awards__img(src="/images/sundaytimes-best-small-companies-to-work-for.png" alt="The Sunday Times 100 Best Small Company")
-				p The Sunday Times 100 Best
-				p Small Companies To Work For
-			.col-md-4
-				img.profilepension-awards__img(src="/images/northern-tech-100.png" alt="Northern Tech 100")
-				p Northern Tech 100
-				p (Number 7)
-			.col-md-4
-				img.profilepension-awards__img(src="/images/national-business-awards-1.png" alt="Lloyds Bank New Business of the Year")
-				p Lloyds Bank New Business of the Year
-				p (Shortlisted)	
-			.col-md-4
-				img.profilepension-awards__img(src="/images/uk-customer-experience-awards-finalist.png" alt="UK Customer Experience Awards")
-				p UK Customer Experience Awards
-				p (Finalist)
-			.col-md-4
-				img.profilepension-awards__img(src="/images/moneyfact-finalist.png" alt="Retirement Adviser Of The Year")
-				p Retirement Adviser Of The Year 
-				p (Finalist)	
-			
-
-
+					<!-- TrustBox widget - Grid -->
+					<div class="trustpilot-widget" data-locale="en-GB" data-template-id="539adbd6dec7e10e686debee" data-businessunit-id="57ff44480000ff000595f84b" data-style-height="600px" data-style-width="100%" data-stars="1,2,3,4,5" data-schema-type="Organization"><a href="https://uk.trustpilot.com/review/www.profilepensions.co.uk" target="_blank" rel="noopener">Trustpilot</a></div>
+					<!-- End TrustBox widget -->
+					<br />
+	section.p3rem
+		.container.text-center
+			.col-md-12
+				.row
+					.col-md-4
+						img.profilepension-awards__img(src="/images/WINNER-FXA17-3.png" alt="Financial Services Experience Awards")
+						p!= data.awardsandreviews.s1content1
+					.col-md-4
+						img.profilepension-awards__img(src="/images/sundaytimes-best-small-companies-to-work-for.png" alt="The Sunday Times 100 Best Small Company")
+						p!= data.awardsandreviews.s1content2
+					.col-md-4
+						img.profilepension-awards__img(src="/images/northern-tech-100.png" alt="Northern Tech 100")
+						p!= data.awardsandreviews.s1content3
+					.col-md-4
+						img.profilepension-awards__img(src="/images/national-business-awards-1.png" alt="Lloyds Bank New Business of the Year")
+						p!= data.awardsandreviews.s1content4
+					.col-md-4
+						img.profilepension-awards__img(src="/images/uk-customer-experience-awards-finalist.png" alt="UK Customer Experience Awards")
+						p!= data.awardsandreviews.s1content5
+					.col-md-4
+						img.profilepension-awards__img(src="/images/moneyfact-finalist.png" alt="Retirement Adviser Of The Year")
+						p!= data.awardsandreviews.s1content6
 	+cta()
