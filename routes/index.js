@@ -43,6 +43,8 @@ exports = module.exports = function (app) {
 	app.get('/content-hub/post/:post', routes.views.post);
 	app.get('/infographics/:category?', routes.views.infographics);
 	app.get('/infographics/infographic/:infographic', routes.views.infographic);
+	app.get('/videos/:category?', routes.views.videos);
+	app.get('/videos/video/:video', routes.views.video);
 	app.get('/pension-types', routes.views.pensiontypes);
 	app.get('/pension-types/:pensiontype', routes.views.pensiontype);
 	app.get('/about-us', routes.views.aboutus);

@@ -36,7 +36,8 @@ html
 			function createDiv() {
 				var bodytag = document.getElementsByClassName('navbar navbar-toggleable-md')[0];
 				var div = document.createElement('div');
-				div.setAttribute('id', 'cookie-law');
+				div.setAttribute('id', 'cookie-law' );
+				div.setAttribute('class', 'col-md-12 col-lg-12' );
 				div.innerHTML = '<p>By continuing you agree to our use of cookies. <a href="/privacy-policy/" rel="nofollow" title="Privacy &amp; Cookies Policy"> Learn more</a> | <a class="close-cookie-banner" href="javascript:void(0);" onclick="removeMe();">Got it <i class="fa fa-check" aria-hidden="true"></i> </a></p>';
 				// Be advised the Close Banner 'X' link requires jQuery
 				// bodytag.appendChild(div); // Adds the Cookie Banner just before the closing </body> tag

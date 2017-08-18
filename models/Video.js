@@ -2,15 +2,15 @@ var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
 /**
- * BeginnerGuide Model
+ * Video Model
  */
 
-var BeginnerGuide = new keystone.List('BeginnerGuide', {
+var Video = new keystone.List('Video', {
 	map: { name: 'title' },
 	autokey: { path: 'slug', from: 'title', unique: true },
 });
 
-BeginnerGuide.add({
+Video.add({
 	title: { type: String, required: true },
 	displayBlogTitle: { type: String },
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
@@ -22,7 +22,7 @@ BeginnerGuide.add({
 		brief: { type: String },
 		extended: { type: Types.Html, wysiwyg: true, height: 400 },
 	},
-	categories: { type: Types.Relationship, ref: 'BeginnerGuideCategory', many: true },
+	categories: { type: Types.Relationship, ref: 'VideoCategory', many: true },
 	metadata: {
 		metatitle: { type: String },
 		metadescription: { type: String },
@@ -37,9 +37,9 @@ BeginnerGuide.add({
 	},
 });
 
-BeginnerGuide.schema.virtual('content.full').get(function () {
+Video.schema.virtual('content.full').get(function () {
 	return this.content.extended || this.content.brief;
 });
 
-BeginnerGuide.defaultColumns = 'title, state|20%, author|20%, publishedDate|20%';
-BeginnerGuide.register();
+Video.defaultColumns = 'title, state|20%, author|20%, publishedDate|20%';
+Video.register();

@@ -46,6 +46,7 @@ keystone.set('nav', {
 	posts: ['posts', 'post-categories'],
 	infographics: ['infographics', 'infographic-categories'],
 	beginnerguides: ['beginner-guides', 'beginner-guide-categories'],
+	videos: ['videos', 'videos-categories'],
 	teamMembers: ['team-members', 'team-member-categories'],
 	pensions: ['pensions', 'pension-categories'],
 	address: ['contacts', 'contact-categories'],

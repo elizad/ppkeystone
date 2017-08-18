@@ -6910,7 +6910,9 @@ ul.breadcrumbs li:first-child {
   display: block; }
 
 .advice {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  margin-right: 0rem;
+  margin-left: 0rem; }
 
 .advice-content {
   padding: 1rem;
@@ -6956,6 +6958,12 @@ ul.breadcrumbs li:first-child {
   font-size: 12px;
   height: auto;
   line-height: 15px; }
+
+.col-md-5.advice-image {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 .pagination {
   display: inline-block;

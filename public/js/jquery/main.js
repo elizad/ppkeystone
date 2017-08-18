@@ -63,13 +63,13 @@ equalheight = function(container){
 
 window.addEventListener("load", function load(event){
 	console.log("All resources finished loading!");
-	//equalheight('.equal .company-services__item');
+	equalheight('.equal .company-services__item');
 	equalheight('.light-slider .review-customer');
 });
 
 window.addEventListener("load", function load(event){
 	console.log("resize!");
-	//equalheight('.equal .company-services__item');
+	equalheight('.equal .advice');
 	equalheight('.light-slider .review-customer');
 });
 

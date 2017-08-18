@@ -10,35 +10,35 @@ block metadata
 		meta(property="og:image" content='#{data.category.metafbimageurl}' )
 		meta(name="twitter:image:src" content='#{data.category.metatwitterdescription}' )
 		meta(name="twitter:card" , content="#{data.category.metatwittercard}" )
-		meta(name="keywords" content="#{data.post.metakeywords}" )
+		meta(name="keywords" content="#{data.video.metakeywords}" )
 	else
 		+postmeta()
 		
-mixin post(post)
-	.post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
+mixin video(video)
+	.video(data-ks-editable=editable(user, { list: 'Video', id: video.id }))
 		div.row.advice
-			if post.image.exists
-				a.col-md-5.advice-image(href='/content-hub/post/' + post.slug)(style="background-image: url("+post._.image.fit() +");" )
+			if video.image.exists
+				a.col-md-5.advice-image(href='/content-hub/video/' + video.slug)(style="background-image: url("+video._.image.fit() +");" )
 				
 			div.col-md-7.advice-content
-				h2.advice-title: a(href='/content-hub/post/' + post.slug)= post.title
+				h2.advice-title: a(href='/content-hub/video/' + video.slug)= video.title
 				div.advice-meta
-					if post.publishedDate
-						span.advice-meta__date #{post._.publishedDate.format('DD/MM/YYYY')}
-					if post.author.name.first
-						span.advice-meta__author #{post.author.name.first}
-				p.advice-text!= post.content.brief
+					if video.publishedDate
+						span.advice-meta__date #{video._.publishedDate.format('DD/MM/YYYY')}
+					if video.author.name.first
+						span.advice-meta__author #{video.author.name.first}
+				p.advice-text!= video.content.brief
 				div.share
 					span Share | 
-					a(href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + post.slug + '' target="_blank" style="font-size: 18px;")
+					a(href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + video.slug + '' target="_blank" style="font-size: 18px;")
 						i.fitted.fa.fa-facebook.f.icon
-					a(href='https://twitter.com/home?status=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + post.slug + '' target="_blank" style="font-size: 18px;")
+					a(href='https://twitter.com/home?status=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + video.slug + '' target="_blank" style="font-size: 18px;")
 						i.fitted.fa.fa-twitter.icon
-					a(href='https://plus.google.com/share?url=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + post.slug+ '' target="_blank" style="font-size: 18px;")
+					a(href='https://plus.google.com/share?url=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + video.slug+ '' target="_blank" style="font-size: 18px;")
 						i.fitted.fa.fa-google-plus.icon
-					a(href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + post.slug + '&amp;title=' + post.title + '+-+Profile+Pensions&amp;summary=&amp;source=" target="_blank" style="font-size: 18px;')
+					a(href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + video.slug + '&amp;title=' + video.title + '+-+Profile+Pensions&amp;summary=&amp;source=" target="_blank" style="font-size: 18px;')
 						i.fitted.fa.fa-linkedin.icon
-					a(href='mailto:?body=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + post.slug + '' style="font-size: 18px;")
+					a(href='mailto:?body=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + video.slug + '' style="font-size: 18px;")
 					
 block intro
 	section.intro.green.text-center
@@ -64,42 +64,42 @@ block content
 				if filters.category && !data.category
 					h3.text-muted Invalid Category.
 				else
-					if data.posts.results.length
-						if data.posts.totalPages > 1
+					if data.videos.results.length
+						if data.videos.totalPages > 1
 							h4.text-weight-normal Showing 
-								strong #{data.posts.first}
+								strong #{data.videos.first}
 								|  to 
-								strong #{data.posts.last}
+								strong #{data.videos.last}
 								|  of 
-								strong #{data.posts.total}
-								|  posts.
+								strong #{data.videos.total}
+								|  videos.
 						else
-							h4.text-weight-normal Showing #{utils.plural(data.posts.results.length, '* post')}.
+							h4.text-weight-normal Showing #{utils.plural(data.videos.results.length, '* video')}.
 						.row
-							each post in data.posts.results
+							each video in data.videos.results
 								.col-md-6.col-sm-12.equal
-									+post(post)
+									+video(video)
 						
-						if data.posts.totalPages > 1
+						if data.videos.totalPages > 1
 							ul.pagination
-								if data.posts.previous
-									li: a(href='?page=' + data.posts.previous): i.fa.fa-angle-left
+								if data.videos.previous
+									li: a(href='?page=' + data.videos.previous): i.fa.fa-angle-left
 								else
 									li.disabled: a(href='?page=' + 1): i.fa.fa-angle-left
-								each p, i in data.posts.pages
-									li(class=data.posts.currentPage == p ? 'active' : null)
-										a(href='?page=' + (p == '...' ? (i ? data.posts.totalPages : 1) : p ))= p
-								if data.posts.next
-									li: a(href='?page=' + data.posts.next) Next page
+								each p, i in data.videos.pages
+									li(class=data.videos.currentPage == p ? 'active' : null)
+										a(href='?page=' + (p == '...' ? (i ? data.videos.totalPages : 1) : p ))= p
+								if data.videos.next
+									li: a(href='?page=' + data.videos.next) Next page
 										i.fa.fa-angle-right 
 								else
-									li.disabled: a(href='?page=' + data.posts.totalPages) Next page
+									li.disabled: a(href='?page=' + data.videos.totalPages) Next page
 										i.entypo.fa.fa-angle-right
 					else
 						if data.category
-							h3.text-muted There are no posts in the category #{data.category.name}.
+							h3.text-muted There are no videos in the category #{data.category.name}.
 						else
-							h3.text-muted There are no posts yet.
+							h3.text-muted There are no videos yet.
 			.col-sm-4.col-md-3.sidebar
 				div.subscribe.area
 					h2 Subscribe to our Newsletter
