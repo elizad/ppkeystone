@@ -1,16 +1,16 @@
 extends ../layouts/default
 block metadata
 	if  (data.teamMember)
-		title= data.teamMember.metatitle || 'Profile Pension'
-		meta(property='og:title', content="" +data.teamMember.metatitle  )
-		meta(name="twitter:title", content='#{data.teamMember.metatwittertitle}' )
-		meta(name="description" content='#{data.teamMember.metadescription}' )
-		meta(property="og:description" , content='#{data.teamMember.metafbdescription}' )
-		meta(name="twitter:description", content='#{data.teamMember.metatwitterdescription}' )
-		meta(property="og:image" content='#{data.teamMember.metafbimageurl}' )
-		meta(name="twitter:image:src" content='#{data.teamMember.metatwitterdescription}' )
-		meta(name="twitter:card" , content="#{data.teamMember.metatwittercard}" )
-		meta(name="keywords" content="#{data.teamMember.metakeywords}" )
+		title= data.teamMember.metadata.metatitle || 'Profile Pension'
+		meta(property='og:title' , content='' + data.teamMember.metadata.metafbtitle + ''  )
+		meta(name='twitter:title', content='' + data.teamMember.metadata.metatwittertitle + '' )
+		meta(name='description' content='' + data.teamMember.metadata.metadescription + '' )
+		meta(property='og:description' , content='' + data.teamMember.metadata.metafbdescription + '' )
+		meta(name='twitter:description', content='' + data.teamMember.metadata.metatwitterdescription + '' )
+		meta(property='og:image' content='' + data.teamMember.metadata.metafbimageurl + '' )
+		meta(name='twitter:image:src' content='' + data.teamMember.metadata.metatwitterdescription + '' )
+		meta(name='twitter:card' , content='' + data.teamMember.metadata.metatwittercard + '' )
+		meta(name='keywords' content='' + data.teamMember.metadata.metakeywords + '' )
 	else
 		+postmeta()
 

@@ -1,16 +1,17 @@
 extends ../layouts/default
 block metadata
-	if  (data.getstarted)
-		title= data.getstarted.metatitle || 'Profile Pension'
-		meta(property='og:title', content="" +data.getstarted.metatitle  )
-		meta(name="twitter:title", content='#{data.getstarted.metatwittertitle}' )
-		meta(name="description" content='#{data.getstarted.metadescription}' )
-		meta(property="og:description" , content='#{data.getstarted.metafbdescription}' )
-		meta(name="twitter:description", content='#{data.getstarted.metatwitterdescription}' )
-		meta(property="og:image" content='#{data.getstarted.metafbimageurl}' )
-		meta(name="twitter:image:src" content='#{data.getstarted.metatwitterdescription}' )
-		meta(name="twitter:card" , content="#{data.getstarted.metatwittercard}" )
-		meta(name="keywords" content="#{data.getstarted.metakeywords}" )
+	if  (data.getstarted.metadata)
+		title= data.getstarted.metadata.metatitle || 'Profile Pension'
+		meta(property='og:title' , content='' + data.getstarted.metadata.metafbtitle + ''  )
+		meta(name='twitter:title', content='' + data.getstarted.metadata.metatwittertitle + '' )
+		meta(name='description' content='' + data.getstarted.metadata.metadescription + '' )
+		meta(property='og:description' , content='' + data.getstarted.metadata.metafbdescription + '' )
+		meta(name='twitter:description', content='' + data.getstarted.metadata.metatwitterdescription + '' )
+		meta(property='og:image' content='' + data.getstarted.metadata.metafbimageurl + '' )
+		meta(name='twitter:image:src' content='' + data.getstarted.metadata.metatwitterdescription + '' )
+		meta(name='twitter:card' , content='' + data.getstarted.metadata.metatwittercard + '' )
+		meta(name='keywords' content='' + data.getstarted.metadata.metakeywords + '' )
+
 	else
 		+postmeta()
 block content

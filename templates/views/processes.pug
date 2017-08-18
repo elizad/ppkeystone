@@ -2,30 +2,30 @@ extends ../layouts/default
 include ../mixins/cta
 block metadata
 	if  (data.processes)
-		title= data.processes.metatitle || 'Profile Pension'
-		meta(property='og:title', content="" +data.processes.metatitle  )
-		meta(name="twitter:title", content='#{data.processes.metatwittertitle}' )
-		meta(name="description" content='#{data.processes.metadescription}' )
-		meta(property="og:description" , content='#{data.processes.metafbdescription}' )
-		meta(name="twitter:description", content='#{data.processes.metatwitterdescription}' )
-		meta(property="og:image" content='#{data.processes.metafbimageurl}' )
-		meta(name="twitter:image:src" content='#{data.processes.metatwitterdescription}' )
-		meta(name="twitter:card" , content="#{data.processes.metatwittercard}" )
-		meta(name="keywords" content="#{data.processes.metakeywords}" )
+		title= data.processes.metadata.metatitle || 'Profile Pension'
+		meta(property='og:title' , content='' + data.processes.metadata.metafbtitle + ''  )
+		meta(name='twitter:title', content='' + data.processes.metadata.metatwittertitle + '' )
+		meta(name='description' content='' + data.processes.metadata.metadescription + '' )
+		meta(property='og:description' , content='' + data.processes.metadata.metafbdescription + '' )
+		meta(name='twitter:description', content='' + data.processes.metadata.metatwitterdescription + '' )
+		meta(property='og:image' content='' + data.processes.metadata.metafbimageurl + '' )
+		meta(name='twitter:image:src' content='' + data.processes.metadata.metatwitterdescription + '' )
+		meta(name='twitter:card' , content='' + data.processes.metadata.metatwittercard + '' )
+		meta(name='keywords' content='' + data.processes.metadata.metakeywords + '' )
 	else
 		+postmeta()
 block intro
 	section.intro.green.text-center
-		h1 How It Works
-		h3 Over the past three years we have refined our process to make it as easy as possible for you to find a better pension.
+		h1= data.privacypolicy.title
+		h3= data.privacypolicy.longtitle
 	section.grey
 		ul.container.breadcrumb
-			li How It Works
+			li= data.privacypolicy.breadcrumbstitle
 block content
 	section.p3rem
 		.container.text-center
 			.row
-				h2 Privacy Policy
-				.col-md-12
+				h2= data.privacypolicy.title
+				.col-md-12!= data.privacypolicy.content
 
 	+cta

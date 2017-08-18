@@ -1,16 +1,16 @@
 extends ../layouts/default
 block metadata
 	if  (data.pensioncalculator)
-		title= data.pensioncalculator.metatitle || 'Profile Pension'
-		meta(property='og:title', content="" +data.pensioncalculator.metatitle  )
-		meta(name="twitter:title", content='#{data.pensioncalculator.metatwittertitle}' )
-		meta(name="description" content='#{data.pensioncalculator.metadescription}' )
-		meta(property="og:description" , content='#{data.pensioncalculator.metafbdescription}' )
-		meta(name="twitter:description", content='#{data.pensioncalculator.metatwitterdescription}' )
-		meta(property="og:image" content='#{data.pensioncalculator.metafbimageurl}' )
-		meta(name="twitter:image:src" content='#{data.pensioncalculator.metatwitterdescription}' )
-		meta(name="twitter:card" , content="#{data.pensioncalculator.metatwittercard}" )
-		meta(name="keywords" content="#{data.pensioncalculator.metakeywords}" )
+		title= data.pensioncalculator.metadata.metatitle || 'Profile Pension'
+		meta(property='og:title' , content='' + data.pensioncalculator.metadata.metafbtitle + ''  )
+		meta(name='twitter:title', content='' + data.pensioncalculator.metadata.metatwittertitle + '' )
+		meta(name='description' content='' + data.pensioncalculator.metadata.metadescription + '' )
+		meta(property='og:description' , content='' + data.pensioncalculator.metadata.metafbdescription + '' )
+		meta(name='twitter:description', content='' + data.pensioncalculator.metadata.metatwitterdescription + '' )
+		meta(property='og:image' content='' + data.pensioncalculator.metadata.metafbimageurl + '' )
+		meta(name='twitter:image:src' content='' + data.pensioncalculator.metadata.metatwitterdescription + '' )
+		meta(name='twitter:card' , content='' + data.pensioncalculator.metadata.metatwittercard + '' )
+		meta(name='keywords' content='' + data.pensioncalculator.metadata.metakeywords + '' )
 	else
 		+postmeta()
 block intro

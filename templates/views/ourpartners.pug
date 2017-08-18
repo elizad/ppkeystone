@@ -6,15 +6,15 @@ include ../mixins/cta
 block metadata
 	if  (data.ourpartners)
 		title= data.ourpartners.metatitle || 'Profile Pension'
-		meta(property='og:title', content="" +data.ourpartners.metatitle  )
-		meta(name="twitter:title", content='#{data.ourpartners.metatwittertitle}' )
-		meta(name="description" content='#{data.ourpartners.metadescription}' )
-		meta(property="og:description" , content='#{data.ourpartners.metafbdescription}' )
-		meta(name="twitter:description", content='#{data.ourpartners.metatwitterdescription}' )
-		meta(property="og:image" content='#{data.ourpartners.metafbimageurl}' )
-		meta(name="twitter:image:src" content='#{data.ourpartners.metatwitterdescription}' )
-		meta(name="twitter:card" , content="#{data.ourpartners.metatwittercard}" )
-		meta(name="keywords" content="#{data.ourpartners.metakeywords}" )
+		meta(property='og:title' , content='' + data.ourpartners.metafbtitle + ''  )
+		meta(name='twitter:title', content='' + data.ourpartners.metadata.metatwittertitle + '' )
+		meta(name='description' content='' + data.ourpartners.metadata.metadescription + '' )
+		meta(property='og:description' , content='' + data.ourpartners.metadata.metafbdescription + '' )
+		meta(name='twitter:description', content='' + data.ourpartners.metadata.metatwitterdescription + '' )
+		meta(property='og:image' content='' + data.ourpartners.metadata.metafbimageurl + '' )
+		meta(name='twitter:image:src' content='' + data.ourpartners.metadata.metatwitterdescription + '' )
+		meta(name='twitter:card' , content='' + data.ourpartners.metadata.metatwittercard + '' )
+		meta(name='keywords' content='' + data.ourpartners.metadata.metakeywords + '' )
 	else
 		+postmeta()
 block intro
@@ -30,7 +30,7 @@ block intro
 				li= data.ourpartners.breadcrumbstitle
 block content
 	section.p3rem
-		.container.col-md-12
+		.container
 			.row.justify-content-center
 				.col-md-7
 					h2.text-center= data.ourpartners.ourPartnersTitle

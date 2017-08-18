@@ -8,31 +8,27 @@ include ../mixins/tpreviews
 include ../mixins/partners	
 include ../mixins/press
 block metadata
-	if  (data.pensionswitch)
+	if  data.pensionswitch
 		title= data.pensionswitch.metatitle || 'Profile Pension'
-		meta(property='og:title', content="" +data.pensionswitch.metatitle  )
-		meta(name="twitter:title", content='#{data.pensionswitch.metatwittertitle}' )
-		meta(name="description" content='#{data.pensionswitch.metadescription}' )
-		meta(property="og:description" , content='#{data.pensionswitch.metafbdescription}' )
-		meta(name="twitter:description", content='#{data.pensionswitch.metatwitterdescription}' )
-		meta(property="og:image" content='#{data.pensionswitch.metafbimageurl}' )
-		meta(name="twitter:image:src" content='#{data.pensionswitch.metatwitterdescription}' )
-		meta(name="twitter:card" , content="#{data.pensionswitch.metatwittercard}" )
-		meta(name="keywords" content="#{data.pensionswitch.metakeywords}" )
+		meta(property='og:title' , content=''+ data.pensionswitch.metadata.metafbtitle + ''  )
+		meta(name='twitter:title', content='' + data.pensionswitch.metadata.metatwittertitle +'' )
+		meta(name='description' content='' + data.pensionswitch.metadata.metadescription  +'' )
+		meta(property='og:description' , content='' + data.pensionswitch.metadata.metafbdescription + '' )
+		meta(name='twitter:description', content='' + data.pensionswitch.metadata.metatwitterdescription+ '' )
+		meta(property='og:image' content='' + data.pensionswitch.metadata.metafbimageurl+ '' )
+		meta(name='twitter:image:src' content='' + data.pensionswitch.metadata.metatwitterdescription + '' )
+		meta(name='twitter:card' , content='' + data.pensionswitch.metadata.metatwittercard + '' )
+		meta(name='keywords' content='' + data.pensionswitch.metadata.metakeywords + '' )
 	else
-		+postmeta()	
-
+		+postmeta()
 block content
 	section#homehead
 		.container.text-center
-
-			h1 Switching you to the best pension.
-
-							
+			h1= data.pensionswitch.s1title
 			div.row.justify-content-center
 				div.col-xs-8.col-md-6
-					p Impartial advice to maximise the value of your pension, reduce charges and get you access to your cash when you need it.
-					a(href='/get-started-trace').btn.btn-lg.btn-primary Find Pensions
+					p!= data.pensionswitch.s1content
+					a(href='/'+ data.pensionswitch.s1buttonlink+'').btn.btn-lg.btn-primary= data.pensionswitch.s1button
 					+tpdata()
 	
 	+company-features()

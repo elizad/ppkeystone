@@ -1,106 +1,106 @@
 extends ../layouts/default
 block metadata
-	if  data.video
-		title= data.video.metadata.metatitle || 'Profile Pension'
-		meta(property='og:title' , content='' + data.video.metadata.metafbtitle + ''  )
-		meta(name='twitter:title', content='' + data.video.metadata.metatwittertitle + '' )
-		meta(name='description' content='' + data.video.metadata.metadescription + '' )
-		meta(property='og:description' , content='' + data.video.metadata.metafbdescription + '' )
-		meta(name='twitter:description', content='' + data.video.metadata.metatwitterdescription + '' )
-		meta(property='og:image' content='' + data.video.metadata.metafbimageurl + '' )
-		meta(name='twitter:image:src' content='' + data.video.metadata.metatwitterdescription + '' )
-		meta(name='twitter:card' , content='' + data.video.metadata.metatwittercard + '' )
-		meta(name='keywords' content='' + data.video.metadata.metakeywords + '' )
+	if  data.story
+		title= data.story.metadata.metatitle || 'Profile Pension'
+		meta(property='og:title' , content='' + data.story.metadata.metafbtitle + ''  )
+		meta(name='twitter:title', content='' + data.story.metadata.metatwittertitle + '' )
+		meta(name='description' content='' + data.story.metadata.metadescription + '' )
+		meta(property='og:description' , content='' + data.story.metadata.metafbdescription + '' )
+		meta(name='twitter:description', content='' + data.story.metadata.metatwitterdescription + '' )
+		meta(property='og:image' content='' + data.story.metadata.metafbimageurl + '' )
+		meta(name='twitter:image:src' content='' + data.story.metadata.metatwitterdescription + '' )
+		meta(name='twitter:card' , content='' + data.story.metadata.metatwittercard + '' )
+		meta(name='keywords' content='' + data.story.metadata.metakeywords + '' )
 	else
 		+postmeta()
 block intro
 	section.intro.green.text-center
-		if !data.video
-			h2 Invalid video.
+		if !data.story
+			h2 Invalid story.
 		else
-			h1= data.video.longtitle
-		if data.video.author
-			h3 by #{data.video.author.name.first}
+			h1= data.story.longtitle
+		if data.story.author
+			h3 by #{data.story.author.name.first}
 	div.grey
 		ul.container.breadcrumb
-			li: a(href='/videos') &larr; Content Hub
+			li: a(href='/content-hub') &larr; Content Hub
 			li   /  
-			if !data.video
-				li Invalid video.
+			if !data.story
+				li Invalid story.
 			else
-				li= data.video.title
+				li= data.story.title
 block content
 	.container: .row.p3rem
 		.col-md-9.col-sm-12.border-right
 			article
-			if !data.video
-				h2 Invalid video.
+			if !data.story
+				h2 Invalid story.
 			else
 				header
-					h2= data.video.title
-					h5 videoed 
-						if data.video.publishedDate
-							| on #{data.video._.publishedDate.format('DD/MM/YYYY')} 
-						if data.video.categories && data.video.categories.length
+					h2= data.story.title
+					h5 News
+						if data.story.publishedDate
+							| on #{data.story._.publishedDate.format('DD/MM/YYYY')} 
+						if data.story.categories && data.story.categories.length
 							| in 
-							each cat, cat_i in data.video.categories
-								a(href='/content-hub/' + cat.key)= cat.name
-								if cat_i < data.video.categories.length - 1
+							each cat, cat_i in data.story.categories
+								a(href='/news/' + cat.key)= cat.name
+								if cat_i < data.story.categories.length - 1
 									| , 
 								else
 									|
-						if data.video.author
-							|  by #{data.video.author.name.first}
-				.video
-					if data.video.image.exists
-						.image-wrap: img(src=data.video._.image.fit(750, 450)).img-responsive
-					!= data.video.content.full
+						if data.story.author
+							|  by #{data.story.author.name.first}
+				.story
+					if data.story.image.exists
+						.image-wrap: img(src=data.story._.image.fit(750, 450)).img-responsive
+					!= data.story.content.full
 			div.pagination
-				a(href="https://www.profilepensions.co.uk/pension-options-retirement/") Next video 
+				a(href="https://www.profilepensions.co.uk/pension-options-retirement/") Next story 
 					i.right.fa.fa-caret-right
 			
 			div.p3rem
 				h2 More things you might like
 				div.row
-					each video in data.videos
+					each story in data.storys
 						div.col-md-6.col-lg-6
 							div.row.advice
 								a.col-md-5.equal.advice-image(href="")
-									img(src=video._.image.fit(150, 177)).img-responsive
+									img(src=story._.image.fit(150, 177)).img-responsive
 								div.col-md-7.equal.advice-content
-									h2.advice-title= video.title
+									h2.advice-title= story.title
 									div.advice-meta
-										if video.publishedDate
-											span.advice-meta__date  #{video._.publishedDate.format('DD/MM/YYYY')}
-										if video.author.name.first
-											span.advice-meta__author  #{video.author.name.first}
-									p.excerpt!= video.content.brief
+										if story.publishedDate
+											span.advice-meta__date  #{story._.publishedDate.format('DD/MM/YYYY')}
+										if story.author.name.first
+											span.advice-meta__author  #{story.author.name.first}
+									p.excerpt!= story.content.brief
 									div.share
 										span Share | 
-										a(href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + video.slug + '' target="_blank" style="font-size: 18px;")
+										a(href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + story.slug + '' target="_blank" style="font-size: 18px;")
 											i.fitted.fa.fa-facebook.f.icon
-										a(href='https://twitter.com/home?status=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + video.slug + '' target="_blank" style="font-size: 18px;")
+										a(href='https://twitter.com/home?status=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + story.slug + '' target="_blank" style="font-size: 18px;")
 											i.fitted.fa.fa-twitter.icon
-										a(href='https://plus.google.com/share?url=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + video.slug + '' target="_blank" style="font-size: 18px;")
+										a(href='https://plus.google.com/share?url=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + story.slug + '' target="_blank" style="font-size: 18px;")
 											i.fitted.fa.fa-google-plus.icon
-										a(href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + video.slug + '&amp;title=' + data.video.title + '+-+Profile+Pensions&amp;summary=&amp;source=" target="_blank" style="font-size: 18px;')
+										a(href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + story.slug + '&amp;title=' + data.story.title + '+-+Profile+Pensions&amp;summary=&amp;source=" target="_blank" style="font-size: 18px;')
 											i.fitted.fa.fa-linkedin.icon
-										a(href='mailto:?body=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + video.slug + '' style="font-size: 18px;")
+										a(href='mailto:?body=https%3A%2F%2Fwww.profilepensions.co.uk%2F' + story.slug + '' style="font-size: 18px;")
 
 										
 		.col-sm-12.col-md-3.sidebar
 				div.share.area
 					h2.shares-header Share
 					div.shares
-						a(href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.profilepensions.co.uk%2F'+data.video.slug+'' target="_blank" style="font-size: 18px;")
+						a(href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.profilepensions.co.uk%2F'+data.story.slug+'' target="_blank" style="font-size: 18px;")
 							i.fitted.fa.fa-facebook.f.icon
-						a(href='https://twitter.com/home?status=https%3A%2F%2Fwww.profilepensions.co.uk%2F'+data.video.slug+'' target="_blank" style="font-size: 18px;")
+						a(href='https://twitter.com/home?status=https%3A%2F%2Fwww.profilepensions.co.uk%2F'+data.story.slug+'' target="_blank" style="font-size: 18px;")
 							i.fitted.fa.fa-twitter.icon
-						a(href='https://plus.google.com/share?url=https%3A%2F%2Fwww.profilepensions.co.uk%2F'+data.video.slug+'' target="_blank" style="font-size: 18px;")
+						a(href='https://plus.google.com/share?url=https%3A%2F%2Fwww.profilepensions.co.uk%2F'+data.story.slug+'' target="_blank" style="font-size: 18px;")
 							i.fitted.fa.fa-google-plus.icon
-						a(href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.profilepensions.co.uk%2F'+data.video.slug+'&amp;title='+data.video.title+'+-+Profile+Pensions&amp;summary=&amp;source=" target="_blank" style="font-size: 18px;')
+						a(href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.profilepensions.co.uk%2F'+data.story.slug+'&amp;title='+data.story.title+'+-+Profile+Pensions&amp;summary=&amp;source=" target="_blank" style="font-size: 18px;')
 							i.fitted.fa.fa-linkedin.icon
-						a(href='mailto:?body=https%3A%2F%2Fwww.profilepensions.co.uk%2F'+data.video.slug+'' style="font-size: 18px;")
+						a(href='mailto:?body=https%3A%2F%2Fwww.profilepensions.co.uk%2F'+data.story.slug+'' style="font-size: 18px;")
 							i.icon.fa.fa-envelope
 					<hr>		
 				div.subscribe.area

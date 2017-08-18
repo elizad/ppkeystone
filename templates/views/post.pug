@@ -1,16 +1,16 @@
 extends ../layouts/default
 block metadata
 	if  data.post
-		title= data.post.metatitle || 'Profile Pension'
-		meta(property='og:title', content="" +data.post.metatitle  )
-		meta(name="twitter:title", content='#{data.post.metatwittertitle}' )
-		meta(name="description" content='#{data.post.metadescription}' )
-		meta(property="og:description" , content='#{data.post.metafbdescription}' )
-		meta(name="twitter:description", content='#{data.post.metatwitterdescription}' )
-		meta(property="og:image" content='#{data.post.metafbimageurl}' )
-		meta(name="twitter:image:src" content='#{data.post.metatwitterdescription}' )
-		meta(name="twitter:card" , content="#{data.post.metatwittercard}" )
-		meta(name="keywords" content="#{data.post.metakeywords}" )
+		title= data.post.metadata.metatitle || 'Profile Pension'
+		meta(property='og:title' , content='' + data.post.metadata.metafbtitle + ''  )
+		meta(name='twitter:title', content='' + data.post.metadata.metatwittertitle + '' )
+		meta(name='description' content='' + data.post.metadata.metadescription + '' )
+		meta(property='og:description' , content='' + data.post.metadata.metafbdescription + '' )
+		meta(name='twitter:description', content='' + data.post.metadata.metatwitterdescription + '' )
+		meta(property='og:image' content='' + data.post.metadata.metafbimageurl + '' )
+		meta(name='twitter:image:src' content='' + data.post.metadata.metatwitterdescription + '' )
+		meta(name='twitter:card' , content='' + data.post.metadata.metatwittercard + '' )
+		meta(name='keywords' content='' + data.post.metadata.metakeywords + '' )
 	else
 		+postmeta()
 block intro

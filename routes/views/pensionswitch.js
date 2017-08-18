@@ -4,15 +4,30 @@ var trustpilot = require('../../providers/trustpilot')(path);
 var trustpilot2 = require('../../providers/trustpilot')(path2);
 var keystone = require('keystone');
 
-
 exports = module.exports = async function (req, res) {
-	console.log('tp2' + await trustpilot2.getData());
-
+	var pensionswitch;
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 	locals.trustpilot = await trustpilot.getData() || {};
+
 	locals.trustpilot2 = await trustpilot2.getData(path2) || {};
+	try {
+		pensionswitch = await keystone.list('PensionSwitch').model.findOne().exec();
+	} catch (error) {
+		console.log('could not find pension switch ', error);
+	}
+	// item in the header navigation.
 	locals.section = 'pension-switch';
+	locals.filters = {
+		pensionswitch: req.params.pensionswitch,
+	};
+	locals.data = {
+		pensionswitch,
+	};
+	//  Load pension review
+	view.on('init', function (next) {
+		next();
+	});
 
 	// Render the view
 	view.render('pensionswitch');

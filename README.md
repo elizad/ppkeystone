@@ -4,17 +4,20 @@ Profile Pension Website
 The source code for re-platforming the www.profilefinancial.co.uk website
 
 ## Built With
+-
+### [Keystone]version 4.0.0-beta.5 (http://keystonejs.com/) - Node.js CMS & Web Application Platform
+### [Node] 8.2.1
+### [MongoDB] 3.4
+### [npm]  5.3.0
+-
 
-# [Keystone]version 4.0.0-beta.5 (http://keystonejs.com/) - Node.js CMS & Web Application Platform
-# [Node] 8.2.1
-# [MongoDB] 3.4
-# [npm]  5.3.0
-
-##Coding Guidelines
+## Coding Guidelines
 This Project is generally following the guidelines set out in [AirBnB's Javascript Style Guide](https://github.com/airbnb/javascript), with the exception of using real tabs for indentation.
 
 ## Deployment
 
+default login data: elizadascal@gmail.com
+			  pass: light
 
 ## Start
 1 Install & start MongoDb https://www.mongodb.com/ 
@@ -49,7 +52,6 @@ log in and add data into types form [types  = (post , index, videos , page-.... 
 
 ### Preview mode for keystone post, pages, infographics, ...
 
-
 ### Go to node_modules > keystone > admin > public > js > lib > jquery > jquery-1.10.2.min.js 
  and add 
 --- 
@@ -61,7 +63,7 @@ log in and add data into types form [types  = (post , index, videos , page-.... 
 		'posts': 'content-hub/post',
 		'team-members': 'meet-the-team',
 		'pensions': 'pension-type',
-		'whatyouneedfromadmin': 'whatismatchinginurl'
+		'whatyouneedfromadmin': 'whatismatchinginurl- route matching'
 	 };
  
 	 function addLink() {

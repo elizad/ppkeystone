@@ -1,16 +1,16 @@
 extends ../layouts/default
 block metadata
-	if  (data.contact)
-		title= data.category.metatitle || 'Profile Pension'
-		meta(property='og:title', content="" +data.category.metatitle  )
-		meta(name="twitter:title", content='#{data.category.metatwittertitle}' )
-		meta(name="description" content='#{data.category.metadescription}' )
-		meta(property="og:description" , content='#{data.category.metafbdescription}' )
-		meta(name="twitter:description", content='#{data.category.metatwitterdescription}' )
-		meta(property="og:image" content='#{data.category.metafbimageurl}' )
-		meta(name="twitter:image:src" content='#{data.category.metatwitterdescription}' )
-		meta(name="twitter:card" , content="#{data.category.metatwittercard}" )
-		meta(name="keywords" content="#{data.category.metakeywords}" )
+	if  (data.contact.metadata)
+		title= data.contact.metadata.metatitle || 'Profile Pension'
+		meta(property='og:title' , content='' + data.contact.metadata.metafbtitle + ''  )
+		meta(name='twitter:title', content='' + data.contact.metadata.metatwittertitle + '' )
+		meta(name='description' content='' + data.contact.metadata.metadescription + '' )
+		meta(property='og:description' , content='' + data.contact.metadata.metafbdescription + '' )
+		meta(name='twitter:description', content='' + data.contact.metadata.metatwitterdescription + '' )
+		meta(property='og:image' content='' + data.contact.metadata.metafbimageurl + '' )
+		meta(name='twitter:image:src' content='' + data.contact.metadata.metatwitterdescription + '' )
+		meta(name='twitter:card' , content='' + data.contact.metadata.metatwittercard + '' )
+		meta(name='keywords' content='' + data.contact.metadata.metakeywords + '' )
 	else
 		+postmeta()
 

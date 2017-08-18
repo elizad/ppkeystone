@@ -1,16 +1,16 @@
 extends ../layouts/default
 block metadata
-	if  !data.beginnerguide
+	if  !data.beginnerguide.metadata
 		title= data.beginnerguide.metadata.metatitle || 'Profile Pension'
-		meta(property='og:title', content="" +data.beginnerguide.metadata.metatitle  )
-		meta(name="twitter:title", content='#{data.beginnerguide.metatwittertitle}' )
-		meta(name="description" content='#{data.beginnerguide.metadescription}' )
-		meta(property="og:description" , content='#{data.beginnerguide.metafbdescription}' )
-		meta(name="twitter:description", content='#{data.beginnerguide.metatwitterdescription}' )
-		meta(property="og:image" content='#{data.beginnerguide.metafbimageurl}' )
-		meta(name="twitter:image:src" content='#{data.beginnerguide.metatwitterdescription}' )
-		meta(name="twitter:card" , content="#{data.beginnerguide.metatwittercard}" )
-		meta(name="keywords" content="#{data.beginnerguide.metakeywords}" )
+		meta(property='og:title' , content='' + data.beginnerguide.metadata.metafbtitle + ''  )
+		meta(name='twitter:title', content='' + data.beginnerguide.metadata.metatwittertitle + '' )
+		meta(name='description' content='' + data.beginnerguide.metadata.metadescription + '' )
+		meta(property='og:description' , content='' + data.beginnerguide.metadata.metafbdescription + '' )
+		meta(name='twitter:description', content='' + data.beginnerguide.metadata.metatwitterdescription + '' )
+		meta(property='og:image' content='' + data.beginnerguide.metadata.metafbimageurl + '' )
+		meta(name='twitter:image:src' content='' + data.beginnerguide.metadata.metatwitterdescription + '' )
+		meta(name='twitter:card' , content='' + data.beginnerguide.metadata.metatwittercard + '' )
+		meta(name='keywords' content='' + data.beginnerguide.metadata.metakeywords + '' )
 	else
 		+postmeta()
 block intro

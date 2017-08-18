@@ -1,16 +1,16 @@
 extends ../layouts/default
 block metadata
-	if  data.infographic
-		title= data.infographic.metatitle || 'Profile Pension'
-		meta(property='og:title', content="" +data.infographic.metatitle  )
-		meta(name="twitter:title", content='#{data.infographic.metatwittertitle}' )
-		meta(name="description" content='#{data.infographic.metadescription}' )
-		meta(property="og:description" , content='#{data.infographic.metafbdescription}' )
-		meta(name="twitter:description", content='#{data.infographic.metatwitterdescription}' )
-		meta(property="og:image" content='#{data.infographic.metafbimageurl}' )
-		meta(name="twitter:image:src" content='#{data.infographic.metatwitterdescription}' )
-		meta(name="twitter:card" , content="#{data.infographic.metatwittercard}" )
-		meta(name="keywords" content="#{data.infographic.metakeywords}" )
+	if  data.infographic.metadata
+		title= data.infographic.metadata.metatitle || 'Profile Pension'
+		meta(property='og:title' , content='' + data.infographic.metadata.metafbtitle + ''  )
+		meta(name='twitter:title', content='' + data.infographic.metadata.metatwittertitle + '' )
+		meta(name='description' content='' + data.infographic.metadata.metadescription + '' )
+		meta(property='og:description' , content='' + data.infographic.metadata.metafbdescription + '' )
+		meta(name='twitter:description', content='' + data.infographic.metadata.metatwitterdescription + '' )
+		meta(property='og:image' content='' + data.infographic.metadata.metafbimageurl + '' )
+		meta(name='twitter:image:src' content='' + data.infographic.metadata.metatwitterdescription + '' )
+		meta(name='twitter:card' , content='' + data.infographic.metadata.metatwittercard + '' )
+		meta(name='keywords' content='' + data.infographic.metadata.metakeywords + '' )
 	else
 		+postmeta()
 block intro

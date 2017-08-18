@@ -1,17 +1,17 @@
 extends ../layouts/default
 include ../mixins/cta
 block metadata
-	if  data.aboutus
-		title= data.aboutus.metatitle || 'Profile Pension'
-		meta(property='og:title', content= +data.aboutus.metatitle  ) 
-		meta(name="twitter:title", content='#{data.aboutus.metatwittertitle}' )
-		meta(name="description" content='#{data.aboutus.metadescription}' )
-		meta(property="og:description" , content='#{data.aboutus.metafbdescription}' )
-		meta(name="twitter:description", content='#{data.aboutus.metatwitterdescription}' )
-		meta(property="og:image" content='#{data.aboutus.metafbimageurl}' )
-		meta(name="twitter:image:src" content='#{data.aboutus.metatwitterdescription}' )
-		meta(name="twitter:card" , content="#{data.aboutus.metatwittercard}" )
-		meta(name="keywords" content="#{data.aboutus.metakeywords}" )
+	if  data.aboutus.metadata
+		title= data.aboutus.metadata.metatitle || 'Profile Pension'
+		meta(property='og:title' , content='' + data.aboutus.metadata.metafbtitle + ''  )
+		meta(name='twitter:title', content='' + data.aboutus.metadata.metatwittertitle + '' )
+		meta(name='description' content='' + data.aboutus.metadata.metadescription + '' )
+		meta(property='og:description' , content='' + data.aboutus.metadata.metafbdescription + '' )
+		meta(name='twitter:description', content='' + data.aboutus.metadata.metatwitterdescription + '' )
+		meta(property='og:image' content='' + data.aboutus.metadata.metafbimageurl + '' )
+		meta(name='twitter:image:src' content='' + data.aboutus.metadata.metatwitterdescription + '' )
+		meta(name='twitter:card' , content='' + data.aboutus.metadata.metatwittercard + '' )
+		meta(name='keywords' content='' + data.aboutus.metadata.metakeywords + '' )
 	else
 		+postmeta()
 
