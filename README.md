@@ -71,7 +71,7 @@ log in and add data into types form [types form = (post , index, videos , page-.
 	 addLink()
  
  ---
- in route you need to have to delete for admin post State
+ in route you have to allow admin user to see the post in all cases
  ---
  	var postSearch = {
  			slug: locals.filters.post,
