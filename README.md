@@ -43,31 +43,32 @@ Date          | Time          | Notes
 08/08/2017    | 10.02         | move to node 8
 
 ### In order to get the project working you have to go http://localhost:3000/keystone/ or http://profilepension.co.uk/keystone/
-log in and add data into types form [types form = (post , index, videos , page-.... , contact) ] in order to get the app working
+log in and add data into types form [types form = (post , index, videos , page-.... , contact) ] in order to get the app working or get data into database 
 
 ### Preview mode for keystone post, pages, infographics, ...
----
+
+
  Go to node_modules > keystone > admin > public > js > lib > jquery > jquery-1.10.2.mim.js 
  and add 
 --- 
- var target = 'input.EditForm__key-or-id__input';
- // get content type from the admin ui
- var segment = document.location.href.split('/')[4];
- // map admin keys with front UI
- var map = {
- 	'posts': 'content-hub/post',
- 	'team-members': 'meet-the-team',
- 	'pensions': 'pension-type',
- 	'whatyouneedfromadmin': 'whatismatchinginurl'
- };
+	 var target = 'input.EditForm__key-or-id__input';
+	 // get content type from the admin ui
+	 var segment = document.location.href.split('/')[4];
+	 // map admin keys with front UI
+	 var map = {
+		'posts': 'content-hub/post',
+		'team-members': 'meet-the-team',
+		'pensions': 'pension-type',
+		'whatyouneedfromadmin': 'whatismatchinginurl'
+	 };
  
- function addLink() {
- 	var slug = $(target).val()
- 	if(!slug) return setTimeout(addLink, 1000)
- 	$(target).after('<a title="Preview" href="/' + map[segment] + '/' + slug + '" target="_blank">' + slug + ' (preview)</a>')
- 	$(target).remove()
- }
- addLink()
+	 function addLink() {
+		var slug = $(target).val()
+		if(!slug) return setTimeout(addLink, 1000)
+		$(target).after('<a title="Preview" href="/' + map[segment] + '/' + slug + '" target="_blank">' + slug + ' (preview)</a>')
+		$(target).remove()
+	 }
+	 addLink()
  
  ---
  in route you need to have to delete for admin post State
