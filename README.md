@@ -48,7 +48,7 @@ log in and add data into types form [types form = (post , index, videos , page-.
 ### Preview mode for keystone post, pages, infographics, ...
 
 
- Go to node_modules > keystone > admin > public > js > lib > jquery > jquery-1.10.2.mim.js 
+### Go to node_modules > keystone > admin > public > js > lib > jquery > jquery-1.10.2.mim.js 
  and add 
 --- 
 	 var target = 'input.EditForm__key-or-id__input';
