@@ -42,9 +42,10 @@ Date          | Time          | Notes
 ------------- | ------------- | ------------- 
 08/08/2017    | 10.02         | move to node 8
 
-### In order to get the project working you have to go http://localhost:3000/keystone/ or http://profilepension.co.uk/keystone/
-log in and add data into types form [types form = (post , index, videos , page-.... , contact) ] in order to get the app working or get data into database
 ### The content is grouped be type (similar elements / similar pages) in order to  make it more modular  
+
+### In order to get the project working you have to go http://localhost:3000/keystone/ or http://profilepension.co.uk/keystone/
+log in and add data into types form [types  = (post , index, videos , page-.... , contact) ] in order to get the app working or get data into database
 
 ### Preview mode for keystone post, pages, infographics, ...
 
