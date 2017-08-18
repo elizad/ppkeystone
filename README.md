@@ -70,8 +70,8 @@ log in and add data into types form [types form = (post , index, videos , page-.
 	 }
 	 addLink()
  
- ---
- in route you have to allow admin user to see the post in all cases
+
+ ###  in route you have to allow admin user to see the post in all cases
  ---
  	var postSearch = {
  			slug: locals.filters.post,
