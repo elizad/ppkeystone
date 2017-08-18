@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cde2f55e-acad-48a1-9f10-f140b28058e5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/Video.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/VideoCategory.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/views/news.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/views/newss.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/views/video.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/views/videos.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/views/video.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/views/videos.pug" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/18486261_1666372546725515_4555592715929794745_n.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keystone.js" afterPath="$PROJECT_DIR$/keystone.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/BeginnerGuide.js" afterPath="$PROJECT_DIR$/models/BeginnerGuide.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Contact.js" afterPath="$PROJECT_DIR$/models/Contact.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Infographic.js" afterPath="$PROJECT_DIR$/models/Infographic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Pensiontracing.js" afterPath="$PROJECT_DIR$/models/Pensiontracing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Post.js" afterPath="$PROJECT_DIR$/models/Post.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery/main.js" afterPath="$PROJECT_DIR$/public/js/jquery/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/site.css" afterPath="$PROJECT_DIR$/public/styles/site.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/site/_layout.css" afterPath="$PROJECT_DIR$/public/styles/site/_layout.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/views/post.js" afterPath="$PROJECT_DIR$/routes/views/post.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/includes/layout/footer.pug" afterPath="$PROJECT_DIR$/templates/includes/layout/footer.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/layouts/default.pug" afterPath="$PROJECT_DIR$/templates/layouts/default.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/blog.pug" afterPath="$PROJECT_DIR$/templates/views/blog.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/contact.pug" afterPath="$PROJECT_DIR$/templates/views/contact.pug" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -47,8 +22,8 @@
             <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/README.md">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="833">
-                    <caret line="64" column="42" lean-forward="true" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
+                  <state relative-caret-position="510">
+                    <caret line="72" column="4" lean-forward="false" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
                     <folding />
                   </state>
                 </provider>
@@ -451,12 +426,12 @@
       <workItem from="1502469944594" duration="670000" />
       <workItem from="1502665739933" duration="455000" />
       <workItem from="1502666373632" duration="61795000" />
-      <workItem from="1503014671179" duration="15417000" />
+      <workItem from="1503014671179" duration="16009000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277350000" />
+    <option name="totallyTimeSpent" value="277942000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1464" y="112" width="1269" height="897" extended-state="0" />
@@ -907,8 +882,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="64" column="42" lean-forward="true" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
+        <state relative-caret-position="510">
+          <caret line="72" column="4" lean-forward="false" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
           <folding />
         </state>
       </provider>

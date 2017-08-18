@@ -20,17 +20,17 @@ This Project is generally following the guidelines set out in [AirBnB's Javascri
 1 Install & start MongoDb https://www.mongodb.com/ 
 2 Install & start Node https://nodejs.org/en/
 
-## REGARDING current project 
-# TO KEEP IT AS IT IS 
+## Current project 
+### TO KEEP IT AS IT IS 
  -- download this project
  -- add the database to mongoDB 
    Once you've set up it up, run $ npm start or  $ node keystone to start the server.
    
-# To get an empty project without the preview feature  
+### To get an empty project without the preview feature  
   -- download this project
   Once you've set up your configuration with $ npm install and run $ npm start or  $ node keystone to start the server.
  
-# See more about keystonejs at http://keystonejs.com/getting-started/ 
+### See more about keystonejs at http://keystonejs.com/getting-started/ 
 
 
 Once you've set up your configuration with $ npm install, run  $ node keystone to start the server. 
@@ -42,13 +42,13 @@ Date          | Time          | Notes
 ------------- | ------------- | ------------- 
 08/08/2017    | 10.02         | move to node 8
 
-## keystone will create an empty database at runtime. 
-in order to get it working you have to go http://localhost:3000/keystone/ or http://profilepension.co.uk/keystone/
-log in and add data/ fill the form in order to get it working into types = (post , index, videos , page-.... , contact in order to get the app working
+### In order to get the project working you have to go http://localhost:3000/keystone/ or http://profilepension.co.uk/keystone/
+log in and add data/ fill the form in order to get it working into types = (post , index, videos , page-.... , contact) in order to get the app working
 
 ## Preview mode for keystone post, pages, infographics, ...
  Go to node_modules > keystone > admin > public > js > lib > jquery > jquery-1.10.2.mim.js 
  and add 
+ ------
  var target = 'input.EditForm__key-or-id__input';
  // get content type from the admin ui
  var segment = document.location.href.split('/')[4];
@@ -68,8 +68,9 @@ log in and add data/ fill the form in order to get it working into types = (post
  }
  addLink()
  
- 
+ ---
  in route you need to have to delete for admin post State
+ ---
  	var postSearch = {
  			slug: locals.filters.post,
  			state: 'published',
