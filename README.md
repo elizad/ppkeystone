@@ -43,9 +43,10 @@ Date          | Time          | Notes
 08/08/2017    | 10.02         | move to node 8
 
 ### In order to get the project working you have to go http://localhost:3000/keystone/ or http://profilepension.co.uk/keystone/
-log in and add data/ fill the form in order to get it working into types = (post , index, videos , page-.... , contact) in order to get the app working
+log in and add data into types form [types form = (post , index, videos , page-.... , contact) ] in order to get the app working
 
-## Preview mode for keystone post, pages, infographics, ...
+### Preview mode for keystone post, pages, infographics, ...
+
  Go to node_modules > keystone > admin > public > js > lib > jquery > jquery-1.10.2.mim.js 
  and add 
  ------
