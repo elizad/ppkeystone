@@ -5,16 +5,16 @@ include ../mixins/tpreviews
 include ../mixins/cta
 block metadata
 	if  (data.pensionreview)
-		title= data.pensionpreview.metadata.metatitle || 'Profile Pension'
-		meta(property='og:title' , content='' + data.pensionpreview.metadata.metafbtitle + ''  )
-		meta(name='twitter:title', content='' + data.pensionpreview.metadata.metatwittertitle + '' )
-		meta(name='description' content='' + data.pensionpreview.metadata.metadescription + '' )
-		meta(property='og:description' , content='' + data.pensionpreview.metadata.metafbdescription + '' )
-		meta(name='twitter:description', content='' + data.pensionpreview.metadata.metatwitterdescription + '' )
-		meta(property='og:image' content='' + data.pensionpreview.metadata.metafbimageurl + '' )
-		meta(name='twitter:image:src' content='' + data.pensionpreview.metadata.metatwitterdescription + '' )
-		meta(name='twitter:card' , content='' + data.pensionpreview.metadata.metatwittercard + '' )
-		meta(name='keywords' content='' + data.pensionpreview.metadata.metakeywords + '' )
+		title= data.pensionreview.metadata.metatitle || 'Profile Pension'
+		meta(property='og:title' , content='' + data.pensionreview.metadata.metafbtitle + ''  )
+		meta(name='twitter:title', content='' + data.pensionreview.metadata.metatwittertitle + '' )
+		meta(name='description' content='' + data.pensionreview.metadata.metadescription + '' )
+		meta(property='og:description' , content='' + data.pensionreview.metadata.metafbdescription + '' )
+		meta(name='twitter:description', content='' + data.pensionreview.metadata.metatwitterdescription + '' )
+		meta(property='og:image' content='' + data.pensionreview.metadata.metafbimageurl + '' )
+		meta(name='twitter:image:src' content='' + data.pensionreview.metadata.metatwitterdescription + '' )
+		meta(name='twitter:card' , content='' + data.pensionreview.metadata.metatwittercard + '' )
+		meta(name='keywords' content='' + data.pensionreview.metadata.metakeywords + '' )
 	else
 		+postmeta()
 block intro

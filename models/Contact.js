@@ -12,7 +12,7 @@ Contact.add({
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	author: { type: Types.Relationship, ref: 'User', index: true },
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
-	map: { type: Types.Location, defaults: { country: 'United Kingdom' } },
+	map: { type: Types.Location },
 	bussinesoffice: { type: String },
 	bussinesname: { type: String },
 	address1: { type: String },

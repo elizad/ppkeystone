@@ -1,7 +1,6 @@
 #header.fixed-top
-	nav(role="navigation").navbar.navbar-toggleable-md
+	nav(role="navigation").navbar.navbar-toggleable-md.justify-content-md-center
 		.container
-		
 			.navbar-header
 				button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
 					span.navbar-toggler-icon
@@ -9,88 +8,55 @@
 					svg#profile-pension-logo( height='54') <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#profile-pension-logo" viewBox="0 0 574 232"></use>
 			#navbarSupportedContent.collapse.navbar-collapse
 				ul.navbar-nav.ml-auto
-					li.nav-link.dropdown
+					li.col-lg-2.push-lg-8.findyourpension
+						a.btn.btn-lg.btn-primary(href="/get-started-trace/") Find Pensions
+
+					li.nav-link.dropdown.col-lg-auto.pull-lg-2
 						a.dropdown-toggle-left(href="/" tabindex="-1") What We Do
 						a.dropdown-toggle(href="/" data-toggle="dropdown")
 						ul.dropdown-menu
-							li.nav-link 
+							li.nav-link.navitem 
 								a(href="/") Finding Your Pensions
-							li.nav-link 
+							li.nav-link.navitem
 								a(href="/pension-switch/") Switching You To The Best Pension
-					li.nav-link.dropdown
+					li.nav-link.dropdown.col-lg-auto.pull-lg-2
 						a.dropdown-toggle-left(href="#" tabindex="-1") About Pensions
 						a.dropdown-toggle(href="#" data-toggle="dropdown")
 						ul.dropdown-menu
-							li.nav-link 
+							li.nav-link.navitem
 								a(href="/pension-calculator/") Pension Calculator
 							li.nav-link.dropdown-submenu 
 								a.dropdown-toggle(href="/content-hub/" id="contentHub" tabindex="-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Content Hub
 								ul.dropdown-menu(aria-labelledby="contentHub")
-									li.nav-link: a(href="/content-hub/beginners-guides/") Beginners Guides
-									li.nav-link: a(href="/content-hub/blog/") Blog
-									li.nav-link: a(href="/content-hub/news/") News
-									li.nav-link: a(href="/content-hub/infographics/") Infographics
-									li.nav-link: a(href="/content-hub/videos/") Videos	
+									li.nav-link.navitem: a(href="/content-hub/beginners-guides/") Beginners Guides
+									li.nav-link.navitem: a(href="/content-hub/blog/") Blog
+									li.nav-link.navitem: a(href="/content-hub/news/") News
+									li.nav-link.navitem: a(href="/content-hub/infographics/") Infographics
+									li.nav-link.navitem: a(href="/content-hub/videos/") Videos	
 									
 							li.nav-link.dropdown-submenu
 								a.dropdown-toggle(href="/pension-types/" id="pensionTypes" tabindex="-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Pensions We Review
 								ul.dropdown-menu(aria-labelledby="pensionTypes")
-									li.nav-link: a(href="/pension-types/defined-contribution-pension/") Defined Contribution Pensions
-									li.nav-link: a(href="/pension-types/fsavc-pension/") FSAVC Pension
-									li.nav-link: a(href="/pension-types/group-personal-pension/") Group Personal Pension
-									li.nav-link: a(href="/pension-types/money-purchase-pension/") Money Purchase Pension
-									li.nav-link: a(href="/pension-types/private-pension/") Private Pension
-									li.nav-link: a(href="/pension-types/personal-pension/") Personal Pensions
-									li.nav-link: a(href="pension-types/section-32-buy-pensions/") Section 32 Buy Out Pensions
-									li.nav-link: a(href="/pension-types/self-employed-pension/") Self-Employed Pensions
-									li.nav-link: a(href="/pension-types/serps-pension/") SERPS Pensions
-									li.nav-link: a(href="/pension-types/sipp-pension/") SIPP Pension
-									li.nav-link: a(href="/pension-types/stakeholder-pensions/") Stakeholder Pension	
-							li.nav-link: a(href="/pension-review/") What Is A Pension Review?
-							li.nav-link: a(href="/pension-tracing/") What Is Pension Tracing?
-					li.nav-link.dropdown
+									li.nav-link.navitem: a(href="/pension-types/defined-contribution-pension/") Defined Contribution Pensions
+									li.nav-link.navitem: a(href="/pension-types/fsavc-pension/") FSAVC Pension
+									li.nav-link.navitem: a(href="/pension-types/group-personal-pension/") Group Personal Pension
+									li.nav-link.navitem: a(href="/pension-types/money-purchase-pension/") Money Purchase Pension
+									li.nav-link.navitem: a(href="/pension-types/private-pension/") Private Pension
+									li.nav-link.navitem: a(href="/pension-types/personal-pension/") Personal Pensions
+									li.nav-link.navitem: a(href="pension-types/section-32-buy-pensions/") Section 32 Buy Out Pensions
+									li.nav-link.navitem: a(href="/pension-types/self-employed-pension/") Self-Employed Pensions
+									li.nav-link.navitem: a(href="/pension-types/serps-pension/") SERPS Pensions
+									li.nav-link.navitem: a(href="/pension-types/sipp-pension/") SIPP Pension
+									li.nav-link.navitem: a(href="/pension-types/stakeholder-pensions/") Stakeholder Pension	
+							li.nav-link.navitem: a(href="/pension-review/") What Is A Pension Review?
+							li.nav-link.navitem: a(href="/pension-tracing/") What Is Pension Tracing?
+					li.nav-link.dropdown.col-lg-auto.pull-lg-2
 						a.dropdown-toggle-left(href="/about-us/" tabindex="-1") About Us
 						a.dropdown-toggle(href="/" data-toggle="dropdown")
 						ul.dropdown-menu
-							li.nav-link: a(href="/meet-the-team/") Meet The Team
-							li.nav-link: a(href="/processes/") How It Works
-							li.nav-link: a(href="/about-us/awards-and-reviews/") Awards And Reviews
-							li.nav-link: a(href="/partners/") Our Partners
-							li.nav-link: a(href="/contact/") Contact
-					li
-						a.btn.btn-lg.btn-primary(href="/get-started-trace/") Find Pensions
-							// a.text-white(href="/get-started-trace/") Find Pensions
-					//each link in navLinks
-					//	//li(class=(section == link.key ? 'active' : null)): a.nav-link(href=link.href)= link.label
-					//	// aici am incercat ceva dupa https://stackoverflow.com/questions/38994107/drop-down-sub-menus-in-keystonejs
-					//	// si dupa https://github.com/keystonejs/keystone/issues/428
-					//	if(section)
-					//		li(class=(section == link.key ? 'active' : null)): a.nav-link(href=link.href)= link.label
-					//	else
-					//		//li(class='dropdown '+(section == link.key ? 'active' : null)): a.nav-link(href=link.href)= link.label
-					//		li(id='menu1').dropdown
-					//			a(data-toggle='dropdown', href='#menu1').dropdown-toogle Dropdown
-					//				b.caret
-					//			ul.dropdown-menu
-					//				each link in navLinks
-					//					li(class=(section == link.key ? 'active' : null)): a.nav-link(href=link.href)= link.label
-
-
-			//{{# each navLinks}}
-			//{{#if href}}    
-			//	<li {{#ifeq ../../section key}}class="active"{{/ifeq}}>
-			//	<a href="{{ href }}">{{ label }}</a>
-			//	</li>
-			//{{else}}
-			//	<li class="dropdown{{#ifeq ../../}} active{{/ifeq}}">
-			//	<a href="#" class="dropdown toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ label }} <span class="caret"></span></a>
-			//	<ul class="dropdown-menu">
-			//{{#each pages}}
-			//	<li {{#ifeq ../../../subsection subkey}}class="active"{{/ifeq}}>
-			//	<a href="{{ href }}">{{ label }}</a>
-			//	</li>
-			//{{/each}}
-			//	</ul>
-			//</li>
-			//{{/if}}
-			//{{/each}}
+							li.nav-link.navitem: a(href="/meet-the-team/") Meet The Team
+							li.nav-link.navitem: a(href="/processes/") How It Works
+							li.nav-link.navitem: a(href="/about-us/awards-and-reviews/") Awards And Reviews
+							li.nav-link.navitem: a(href="/partners/") Our Partners
+							li.nav-link.navitem: a(href="/contact/") Contact
+					

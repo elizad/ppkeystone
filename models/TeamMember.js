@@ -9,18 +9,7 @@ var TeamMember = new keystone.List('teamMember', {
 	singular: 'TeamMember',
 	plural: 'TeamMembers',
 	autokey: { path: 'slug', from: 'title', unique: true },
-	metadata: {
-		metatitle: { type: String },
-		metadescription: { type: String },
-		metakeywords: { type: String },
-		metafbtitle: { type: String },
-		metafbdescription: { type: String },
-		metafbimageurl: { type: String },
-		metatwittertitle: { type: String },
-		metatwittercard: { type: String },
-		metatwitterdescription: { type: String },
-		metatwitterimageurl: { type: String },
-	},
+
 });
 
 TeamMember.add({
@@ -39,6 +28,18 @@ TeamMember.add({
 	qualification: { type: String },
 	phone: { type: Types.Number },
 	email: { type: String },
+	metadata: {
+		metatitle: { type: String },
+		metadescription: { type: String },
+		metakeywords: { type: String },
+		metafbtitle: { type: String },
+		metafbdescription: { type: String },
+		metafbimageurl: { type: Types.CloudinaryImage },
+		metatwittertitle: { type: String },
+		metatwittercard: { type: String },
+		metatwitterdescription: { type: String },
+		metatwitterimageurl: { type: Types.CloudinaryImage },
+	},
 	categories: { type: Types.Relationship, ref: 'teamMemberCategory', many: true },
 });
 

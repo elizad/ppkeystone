@@ -9,22 +9,23 @@ var InfographicCategory = new keystone.List('InfographicCategory', {
 	name: { type: String },
 	categorylongtitle: { type: String },
 	description: { type: Types.Html, wysiwyg: true, height: 150 },
+
+});
+
+InfographicCategory.add({
+	name: { type: String, required: true },
 	metadata: {
 		metatitle: { type: String },
 		metadescription: { type: String },
 		metakeywords: { type: String },
 		metafbtitle: { type: String },
 		metafbdescription: { type: String },
-		metafbimageurl: { type: String },
+		metafbimageurl: { type: Types.CloudinaryImage },
 		metatwittertitle: { type: String },
 		metatwittercard: { type: String },
 		metatwitterdescription: { type: String },
-		metatwitterimageurl: { type: String },
+		metatwitterimageurl: { type: Types.CloudinaryImage },
 	},
-});
-
-InfographicCategory.add({
-	name: { type: String, required: true },
 });
 
 InfographicCategory.relationship({ ref: 'Infographic', path: 'infographics', refPath: 'categories' });

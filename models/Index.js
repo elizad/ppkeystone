@@ -28,11 +28,11 @@ index.add({
 		metakeywords: { type: String },
 		metafbtitle: { type: String },
 		metafbdescription: { type: String },
-		metafbimageurl: { type: String },
+		metafbimageurl: { type: Types.CloudinaryImage },
 		metatwittertitle: { type: String },
 		metatwittercard: { type: String },
 		metatwitterdescription: { type: String },
-		metatwitterimageurl: { type: String },
+		metatwitterimageurl: { type: Types.CloudinaryImage },
 	},
 });
 

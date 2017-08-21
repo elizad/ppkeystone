@@ -1,9 +1,9 @@
 extends ../layouts/default
 block metadata
-	if  (data.pension.meta)
+	if  data.pension.meta
 		title= data.pension.metadata.metatitle || 'Profile Pension'
 		meta(property='og:title' , content='' + data.pension.metadata.metafbtitle + ''  )
-		meta(name='twitter:title', content='' + data.pension.metadata.metatwittertitle + '' )
+		meta(name='twitter:title', content='' + data.pension.metadata.metatwittertitle || data.pension.title  + '' )
 		meta(name='description' content='' + data.pension.metadata.metadescription + '' )
 		meta(property='og:description' , content='' + data.pension.metadata.metafbdescription + '' )
 		meta(name='twitter:description', content='' + data.pension.metadata.metatwitterdescription + '' )
