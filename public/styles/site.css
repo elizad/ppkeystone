@@ -6528,7 +6528,8 @@ a i.fa:hover, a i.fa:active {
   padding: 0.25em; }
 
 .navbar-nav.ml-auto > .nav-link a {
-  color: #6e6e6e; }
+  color: #6e6e6e;
+  padding-left: 10px; }
 
 .navbar-nav.ml-auto > .nav-link a:hover, .navbar-default .navbar-nav > li a:focus {
   color: #169b62;
@@ -6686,10 +6687,6 @@ svg {
   padding: 3rem 0;
   color: #fff;
   position: relative; }
-
-@media (max-width: 768px) {
-  .promise .company-features__item {
-    float: none; } }
 
 .promise:after {
   content: '';
@@ -7123,3 +7120,10 @@ ul.breadcrumbs li:first-child {
   left: calc(50% - 100px);
   top: 2em;
   border-radius: 50%; }
+
+@media (max-width: 768px) {
+  .promise .company-features__item {
+    float: none; }
+  .findyourpension > a {
+    width: 100%;
+    margin: 0 -10px; } }
