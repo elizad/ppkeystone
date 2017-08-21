@@ -1,10 +1,10 @@
 extends ../layouts/default
 include ../mixins/cta
 block metadata
-	if  data.aboutus.metadata
+	if  data.aboutus
 		title= data.aboutus.metadata.metatitle || 'Profile Pension'
-		meta(property='og:title' , content='' + data.aboutus.metadata.metafbtitle + ''  )
-		meta(name='twitter:title', content='' + data.aboutus.metadata.metatwittertitle + '' )
+		meta(property='og:title' , content='' + data.aboutus.metadata.metafbtitle || data.aboutus.title + ''  )
+		meta(name='twitter:title', content='' + data.aboutus.metadata.metatwittertitle || data.aboutus.title  + '' )
 		meta(name='description' content='' + data.aboutus.metadata.metadescription + '' )
 		meta(property='og:description' , content='' + data.aboutus.metadata.metafbdescription + '' )
 		meta(name='twitter:description', content='' + data.aboutus.metadata.metatwitterdescription + '' )
