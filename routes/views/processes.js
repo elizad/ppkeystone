@@ -1,7 +1,6 @@
 var keystone = require('keystone');
 
 exports = module.exports = async function (req, res) {
-
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 	var processes = {};	// assuming pension should be an object

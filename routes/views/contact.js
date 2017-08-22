@@ -7,13 +7,9 @@ exports = module.exports = async function (req, res) {
 	var contacts = {};
 	try {
 		var categories = await keystone.list('ContactCategory').model.find().exec();
-		// var categoriesById = [];
-		// categories.map((category) => {
-		// 	categoriesById[category._id] = category;
-		// });
 		contacts = await keystone.list('Contact').model.find().exec();
 
-		console.log(contacts);
+		// console.log(contacts);
 	} catch (error) {
 		console.log('could not find contact types ', error);
 	}
@@ -25,7 +21,6 @@ exports = module.exports = async function (req, res) {
 	locals.data = {
 		contacts,
 		categories,
-		// categoriesById,
 	};
 	// Load contacts
 	view.on('init', function (next) {

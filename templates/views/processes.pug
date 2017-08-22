@@ -39,8 +39,7 @@ block content
 					a(href='/' + data.processes.buttontitle + '').btn.btn-lg.btn-primary= data.processes.buttontext
 				.col-md-12
 					a(style='text-decoration: underline;' data-toggle='modal' href='#modal-money-0')= data.processes.modaltext
-
-
+					
 			div#modal-money-0.modal.fade(style='display: none;')
 				div.modal-dialog
 					div.modal-content
@@ -53,9 +52,7 @@ block content
 								h5= data.processes.modalsubtitle
 								br
 							div.col!= data.processes.modaltext
-
-
-
+								
 						div.modal-footer.justify-content-md-center
 							button.btn.btn-primary(type="button" data-dismiss="modal") Close
 				
