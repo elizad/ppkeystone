@@ -2,8 +2,12 @@
 	nav(role="navigation").navbar.navbar-toggleable-md.justify-content-md-center
 		.container
 			.navbar-header
-				button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
-					span.navbar-toggler-icon
+				button.navbar-toggle.navbar-toggle-right.collapsed(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', data-label-expanded="Close",  aria-expanded='false', aria-label='Toggle navigation')
+					span.sr-only(toggle)
+					span.navbar-toggle-icon
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
 				a.navbar-brand(href='/')
 					svg#profile-pension-logo( height='54') <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#profile-pension-logo" viewBox="0 0 574 232"></use>
 			#navbarSupportedContent.collapse.navbar-collapse

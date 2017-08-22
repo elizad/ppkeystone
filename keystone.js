@@ -49,7 +49,6 @@ keystone.set('locals', {
 // Load your project's Routes
 keystone.set('routes', require('./routes'));
 
-
 // Configure the navigation bar in Keystone's Admin UI
 
 keystone.set('nav', {
@@ -65,7 +64,9 @@ keystone.set('nav', {
 });
 
 keystone.set('cloudinary config', 'cloudinary://558621339852181:481pLA54aHUo-6sdvxa_Y9pZt3I@dc36pae5l');
-
+keystone.set('google api key', 'browser-key');
+keystone.set('google server api key', 'server-key');
+keystone.set('default region', 'uk');
 // Start Keystone to connect to your database and initialise the web server
 
 
