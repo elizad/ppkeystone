@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cde2f55e-acad-48a1-9f10-f140b28058e5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keystone.js" afterPath="$PROJECT_DIR$/keystone.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery/main.js" afterPath="$PROJECT_DIR$/public/js/jquery/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/site.css" afterPath="$PROJECT_DIR$/public/styles/site.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/site/_layout.css" afterPath="$PROJECT_DIR$/public/styles/site/_layout.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/includes/layout/header.pug" afterPath="$PROJECT_DIR$/templates/includes/layout/header.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mixins/press.pug" afterPath="$PROJECT_DIR$/templates/mixins/press.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mixins/tpreviews.pug" afterPath="$PROJECT_DIR$/templates/mixins/tpreviews.pug" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -116,8 +112,8 @@
       <file leaf-file-name="header.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/includes/layout/header.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+            <state relative-caret-position="17">
+              <caret line="1" column="73" lean-forward="false" selection-start-line="1" selection-start-column="73" selection-end-line="1" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -126,8 +122,8 @@
       <file leaf-file-name="_layout.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/styles/site/_layout.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="874" column="24" lean-forward="true" selection-start-line="874" selection-start-column="24" selection-end-line="874" selection-end-column="24" />
+            <state relative-caret-position="390">
+              <caret line="1055" column="22" lean-forward="false" selection-start-line="1055" selection-start-column="22" selection-end-line="1055" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -176,7 +172,7 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/jquery/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-332">
+            <state relative-caret-position="-26">
               <caret line="80" column="4" lean-forward="false" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="4" />
               <folding />
             </state>
@@ -206,8 +202,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>REVIEW</find>
-      <find>review</find>
       <find>switch</find>
       <find>calculator</find>
       <find>nsioncalculator</find>
@@ -236,6 +230,8 @@
       <find>firstmr</find>
       <find>reviews</find>
       <find>nav</find>
+      <find>.navbar-toggle-icon</find>
+      <find>lg</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -291,9 +287,9 @@
         <option value="$PROJECT_DIR$/templates/views/index.pug" />
         <option value="$PROJECT_DIR$/templates/mixins/press.pug" />
         <option value="$PROJECT_DIR$/public/js/jquery/main.js" />
-        <option value="$PROJECT_DIR$/templates/includes/layout/header.pug" />
         <option value="$PROJECT_DIR$/templates/mixins/tpreviews.pug" />
         <option value="$PROJECT_DIR$/keystone.js" />
+        <option value="$PROJECT_DIR$/templates/includes/layout/header.pug" />
         <option value="$PROJECT_DIR$/public/styles/site/_layout.css" />
       </list>
     </option>
@@ -317,8 +313,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1548" />
-    <option name="y" value="151" />
+    <option name="x" value="1226" />
+    <option name="y" value="161" />
     <option name="width" value="1826" />
     <option name="height" value="813" />
   </component>
@@ -502,15 +498,15 @@
       <workItem from="1502665739933" duration="455000" />
       <workItem from="1502666373632" duration="61795000" />
       <workItem from="1503014671179" duration="31974000" />
-      <workItem from="1503303697939" duration="58054000" />
+      <workItem from="1503303697939" duration="60603000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="351961000" />
+    <option name="totallyTimeSpent" value="354510000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1548" y="151" width="1826" height="813" extended-state="0" />
+    <frame x="1226" y="161" width="1826" height="813" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19574945" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
@@ -951,14 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/jquery/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-332">
-          <caret line="80" column="4" lean-forward="false" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/views/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -967,18 +955,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/jquery/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-26">
+          <caret line="80" column="4" lean-forward="false" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/includes/layout/header.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+        <state relative-caret-position="17">
+          <caret line="1" column="73" lean-forward="false" selection-start-line="1" selection-start-column="73" selection-end-line="1" selection-end-column="73" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/styles/site/_layout.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="874" column="24" lean-forward="true" selection-start-line="874" selection-start-column="24" selection-end-line="874" selection-end-column="24" />
+        <state relative-caret-position="390">
+          <caret line="1055" column="22" lean-forward="false" selection-start-line="1055" selection-start-column="22" selection-end-line="1055" selection-end-column="22" />
           <folding />
         </state>
       </provider>
