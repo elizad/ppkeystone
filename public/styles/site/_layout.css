@@ -295,10 +295,22 @@ a i.fa:hover, a i.fa:active{
 	padding: 0;
 	margin: 0;
 	border: 0;
+	min-width: 200px;
+}
+.firstmenu{
+	min-width: 230px;
 }
 
+.dropdown-menu .pensionmenu{
+	min-width: 230px;
+}
 .dropdown-menu .nav-link {
 	font-size: 80%;
+	font-size: 80%;
+}
+.nav-link {
+	display: block;
+	padding: 0 0.5em;
 }
 
 .navitem:focus, .navitem:hover {

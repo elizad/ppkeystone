@@ -21,6 +21,16 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+	'wysiwyg override toolbar': false,
+	'wysiwyg menubar': true,
+	'wysiwyg skin': 'lightgray',
+	'wysiwyg additional buttons': 'searchreplace visualchars,'
+	+ ' charmap ltr rtl pagebreak paste, forecolor backcolor,'
+	+ ' emoticons media, preview print ', 'wysiwyg additional plugins': ' table, advlist, anchor,'
+	+ ' autolink, autosave, bbcode, charmap, contextmenu, '
+	+ ' directionality, emoticons, fullpage, hr, media, pagebreak,'
+	+ ' paste, preview, print, searchreplace, textcolor,'
+	+ ' visualblocks, visualchars, wordcount',
 });
 
 // Load your project's Models
@@ -50,9 +60,8 @@ keystone.set('nav', {
 	news: ['stories', 'story-categories'],
 	teamMembers: ['team-members', 'team-member-categories'],
 	pensions: ['pensions', 'pension-categories'],
-	address: ['contacts', 'contact-categories'],
+	contact: ['contacts', 'contact-categories'],
 	users: 'users',
-	
 });
 
 keystone.set('cloudinary config', 'cloudinary://558621339852181:481pLA54aHUo-6sdvxa_Y9pZt3I@dc36pae5l');

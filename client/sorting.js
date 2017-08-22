@@ -14,7 +14,7 @@ function sorting (arr) {
 		}
 	}
 	return arr;
-	// console.log(arr);
+    // console.log(arr);
 }
 
 

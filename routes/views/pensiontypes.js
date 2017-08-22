@@ -27,7 +27,7 @@ exports = module.exports = async function (req, res) {
 		categories,
 		categoriesById,
 	};
-		// Load 
+	
 	view.on('init', function (next) {
 		next();
 	});

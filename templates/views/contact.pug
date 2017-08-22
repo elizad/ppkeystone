@@ -1,16 +1,17 @@
 extends ../layouts/default
 block metadata
-	if  (data.contact.metadata)
-		title= data.contact.metadata.metatitle || 'Profile Pension'
-		meta(property='og:title' , content='' + data.contact.metadata.metafbtitle + ''  )
-		meta(name='twitter:title', content='' + data.contact.metadata.metatwittertitle + '' )
-		meta(name='description' content='' + data.contact.metadata.metadescription + '' )
-		meta(property='og:description' , content='' + data.contact.metadata.metafbdescription + '' )
-		meta(name='twitter:description', content='' + data.contact.metadata.metatwitterdescription + '' )
-		meta(property='og:image' content='' + data.contact.metadata.metafbimageurl + '' )
-		meta(name='twitter:image:src' content='' + data.contact.metadata.metatwitterdescription + '' )
-		meta(name='twitter:card' , content='' + data.contact.metadata.metatwittercard + '' )
-		meta(name='keywords' content='' + data.contact.metadata.metakeywords + '' )
+	if data.categories.length
+		each category in data.categories
+			title= category.metadata.metatitle || 'Profile Pension'
+			meta(property='og:title' , content='' + category.metadata.metafbtitle + ''  )
+			meta(name='twitter:title', content='' + category.metadata.metatwittertitle + '' )
+			meta(name='description' content='' + category.metadata.metadescription + '' )
+			meta(property='og:description' , content='' + category.metadata.metafbdescription + '' )
+			//meta(name='twitter:description', content='' + data.contact.metadata.metatwitterdescription + '' )
+			//meta(property='og:image' content='' + data.contact.metadata.metafbimageurl + '' )
+			//meta(name='twitter:image:src' content='' + data.contact.metadata.metatwitterdescription + '' )
+			//meta(name='twitter:card' , content='' + data.contact.metadata.metatwittercard + '' )
+			//meta(name='keywords' content='' + data.contact.metadata.metakeywords + '' )
 	else
 		+postmeta()
 
@@ -28,29 +29,26 @@ block intro
 	block content
 		.container.p3rem
 			.row.p3rem
-				if data.categories.length
-					each category in data.categories
-						each contact in data.contacts
-							.col: .card.grey
-								div#prestonMap.map=contact.map
-								div.adress-details.card-block
-									h2= contact.bussinesoffice
-									p= contact.bussinesname
-									p= contact.address1
-									p= contact.address2
-									p= contact.city
-									p= contact.postcode
-									p: i.fa.fa-phone.text-green <a href="tel:+44#{contact.phone}" class="rTapNumber240596" > #{contact.phone}</a> 
-									p: i.fa.fa-envelope.text-green <a href="mailto:#{contact.email}"> #{contact.email}</a>
-			
+				each contact in data.contacts
+					.col: .card.grey
+						div#prestonMap.map=contact.map
+						div.adress-details.card-block
+							h2= contact.bussinesoffice
+							p= contact.bussinesname
+							p= contact.address1
+							p= contact.address2
+							p= contact.city
+							p= contact.postcode
+							p: i.fa.fa-phone.text-green <a href="tel:+44#{contact.phone}" class="rTapNumber240596" > #{contact.phone}</a> 
+							p: i.fa.fa-envelope.text-green <a href="mailto:#{contact.email}"> #{contact.email}</a>
+
+
 	section.grey
-		.container
-			div.follow-us(style="padding: 4rem 0; margin-top:4rem;")
+		.container.p1rem
+			div.follow-us
 				h1 Follow us
 				.row-centered
 					<a href="https://www.facebook.com/ProfilePensions/"><i class="fa fa-facebook fa-2x"></i></a>
 					<a href="https://twitter.com/profilepensions"><i class="fa fa-twitter fa-2x"></i></a>
 					<a href="https://www.linkedin.com/company/profile-financial-solutions-ltd?trk=mini-profile"><i class="fa fa-linkedin icon fa-2x"></i></a>
 					<a href=""><i class="fa fa-google fa-2x"></i></a>
-				
-		
