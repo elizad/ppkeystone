@@ -6390,7 +6390,12 @@ body {
   border-color: #92de63; }
 
 ul {
-  list-style: none; }
+  list-style: none;
+  list-style: none;
+  margin: 0px;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  padding: 5px; }
 
 ul li {
   margin-left: 0;
@@ -6525,11 +6530,10 @@ a i.fa:hover, a i.fa:active {
     width: auto; } }
 
 .navbar-nav.ml-auto > .nav-link {
-  padding: 0.25em; }
+  padding: 0.5em; }
 
 .navbar-nav.ml-auto > .nav-link a {
-  color: #6e6e6e;
-  padding-left: 10px; }
+  color: #6e6e6e; }
 
 .navbar-nav.ml-auto > .nav-link a:hover, .navbar-default .navbar-nav > li a:focus {
   color: #169b62;
@@ -6559,7 +6563,6 @@ a i.fa:hover, a i.fa:active {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#00a160' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
 
 .findyourpension {
-  margin-top: 4px;
   margin-left: 4px; }
 
 .fixed-top {
@@ -7126,4 +7129,6 @@ ul.breadcrumbs li:first-child {
     float: none; }
   .findyourpension > a {
     width: 100%;
-    margin: 0 -10px; } }
+    margin: 0 -10px; }
+  .navbar-nav.ml-auto > .nav-link a {
+    padding-left: 10px; } }

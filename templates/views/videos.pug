@@ -18,10 +18,10 @@ mixin video(video)
 	.video(data-ks-editable=editable(user, { list: 'Video', id: video.id }))
 		div.row.advice
 			if video.image.exists
-				a.col-md-5.advice-image(href='/content-hub/video/' + video.slug)(style="background-image: url("+video._.image.fit() +");" )
+				a.col-md-5.advice-image(href='/videos/video/' + video.slug)(style="background-image: url("+video._.image.fit() +");" )
 				
 			div.col-md-7.advice-content
-				h2.advice-title: a(href='/content-hub/video/' + video.slug)= video.title
+				h2.advice-title: a(href='/videos/video/' + video.slug)= video.title
 				div.advice-meta
 					if video.publishedDate
 						span.advice-meta__date #{video._.publishedDate.format('DD/MM/YYYY')}
@@ -47,15 +47,15 @@ block intro
 	div.grey
 		.container
 			ul.breadcrumb
-				li: a(href='/content-hub') Content Hub
+				li: a(href='/content-hub') Videos 
 				li   /  
-				li= data.category ? data.category.name : 'Blog  '
+				li= data.category ? data.category.name : 'Videos  '
 				.pull-right
 					if data.categories.length
 						span
-							a(href='/content-hub', class=!data.category ? 'active' : false) All Categories  /  
+							a(href='/videos', class=!data.category ? 'active' : false) All Categories  /  
 						each cat in data.categories
-							a(href='/content-hub/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : false).span= cat.name +' /  '	
+							a(href='/videos/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : false).span= cat.name +' /  '	
 			
 block content
 	.container

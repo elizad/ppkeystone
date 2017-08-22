@@ -47,10 +47,12 @@ keystone.set('nav', {
 	infographics: ['infographics', 'infographic-categories'],
 	beginnerguides: ['beginner-guides', 'beginner-guide-categories'],
 	videos: ['videos', 'video-categories'],
+	news: ['stories', 'story-categories'],
 	teamMembers: ['team-members', 'team-member-categories'],
 	pensions: ['pensions', 'pension-categories'],
 	address: ['contacts', 'contact-categories'],
 	users: 'users',
+	
 });
 
 keystone.set('cloudinary config', 'cloudinary://558621339852181:481pLA54aHUo-6sdvxa_Y9pZt3I@dc36pae5l');

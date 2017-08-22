@@ -129,6 +129,11 @@ body {
 }
 ul{
 	list-style: none;
+	list-style: none;
+	margin: 0px;
+	-webkit-margin-before: 0px; 
+	-webkit-margin-after: 0px; 
+	padding: 5px;
 }  
 
 ul li{
@@ -272,13 +277,10 @@ a i.fa:hover, a i.fa:active{
 	}
 }
 .navbar-nav.ml-auto > .nav-link{
-	padding: 0.25em;
+	padding: 0.5em;
 }
 .navbar-nav.ml-auto > .nav-link  a{
 	color: #6e6e6e;
-	padding-left: 10px;
-
-
 }
 .navbar-nav.ml-auto > .nav-link  a:hover, .navbar-default .navbar-nav > li a:focus{
 	color: #169b62;
@@ -312,7 +314,6 @@ a i.fa:hover, a i.fa:active{
 
 }
 .findyourpension{
-	margin-top: 4px;
 	margin-left: 4px;
 }
 
@@ -942,5 +943,8 @@ ul.breadcrumbs li:first-child {
 		width: 100%;
 		margin: 0 -10px;
 	}
+	.navbar-nav.ml-auto > .nav-link a{
+		padding-left: 10px;
 
+	}
 }
