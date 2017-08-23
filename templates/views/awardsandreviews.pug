@@ -2,7 +2,7 @@ extends ../layouts/default
 include ../mixins/process
 include ../mixins/carouselreviews1
 include ../mixins/tpreviews
-include ../mixins/cta
+include ../mixins/cta2
 include ../mixins/postmeta
 	
 block headjs
@@ -49,4 +49,4 @@ block content
 					.col-md-4
 						img.profilepension-awards__img(src="/images/moneyfact-finalist.png" alt="Retirement Adviser Of The Year")
 						p!= data.awardsandreviews.s1content6
-	+cta()
+	+cta2()

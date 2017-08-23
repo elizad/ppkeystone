@@ -1078,7 +1078,7 @@ ul.breadcrumbs li:first-child {
 	font-family: Campton-light;
 }
 #fa-title {
-	background: #ededed;
+	background-color: #fff;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -1092,4 +1092,7 @@ ul.breadcrumbs li:first-child {
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: flex;
+}
+.card-header{
+	background-color: #fff;
 }
