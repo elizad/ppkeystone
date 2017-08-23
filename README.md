@@ -20,6 +20,8 @@ Default login data: 'email': 'hello@profilepensions.co.uk', 'password': 'profile
 The app need content in order work . if there is no Content por a page it will return an error or an empty page
 Please set in /keystone.js  keystone.set('google api key', 'browser-key'); keystone.set('google server api key', 'server-key'); to get the google maps on contact page
 
+### Content need to be added
+
 ## Start
 1 Install & start MongoDb https://www.mongodb.com/ 
 2 Install & start Node https://nodejs.org/en/

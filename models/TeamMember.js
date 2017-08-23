@@ -26,6 +26,7 @@ TeamMember.add({
 	jobtitle: { type: String },
 	description: { type: Types.Html, wysiwyg: true, height: 150 },
 	qualification: { type: String },
+	qualification1: { type: String },
 	phone: { type: Types.Number },
 	email: { type: String },
 	metadata: {
