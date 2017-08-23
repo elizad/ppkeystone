@@ -4,12 +4,11 @@ Profile Pension Website
 The source code for re-platforming the www.profilefinancial.co.uk website
 
 ## Built With
--
+
 ### [Keystone]version 4.0.0-beta.5 (http://keystonejs.com/) - Node.js CMS & Web Application Platform
 ### [Node] 8.2.1
 ### [MongoDB] 3.4
 ### [npm]  5.3.0
--
 
 ## Coding Guidelines
 This Project is generally following the guidelines set out in [AirBnB's Javascript Style Guide](https://github.com/airbnb/javascript), with the exception of using real tabs for indentation.
@@ -19,6 +18,9 @@ This Project is generally following the guidelines set out in [AirBnB's Javascri
 Default login data: 'email': 'hello@profilepensions.co.uk', 'password': 'profilepensions'
 The app need content in order work . if there is no Content por a page it will return an error or an empty page
 Please set in /keystone.js  keystone.set('google api key', 'browser-key'); keystone.set('google server api key', 'server-key'); to get the google maps on contact page
+https://your-url/FileAPITest.html you can upload files to server . 
+folder public > uploads >images
+http://your-url/uploads/files/your-file.ext
 
 ### Content need to be added
 
