@@ -818,6 +818,9 @@ ul.breadcrumbs li:first-child {
 	-o-background-size: cover;
 	background-size: cover
 }
+.advice-image{
+	min-height: 100px;
+}
  .pagination{
 	 display: inline-block;
 	 float: right;

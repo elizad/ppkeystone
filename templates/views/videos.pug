@@ -18,7 +18,7 @@ mixin video(video)
     .video(data-ks-editable=editable(user, { list: 'Video', id: video.id }))
         div.row.advice
             if video.image.exists
-                a.col-md-5.advice-image(href='/videos/video/' + video.slug)(style="background-image: url("+video._.image.fit() +");" )
+                a.col-sm-12.col-md-5.advice-image(href='/videos/video/' + video.slug)(style="background-image: url("+video._.image.fit() +");" )
                 
             div.col-md-7.advice-content
                 h2.advice-title: a(href='/videos/video/' + video.slug)= video.title

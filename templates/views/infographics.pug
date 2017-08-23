@@ -17,7 +17,7 @@ block metadata
 mixin infographic(infographic)
 	.infographic(data-ks-editable=editable(user, { list: 'Infographic', id: infographic.id }))
 		div.row.advice
-			a.col-md-5.equal.advice-imagea(href='/infographics/infographic/' + infographic.slug)
+			a.col-sm-12.col-md-5.equal.advice-imagea(href='/infographics/infographic/' + infographic.slug)
 				if infographic.image.exists
 					img(src=infographic._.image.fit(150, 177)).img-responsive
 			div.col-md-7.equal.advice-content

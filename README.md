@@ -18,6 +18,7 @@ This Project is generally following the guidelines set out in [AirBnB's Javascri
 
 Default login data: 'email': 'hello@profilepensions.co.uk', 'password': 'profilepensions'
 The app need content in order work . if there is no Content por a page it will return an error or an empty page
+Please set in /keystone.js  keystone.set('google api key', 'browser-key'); keystone.set('google server api key', 'server-key'); to get the google maps on contact page
 
 ## Start
 1 Install & start MongoDb https://www.mongodb.com/ 

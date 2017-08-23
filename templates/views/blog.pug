@@ -18,7 +18,7 @@ mixin post(post)
 	.post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
 		div.row.advice
 			if post.image.exists
-				a.col-md-5.advice-image(href='/content-hub/post/' + post.slug)(style="background-image: url("+post._.image.fit() +");" )
+				a.col-sm-12.col-md-5.advice-image(href='/content-hub/post/' + post.slug)(style="background-image: url("+post._.image.fit() +");" )
 				
 			div.col-md-7.advice-content
 				h2.advice-title: a(href='/content-hub/post/' + post.slug)= post.title

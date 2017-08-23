@@ -18,7 +18,7 @@ mixin story(story)
 	.story(data-ks-editable=editable(user, { list: 'Story', id: story.id }))
 		div.row.advice
 			if story.image.exists
-				a.col-md-5.advice-image(href='/news/story/' + story.slug)(style="background-image: url("+story._.image.fit() +");" )
+				a.col-md-12.col-md-5.advice-image(href='/news/story/' + story.slug)(style="background-image: url("+story._.image.fit() +");" )
 				
 			div.col-md-7.advice-content
 				h2.advice-title: a(href='/content-hub/story/' + story.slug)= story.title
