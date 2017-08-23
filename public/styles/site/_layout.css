@@ -1047,7 +1047,6 @@ ul.breadcrumbs li:first-child {
 	button:focus {
 		outline: none;
 	}
-	.collapsed{ visibility: visible; }
 
 }
 
@@ -1057,6 +1056,40 @@ ul.breadcrumbs li:first-child {
 	}
 }
 @media (min-width: 769px) {
-	.collapsed{ visibility: hidden; }
 
+}
+
+#fa-plus {
+	display: inline-block;
+	background: #169b62;
+	color: #fff;
+	width: 66px;
+	height: 100%;
+	font-size: 25px;
+	line-height: 45px;
+	text-align: center;
+	margin-right: 20px;
+}
+
+.mb-0.panel-title > a {
+	color: #2d2d2e;
+	height: 45px;
+	line-height: 45px;
+	font-family: Campton-light;
+}
+#fa-title {
+	background: #ededed;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #2d2d2e;
+	height: 45px;
+	line-height: 45px;
+	padding: 0;
+	overflow: hidden;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
 }

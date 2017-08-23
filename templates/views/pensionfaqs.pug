@@ -1,0 +1,127 @@
+extends ../layouts/default
+include ../mixins/cta2
+include ../mixins/postmeta
+block metadata
+	if  (data.pensionfaqs.metadata)
+		title= data.pensionfaqs.metadata.metatitle || 'Profile Pension'
+		meta(property='og:title' , content='' + data.pensionfaqs.metadata.metafbtitle + ''  )
+		meta(name='twitter:title', content='' + data.pensionfaqs.metadata.metatwittertitle + '' )
+		meta(name='description' content='' + data.pensionfaqs.metadata.metadescription + '' )
+		meta(property='og:description' , content='' + data.pensionfaqs.metadata.metafbdescription + '' )
+		meta(name='twitter:description', content='' + data.pensionfaqs.metadata.metatwitterdescription + '' )
+		meta(property='og:image' content='' + data.pensionfaqs.metadata.metafbimageurl + '' )
+		meta(name='twitter:image:src' content='' + data.pensionfaqs.metadata.metatwitterdescription + '' )
+		meta(name='twitter:card' , content='' + data.pensionfaqs.metadata.metatwittercard + '' )
+		meta(name='keywords' content='' + data.pensionfaqs.metadata.metakeywords + '' )
+	else
+		+postmeta()
+block intro
+	section.intro.green.text-center
+		h1= data.pensionfaqs.title
+		h3 
+	section.grey
+		ul.container.breadcrumb
+			li= data.pensionfaqs.breadcrumbstitle
+block content
+	section.p3rem
+		.container
+			.row
+				.col-md-12
+					div(id="accordion" role="tablist" aria-multiselectable="true")
+						div.card
+							div.card-header(role="tab" id="headingOne")
+								h5.mb-0
+									a(data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne")
+										i#fa-plus.fa.fa-plus
+										span.text-green= data.pensionfaqs.question1
+							div#collapseOne.collapse.show(role="tabpanel" aria-labelledby="headingOne")
+								div.card-block!= data.pensionfaqs.answer1
+						div.card
+							div.card-header#headingTwo(role="tab")
+								h5.mb-0
+									a(class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo")
+										i#fa-plus.fa.fa-plus
+										span.text-green= data.pensionfaqs.question2
+							div#collapseTwo.collapse(role="tabpanel" aria-labelledby="headingTwo")
+								div.card-block!= data.pensionfaqs.answer2
+						div.card
+							div.card-header#headingThree(role="tab")
+								h5.mb-0
+									a(class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree")
+										i#fa-plus.fa.fa-plus
+										span.text-green= data.pensionfaqs.question3
+							div#collapseThree.collapse(role="tabpanel" aria-labelledby="headingThree")
+								div.card-block!= data.pensionfaqs.answer3			
+						div.card
+							div.card-header(role="tab" id="headingFour")
+								h5.mb-0
+									a(data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour")
+										i#fa-plus.fa.fa-plus
+										span.text-green= data.pensionfaqs.question4
+							div#collapseFour.collapse(role="tabpanel" aria-labelledby="headingFour")
+								div.card-block!= data.pensionfaqs.answer4
+						div.card
+							div(class="card-header" role="tab" id="headingFive")
+								h5.mb-0
+									a(class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive")
+										i#fa-plus.fa.fa-plus
+										span.text-green= data.pensionfaqs.question5
+							div(id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive")
+								div.card-block!= data.pensionfaqs.answer5
+						div.card
+							div(class="card-header" role="tab" id="headingSix")
+								h5.mb-0
+									a(class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix")
+										i#fa-plus.fa.fa-plus
+										span.text-green= data.pensionfaqs.question6
+							div(id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix")
+								div.card-block!= data.pensionfaqs.answer6
+						div.card
+							div(class="card-header" role="tab" id="headingSeven")
+								h5.mb-0
+									a(class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven")
+										i#fa-plus.fa.fa-plus
+										span.text-green= data.pensionfaqs.question7
+							div(id="collapseSeven" class="collapse" role="tabpanel" aria-labelledby="headingSeven")
+								div.card-block!= data.pensionfaqs.answer7
+						div.card
+							div(class="card-header" role="tab" id="headingEight")
+								h5.mb-0
+									a(class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight")
+										i#fa-plus.fa.fa-plus
+										span.text-green= data.pensionfaqs.question8
+							div(id="collapseEight" class="collapse" role="tabpanel" aria-labelledby="headingEight")
+								div.card-block!= data.pensionfaqs.answer8
+						div.card
+							div(class="card-header" role="tab" id="headingNine")
+								h5.mb-0
+									a(class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine")
+										i#fa-plus.fa.fa-plus
+										span.text-green= data.pensionfaqs.question9
+							div(id="collapseNine" class="collapse" role="tabpanel" aria-labelledby="headingNine")
+								div.card-block!= data.pensionfaqs.answer9
+						div.card
+							div(class="card-header" role="tab" id="headingTen")
+								h5.mb-0
+									a(class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen")
+										i#fa-plus.fa.fa-plus
+										span.text-green= data.pensionfaqs.question10
+							div(id="collapseTen" class="collapse" role="tabpanel" aria-labelledby="headingTen")
+								div.card-block!= data.pensionfaqs.answer10
+						div.card
+							div(class="card-header" role="tab" id="headingEleven")
+								h5.mb-0
+									a(class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven")
+										i#fa-plus.fa.fa-plus
+										span.text-green= data.pensionfaqs.question11
+							div(id="collapseEleven" class="collapse" role="tabpanel" aria-labelledby="headingEleven")
+								div.card-block!= data.pensionfaqs.answer11
+						div.card
+							div(class="card-header" role="tab" id="headingTwelve")
+								h5.mb-0
+									a(class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve")
+										i#fa-plus.fa.fa-plus
+										span.text-green= data.pensionfaqs.question12
+							div(id="collapseTwelve" class="collapse" role="tabpanel" aria-labelledby="headingTwelve")
+								div.card-block!= data.pensionfaqs.answer12
+						

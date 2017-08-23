@@ -7,14 +7,12 @@ exports = module.exports = async function (req, res) {
 	var calltoaction = {};	// assuming it should be an object
 	try {
 		calltoaction = await keystone.list('CallToAction').model.findOne().exec();
-		console.log(calltoaction);
 	} catch (error) {
 		console.log('could not find ', error);
 	}
-	var complaintsprocess = {};	// assuming it should be an object
+	var pensionfaqs = {};	// assuming it should be an object
 	try {
-		complaintsprocess = await keystone.list('ComplaintsProcess').model.findOne().exec();
-		console.log(complaintsprocess);
+		pensionfaqs = await keystone.list('PensionFaq').model.findOne().exec();
 	} catch (error) {
 		console.log('cound not find ', error);
 	}
@@ -22,10 +20,10 @@ exports = module.exports = async function (req, res) {
 	locals.section = 'complaints-process';
 	locals.filters = {
 		calltoaction: req.params.calltoaction,
-		complaintsprocess: req.params.complaintsprocess,
+		pensionfaqs: req.params.pensionfaqs,
 	};
 	locals.data = {
-		complaintsprocess,
+		pensionfaqs,
 		calltoaction,
 	};
 	// Load
@@ -33,5 +31,5 @@ exports = module.exports = async function (req, res) {
 		next();
 	});
 	// Set locals
-	view.render('complaintsprocess');
+	view.render('pensionfaqs');
 };

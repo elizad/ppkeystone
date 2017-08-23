@@ -1,5 +1,6 @@
 extends ../layouts/default
-include ../mixins/cta
+include ../mixins/cta2
+include ../mixins/postmeta
 block metadata
 	if  (data.complaintsprocess.metadata)
 		title= data.complaintsprocess.metadata.metatitle || 'Profile Pension'
@@ -23,8 +24,9 @@ block intro
 			li= data.complaintsprocess.breadcrumbstitle
 block content
 	section.p3rem
-		.row
-			.col
-				div!= data.complaintsprocess.content
-	+cta
+		.container
+			.row
+				.col
+					div!= data.complaintsprocess.content
+	+cta2()
 
