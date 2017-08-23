@@ -2,7 +2,7 @@ extends ../layouts/default
 include ../mixins/process
 include ../mixins/carouselreviews1
 include ../mixins/tpreviews
-include ../mixins/cta
+include ../mixins/cta2
 block metadata
 	if  (data.pensiontracing)
 		title= data.pensiontracing.metadata.metatitle || 'Profile Pension'
@@ -26,7 +26,7 @@ block intro
 			li= data.pensiontracing.breadcrumbstitle
 block content
 	section.p3rem
-		.container.col-md-12
+		.container
 			.row
 				.col-md-12!= data.pensiontracing.content
 				
@@ -36,5 +36,5 @@ block content
 	
 	+tpreviews()
 		
-	+cta()
+	+cta2()
 

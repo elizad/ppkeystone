@@ -7,6 +7,7 @@ var keystone = require('keystone');
 
 exports = module.exports = async function (req, res) {
 	var pensionreview;
+	var calltoaction = {};
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 	locals.trustpilot = await trustpilot.getData() || {};
@@ -17,13 +18,20 @@ exports = module.exports = async function (req, res) {
 	} catch (error) {
 		console.log('could not find pensionreview ', error);
 	}
+	try {
+		calltoaction = await keystone.list('CallToAction').model.findOne().exec();
+	} catch (error) {
+		console.log('could not find ', error);
+	}
 	// item in the header navigation.
 	locals.section = 'ppension';
 	locals.filters = {
 		pensionreview: req.params.pensionreview,
+		calltoaction: req.params.calltoaction,
 	};
 	locals.data = {
 		pensionreview,
+		calltoaction,
 	};
 	//  Load pension review
 	view.on('init', function (next) {

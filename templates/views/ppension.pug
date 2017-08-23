@@ -2,7 +2,7 @@ extends ../layouts/default
 include ../mixins/process
 include ../mixins/carouselreviews1
 include ../mixins/tpreviews
-include ../mixins/cta
+include ../mixins/cta2
 block metadata
 	if  (data.pensionreview)
 		title= data.pensionreview.metadata.metatitle || 'Profile Pension'
@@ -36,5 +36,5 @@ block content
 	
 	+tpreviews()
 		
-	+cta()
+	+cta2()
 

@@ -1,4 +1,5 @@
 extends ../layouts/default
+include ../mixins/cta2
 block metadata
 	if  data.pension.meta
 		title= data.pension.metadata.metatitle || 'Profile Pension'
@@ -25,7 +26,10 @@ block intro
 				li= data.pension.title
 
 block content
-	.container.p3rem
-		.row.text-center
-			h2=data.pension.title
-			div!= data.pension.content
+	section
+		.container.p3rem
+			.row.text-center
+				h2=data.pension.title
+				div!= data.pension.content
+	
+	+cta2

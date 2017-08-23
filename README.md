@@ -16,8 +16,8 @@ This Project is generally following the guidelines set out in [AirBnB's Javascri
 
 ## Deployment
 
-default login data: elizadascal@gmail.com
-			  pass: light
+Default login data: 'email': 'hello@profilepensions.co.uk', 'password': 'profilepensions'
+The app need content in order work . if there is no Content por a page it will return an error or an empty page
 
 ## Start
 1 Install & start MongoDb https://www.mongodb.com/ 

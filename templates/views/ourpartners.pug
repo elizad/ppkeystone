@@ -2,7 +2,7 @@ extends ../layouts/default
 include ../mixins/process
 include ../mixins/carouselreviews1
 include ../mixins/tpreviews
-include ../mixins/cta
+include ../mixins/cta2
 block metadata
 	if  (data.ourpartners)
 		title= data.ourpartners.metatitle || 'Profile Pension'
@@ -41,4 +41,4 @@ block content
 				.col-md-4
 					img.text-center(src="/images/financial-lifetime-logo-300x96.png" alt="Financial Lifetime")
 					
-	+cta()
+	+cta2()

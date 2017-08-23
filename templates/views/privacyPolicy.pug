@@ -1,5 +1,5 @@
 extends ../layouts/default
-include ../mixins/cta
+include ../mixins/cta2
 block metadata
 	if  (data.privacypolicy)
 		title= data.privacypolicy.metatitle || 'Profile Pension'
@@ -29,4 +29,4 @@ block content
 					h2= data.privacypolicy.title
 				.col-md-12
 					div!= data.privacypolicy.content
-	+cta
+	+cta2

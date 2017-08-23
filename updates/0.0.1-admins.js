@@ -10,6 +10,7 @@
 exports.create = {
 	User: [
 		{ 'name.first': 'Admin', 'name.last': 'User', 'email': 'elizadascal@gmail.com', 'password': 'light', 'isAdmin': true },
+		{ 'name.first': 'Admin', 'name.last': 'User', 'email': 'hello@profilepensions.co.uk', 'password': 'profilepensions', 'isAdmin': true },
 	],
 };
 
