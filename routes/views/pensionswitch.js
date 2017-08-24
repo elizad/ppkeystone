@@ -6,6 +6,9 @@ var keystone = require('keystone');
 
 exports = module.exports = async function (req, res) {
 	var pensionswitch;
+	var carousels;
+	var processes = {};	// assuming it should be an object
+
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 	locals.trustpilot = await trustpilot.getData() || {};
@@ -16,13 +19,28 @@ exports = module.exports = async function (req, res) {
 	} catch (error) {
 		console.log('could not find pension switch ', error);
 	}
+	try {
+		carousels = await keystone.list('Carousel').model.find().exec();
+		// console.log(carousels);
+	} catch (error){
+		console.log('could not find carousels', error);
+	}
+	try {
+		processes = await keystone.list('Steps').model.findOne().exec();
+	} catch (error) {
+		console.log('could not find ', error);
+	}
 	// item in the header navigation.
 	locals.section = 'pension-switch';
 	locals.filters = {
 		pensionswitch: req.params.pensionswitch,
+		carousels: req.params.carousels,
+		processes: req.params.processes,
 	};
 	locals.data = {
 		pensionswitch,
+		carousels,
+		processes,
 	};
 	//  Load pension review
 	view.on('init', function (next) {

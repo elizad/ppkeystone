@@ -60,6 +60,7 @@ keystone.set('nav', {
 	teamMembers: ['team-members', 'team-member-categories'],
 	pensions: ['pensions', 'pension-categories'],
 	contact: ['contacts', 'contact-categories'],
+	part: ['carousels', 'steps', 'call-to-actions'],
 	users: 'users',
 });
 

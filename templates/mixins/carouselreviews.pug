@@ -1,0 +1,15 @@
+mixin carouselreviews()
+	section.reviews
+		.container.text-center
+			h2 On average we find £25,000 per missing pension
+			div.row
+				div.light-slider.col-md-12
+					if data.carousels.length
+						each carousel in data.carousels
+							div.col-md-12.text-center.review-customer
+								div.review-image.compat-object-fit                 
+									img.full-width.img-responsive(src=carousel._.image.fit(200, 200)) 
+								.div.customer-about
+									p.lead2 #{carousel.title}. <br> #{carousel.city}
+									p!= carousel.description
+					

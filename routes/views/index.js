@@ -13,6 +13,7 @@ exports = module.exports = async function (req, res) {
 	var locals = res.locals;
 	locals.trustpilot = await trustpilot.getData() || {};
 	locals.trustpilot2 = await trustpilot2.getData(path2) || {};
+	var carousels = {};
 	// console.log(locals);
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
@@ -21,13 +22,21 @@ exports = module.exports = async function (req, res) {
 	} catch (error) {
 		console.log('could not find index data', error);
 	}
+	try {
+		carousels = await keystone.list('Carousel').model.find().exec();
+		// console.log(carousels);
+	} catch (error){
+		console.log('could not find carousels', error);
+	}
 	// item in the header navigation.
 	locals.section = 'home';
 	locals.filters = {
 		index: req.params.index,
+		carousels: req.params.carousels,
 	};
 	locals.data = {
 		index,
+		carousels,
 	};
 	//  Load pension review
 	view.on('init', function (next) {

@@ -8,6 +8,8 @@ var keystone = require('keystone');
 exports = module.exports = async function (req, res) {
 	var pensionreview;
 	var calltoaction = {};
+	var carousels;
+	var processes;
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 	locals.trustpilot = await trustpilot.getData() || {};
@@ -23,15 +25,30 @@ exports = module.exports = async function (req, res) {
 	} catch (error) {
 		console.log('could not find ', error);
 	}
+	try {
+		carousels = await keystone.list('Carousel').model.find().exec();
+		// console.log(carousels);
+	} catch (error) {
+		console.log('could not find carousels', error);
+	}
+	try {
+		processes = await keystone.list('Steps').model.findOne().exec();
+	} catch (error) {
+		console.log('could not find ', error);
+	}
 	// item in the header navigation.
 	locals.section = 'ppension';
 	locals.filters = {
 		pensionreview: req.params.pensionreview,
 		calltoaction: req.params.calltoaction,
+		carousels: req.params.carousels,
+		processes: req.params.processes,
 	};
 	locals.data = {
 		pensionreview,
 		calltoaction,
+		carousels,
+		processes,
 	};
 	//  Load pension review
 	view.on('init', function (next) {
